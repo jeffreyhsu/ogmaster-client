@@ -1,0 +1,696 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>GameStats.org</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="/war.css">
+        <script type="text/javascript" src="/war.js"></script>
+        <meta name="author" content="Gregor Krambs">
+        <meta name="description" content="- Playersearch, statistics, planets and many other tools for OGame">
+        <meta name="keywords" content="Statistics, MMOG, Ogame, Onlinegame, Browsergame, Tools, GameStats, Search, Information, Database, Planets, Playersearch, Ally, Galatool, Galaxy">
+
+
+    </head>
+    <body>
+
+        <img id="startbanner" src="/img/gs_wide.gif" alt="Banner">
+
+
+        <div id="lang">
+            <a href="/?lang=de" title="GameStats.org in German"><img class=lang src="/img/de.gif"></a>
+            <a href="/?lang=fr" title="GameStats.org in French"><img class=lang src="/img/fr.gif"></a>
+            <a href="/?lang=org" title="GameStats.org "><img class=lang src="/img/org.gif" alt="ORG"></a>
+            <a href="/?lang=us" title="GameStats.org "><img class=lang src="/img/us.gif" alt="US"></a>
+            <a href="/?lang=es" title="GameStats.org for Spain"><img class=lang src="/img/spain.jpg" alt="ES"></a>
+            <a href="/?lang=pl" title="GameStats.org for Poland"><img class=lang src="/img/poland.jpg" alt="PL"></a>
+
+        </div>
+
+
+        <div id="head">
+            <h1>Quickfinder</h1>
+            <nobr>
+	Choose universe:
+                <select class=uni name=uni onChange="select(this);">
+
+                    <option value="/org/Andromeda/stats" >Andromeda</option>
+
+                    <option value="/org/Barym/stats" >Barym</option>
+
+
+                    <option value="/org/Capella/stats" >Capella</option>
+
+                    <option value="/org/Draco/stats" selected>Draco</option>
+
+                    <option value="/org/Electra/stats" >Electra</option>
+
+                    <option value="/org/1/stats" >1</option>
+
+                    <option value="/org/2/stats" >2</option>
+
+                    <option value="/org/3/stats" >3</option>
+
+
+                    <option value="/org/4/stats" >4</option>
+
+                    <option value="/org/5/stats" >5</option>
+
+                    <option value="/org/6/stats" >6</option>
+
+                    <option value="/org/7/stats" >7</option>
+
+                    <option value="/org/8/stats" >8</option>
+
+                    <option value="/org/9/stats" >9</option>
+
+
+                    <option value="/org/10/stats" >10</option>
+
+                    <option value="/org/11/stats" >11</option>
+
+                    <option value="/org/12/stats" >12</option>
+
+                    <option value="/org/13/stats" >13</option>
+
+                    <option value="/org/14/stats" >14</option>
+
+                    <option value="/org/15/stats" >15</option>
+
+
+                    <option value="/org/16/stats" >16</option>
+
+                    <option value="/org/17/stats" >17</option>
+
+                    <option value="/org/18/stats" >18</option>
+
+                    <option value="/org/19/stats" >19</option>
+
+                    <option value="/org/20/stats" >20</option>
+
+                    <option value="/org/21/stats" >21</option>
+
+
+                    <option value="/org/22/stats" >22</option>
+
+                    <option value="/org/23/stats" >23</option>
+
+                    <option value="/org/24/stats" >24</option>
+
+                    <option value="/org/25/stats" >25</option>
+
+                    <option value="/org/26/stats" >26</option>
+
+                    <option value="/org/27/stats" >27</option>
+
+
+                    <option value="/org/28/stats" >28</option>
+
+                    <option value="/org/29/stats" >29</option>
+
+                    <option value="/org/30/stats" >30</option>
+
+                    <option value="/org/31/stats" >31</option>
+
+                    <option value="/org/32/stats" >32</option>
+
+                    <option value="/org/33/stats" >33</option>
+
+
+                    <option value="/org/34/stats" >34</option>
+
+                    <option value="/org/35/stats" >35</option>
+
+                    <option value="/org/36/stats" >36</option>
+
+                    <option value="/org/37/stats" >37</option>
+
+                    <option value="/org/38/stats" >38</option>
+
+                    <option value="/org/39/stats" >39</option>
+
+
+                    <option value="/org/40/stats" >40</option>
+
+                    <option value="/org/41/stats" >41</option>
+
+                    <option value="/org/42/stats" >42</option>
+
+                    <option value="/org/43/stats" >43</option>
+
+                </select>
+                &nbsp;|&nbsp;&nbsp;<form class=inline action=/ method=get><input type=hidden name=lang id=lang value="org"><input type=hidden name=uni id=uni value="104"><input type=hidden name=page value=search><input type=hidden name=post value=1><select name="type" size="1" id=type><option value="player" selected>Player</option><option value="ally">Alliance</option></select> <input type=text size=10 id=name name=name value=""> <input type=button name=submit value="Go!" onClick="search('org','104')"></form>
+
+            </nobr>
+        </div>
+        <div id="leftmenue">
+            <table>
+                <tr><td class=leftmenue >&nbsp;Menu</td></tr>
+                <tr><td class="menue">&nbsp;&nbsp;<a class="menue" href="/org/104/" title="Back to Main Page">Main Page</a></td></tr>
+                <tr><td class="menue">&nbsp;&nbsp;<a class="menue" href="/org/104/news" title="Show News">News</a></td></tr>
+                <tr><td class="menue">&nbsp;&nbsp;<a class="menue" href="/org/104/search" title="Search for Players/Allies">Search</a></td></tr>
+
+                <tr><td class="menue">&nbsp;&nbsp;<a class="menue" href="/org/104/galaxy" title="Show Galaxy">Galaxy</a></td></tr>
+                <tr><td class="menue">&nbsp;&nbsp;<a class="menue" href="/org/104/fleetsearch" title="Search and destrory fleets">Fleet search</a></td></tr>
+                <tr><td class="menue">&nbsp;&nbsp;<a class="menue" href="/org/104/stats" title="Show Statistics">Statistics</a></td></tr>
+                <tr><td class="menue">&nbsp;&nbsp;<a class="menue" href="/org/104/timecalc" title="Calculate Flight Times">Flight Times</a></td></tr>
+                <tr><td class="menue">&nbsp;&nbsp;<a class="menue" href="/org/104/fleetcalc" title="Calculate Fleet Value">Fleet Value</a></td></tr>
+                <tr><td class="menue">&nbsp;&nbsp;<a class="menue" href="/org/104/expocalc" title="Calculate the capacity of Expedition-fleets">Expeditions</a></td></tr>
+
+                <tr><td class="menue">&nbsp;&nbsp;<a class="menue" href="/org/104/compare" title="Compare Players and Alliances side-to-side">Compare</a></td></tr>
+                <!--tr><td class="menue">&nbsp;&nbsp;<a class="menue" ="/?page=data&uni=104&lang=org" title="Stats of whole ogame.org">Total Data</td></tr-->
+                <tr><td class="menue">&nbsp;</td></tr>
+                <tr><td class="menue">&nbsp;&nbsp;<a class="menue" target="_blank" href="http://board.gamestats.org" title="Open board">Board</a></td></tr>
+                <tr><td class="menue">&nbsp;&nbsp;<a class="menue" href="/org/104/info" title="Frequently Asked Questions">F.A.Q.</a></td></tr>
+                <tr><td class="menue">&nbsp;&nbsp;<a class="menue" href="/org/104/imprint" title="Show Imprint">Imprint</a></td></tr>
+                </ul>
+
+            </table>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="startcontent2">
+            <center>
+                <table class=border>
+                    <tr><th class=s align=center width=600>Statistics</th></tr>
+                    <tr><td class=s2>
+						Show <select name="type" onchange="select(this)">
+
+                                <option value="/?lang=org&uni=104&page=stats&type=player&stats=1&start=1101" selected>Players</option>
+                                <option value="/?lang=org&uni=104&page=stats&type=ally&stats=1&start=1101">Alliances</option>
+                            </select>
+      			at <select name="stats" onchange="select(this)">
+                                <option value="/?lang=org&uni=104&page=stats&uni=104&type=player&stats=1&start=1101" selected>Points</option>
+                                <option value="/?lang=org&uni=104&page=stats&uni=104&type=player&stats=2&start=1101">Fleet</option>
+
+                                <option value="/?lang=org&uni=104&page=stats&type=player&stats=3&start=1101">Research</option>
+                            </select>
+						with rank <select name="start" onchange="select(this)">
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=1">1-100</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=101">101-200</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=201">201-300</option>
+
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=301">301-400</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=401">401-500</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=501">501-600</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=601">601-700</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=701">701-800</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=801">801-900</option>
+
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=901">901-1000</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=1001">1001-1100</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=1101" selected>1101-1200</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=1201">1201-1300</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=1301">1301-1400</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=1401">1401-1500</option>
+
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=1501">1501-1600</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=1601">1601-1700</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=1701">1701-1800</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=1801">1801-1900</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=1901">1901-2000</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=2001">2001-2100</option>
+
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=2101">2101-2200</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=2201">2201-2300</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=2301">2301-2400</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=2401">2401-2500</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=2501">2501-2600</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=2601">2601-2700</option>
+
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=2701">2701-2800</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=2801">2801-2900</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=2901">2901-3000</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=3001">3001-3100</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=3101">3101-3200</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=3201">3201-3300</option>
+
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=3301">3301-3400</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=3401">3401-3500</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=3501">3501-3600</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=3601">3601-3700</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=3701">3701-3800</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=3801">3801-3900</option>
+
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=3901">3901-4000</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=4001">4001-4100</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=4101">4101-4200</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=4201">4201-4300</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=4301">4301-4400</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=4401">4401-4500</option>
+
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=4501">4501-4600</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=4601">4601-4700</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=4701">4701-4800</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=4801">4801-4900</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=4901">4901-5000</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=5001">5001-5100</option>
+
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=5101">5101-5200</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=5201">5201-5300</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=5301">5301-5400</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=5401">5401-5500</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=5501">5501-5600</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=5601">5601-5700</option>
+
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=5701">5701-5800</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=5801">5801-5900</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=5901">5901-6000</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=6001">6001-6100</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=6101">6101-6200</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=6201">6201-6300</option>
+
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=6301">6301-6400</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=6401">6401-6500</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=6501">6501-6600</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=6601">6601-6700</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=6701">6701-6800</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=6801">6801-6900</option>
+
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=6901">6901-7000</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=7001">7001-7100</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=7101">7101-7200</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=7201">7201-7300</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=7301">7301-7400</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=7401">7401-7500</option>
+
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=7501">7501-7600</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=7601">7601-7700</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=7701">7701-7800</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=7801">7801-7900</option>
+
+                                <option value="/?lang=&uni=104&page=stats&uni=104&type=player&stats=1&start=7901">7901-8000</option>
+
+                        </td></tr>
+
+                </table>
+                <br>
+                <br>
+                <table class=border>
+
+                    <tr><td class=cl align=center width=48>Rank</th><td class=cl align=center width=225>Name</th><td class=cl align=center width=145>Ally</th><td class=cl align=center width=150>Points</th></tr>
+
+                    <tr><td class=s>1101</td><td class=s><a href="/org/104/details/player/lhermann" title="Details of lhermann show">lhermann</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>7.527</td></tr>
+
+
+                    <tr><td class=s>1102</td><td class=s><a href="/org/104/details/player/scudder5000" title="Details of scudder5000 show">scudder5000</a></td><td class=s><a class=ally href="/org/104/details/ally/M.O.B" title="Details of M.O.B show">M.O.B</a></td><td class=s>7.525</td></tr>
+
+                    <tr><td class=s>1103</td><td class=s><a href="/org/104/details/player/resiak" title="Details of resiak show">resiak</a></td><td class=s><a class=ally href="/org/104/details/ally/MeM" title="Details of MeM show">MeM</a></td><td class=s>7.515</td></tr>
+
+                    <tr><td class=s>1104</td><td class=s><a href="/org/104/details/player/Rhufuzz" title="Details of Rhufuzz show">Rhufuzz</a></td><td class=s><a class=ally href="/org/104/details/ally/TLM" title="Details of TLM show">TLM</a></td><td class=s>7.506</td></tr>
+
+
+                    <tr><td class=s>1105</td><td class=s><a href="/org/104/details/player/Aceshigh101" title="Details of Aceshigh101 show">Aceshigh101</a></td><td class=s><a class=ally href="/org/104/details/ally/ANON" title="Details of ANON show">ANON</a></td><td class=s>7.504</td></tr>
+
+                    <tr><td class=s>1106</td><td class=s><a href="/org/104/details/player/PsychoMonkey" title="Details of PsychoMonkey show">PsychoMonkey</a></td><td class=s><a class=ally href="/org/104/details/ally/UEF" title="Details of UEF show">UEF</a></td><td class=s>7.503</td></tr>
+
+                    <tr><td class=s>1107</td><td class=s><a href="/org/104/details/player/kwonwang" title="Details of kwonwang show">kwonwang</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>7.496</td></tr>
+
+
+                    <tr><td class=s>1108</td><td class=s><a href="/org/104/details/player/Kraan" title="Details of Kraan show">Kraan</a></td><td class=s><a class=ally href="/org/104/details/ally/COF" title="Details of COF show">COF</a></td><td class=s>7.487</td></tr>
+
+                    <tr><td class=s>1109</td><td class=s><a href="/org/104/details/player/LocustAi" title="Details of LocustAi show">LocustAi</a></td><td class=s><a class=ally href="/org/104/details/ally/CWO" title="Details of CWO show">CWO</a></td><td class=s>7.477</td></tr>
+
+                    <tr><td class=s>1110</td><td class=s><a href="/org/104/details/player/Dragonheart" title="Details of Dragonheart show">Dragonheart</a></td><td class=s><a class=ally href="/org/104/details/ally/-FW-" title="Details of -FW- show">-FW-</a></td><td class=s>7.475</td></tr>
+
+
+                    <tr><td class=s>1111</td><td class=s><a href="/org/104/details/player/Supertoad" title="Details of Supertoad show">Supertoad</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>7.461</td></tr>
+
+                    <tr><td class=s>1112</td><td class=s><a href="/org/104/details/player/Blackadder" title="Details of Blackadder show">Blackadder</a></td><td class=s><a class=ally href="/org/104/details/ally/IKA" title="Details of IKA show">IKA</a></td><td class=s>7.457</td></tr>
+
+                    <tr><td class=s>1113</td><td class=s><a href="/org/104/details/player/sniper8133" title="Details of sniper8133 show">sniper8133</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>7.448</td></tr>
+
+                    <tr><td class=s>1114</td><td class=s><a href="/org/104/details/player/sacfan@freemail.hu" title="Details of sacfan@freemail.hu show">sacfan@freemail.hu</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>7.431</td></tr>
+
+
+                    <tr><td class=s>1115</td><td class=s><a href="/org/104/details/player/hanyu" title="Details of hanyu show">hanyu</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>7.431</td></tr>
+
+                    <tr><td class=s>1116</td><td class=s><a href="/org/104/details/player/Gary" title="Details of Gary show">Gary</a></td><td class=s><a class=ally href="/org/104/details/ally/SCMD" title="Details of SCMD show">SCMD</a></td><td class=s>7.405</td></tr>
+
+                    <tr><td class=s>1117</td><td class=s><a href="/org/104/details/player/yang" title="Details of yang show">yang</a></td><td class=s><a class=ally href="/org/104/details/ally/Odyssey" title="Details of Odyssey show">Odyssey</a></td><td class=s>7.397</td></tr>
+
+
+                    <tr><td class=s>1118</td><td class=s><a href="/org/104/details/player/Raamses" title="Details of Raamses show">Raamses</a></td><td class=s><a class=ally href="/org/104/details/ally/P.D.M" title="Details of P.D.M show">P.D.M</a></td><td class=s>7.395</td></tr>
+
+                    <tr><td class=s>1119</td><td class=s><a href="/org/104/details/player/bucsi" title="Details of bucsi show">bucsi</a></td><td class=s><a class=ally href="/org/104/details/ally/Anunnaki" title="Details of Anunnaki show">Anunnaki</a></td><td class=s>7.395</td></tr>
+
+                    <tr><td class=s>1120</td><td class=s><a href="/org/104/details/player/Crescendo" title="Details of Crescendo show">Crescendo</a></td><td class=s><a class=ally href="/org/104/details/ally/Rev" title="Details of Rev show">Rev</a></td><td class=s>7.382</td></tr>
+
+
+                    <tr><td class=s>1121</td><td class=s><a href="/org/104/details/player/RocketMan" title="Details of RocketMan show">RocketMan</a></td><td class=s><a class=ally href="/org/104/details/ally/WOLFPAK" title="Details of WOLFPAK show">WOLFPAK</a></td><td class=s>7.376</td></tr>
+
+                    <tr><td class=s>1122</td><td class=s><a href="/org/104/details/player/eurydice" title="Details of eurydice show">eurydice</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>7.370</td></tr>
+
+                    <tr><td class=s>1123</td><td class=s><a href="/org/104/details/player/looloolo" title="Details of looloolo show">looloolo</a></td><td class=s><a class=ally href="/org/104/details/ally/WOLFPAK" title="Details of WOLFPAK show">WOLFPAK</a></td><td class=s>7.358</td></tr>
+
+
+                    <tr><td class=s>1124</td><td class=s><a href="/org/104/details/player/Saber" title="Details of Saber show">Saber</a></td><td class=s><a class=ally href="/org/104/details/ally/RGD" title="Details of RGD show">RGD</a></td><td class=s>7.353</td></tr>
+
+                    <tr><td class=s>1125</td><td class=s><a href="/org/104/details/player/char" title="Details of char show">char</a></td><td class=s><a class=ally href="/org/104/details/ally/FPA" title="Details of FPA show">FPA</a></td><td class=s>7.349</td></tr>
+
+                    <tr><td class=s>1126</td><td class=s><a href="/org/104/details/player/labanaktis" title="Details of labanaktis show">labanaktis</a></td><td class=s><a class=ally href="/org/104/details/ally/WOLFPAK" title="Details of WOLFPAK show">WOLFPAK</a></td><td class=s>7.346</td></tr>
+
+
+                    <tr><td class=s>1127</td><td class=s><a href="/org/104/details/player/Caj Darkmoon" title="Details of Caj Darkmoon show">Caj Darkmoon</a></td><td class=s><a class=ally href="/org/104/details/ally/chirp" title="Details of chirp show">chirp</a></td><td class=s>7.344</td></tr>
+
+                    <tr><td class=s>1128</td><td class=s><a href="/org/104/details/player/FireclawDrake" title="Details of FireclawDrake show">FireclawDrake</a></td><td class=s><a class=ally href="/org/104/details/ally/AHBP" title="Details of AHBP show">AHBP</a></td><td class=s>7.342</td></tr>
+
+                    <tr><td class=s>1129</td><td class=s><a href="/org/104/details/player/hudi" title="Details of hudi show">hudi</a></td><td class=s><a class=ally href="/org/104/details/ally/T.H.C." title="Details of T.H.C. show">T.H.C.</a></td><td class=s>7.318</td></tr>
+
+
+                    <tr><td class=s>1130</td><td class=s><a href="/org/104/details/player/guy245" title="Details of guy245 show">guy245</a></td><td class=s><a class=ally href="/org/104/details/ally/M.O.B" title="Details of M.O.B show">M.O.B</a></td><td class=s>7.310</td></tr>
+
+                    <tr><td class=s>1131</td><td class=s><a href="/org/104/details/player/Emandab1" title="Details of Emandab1 show">Emandab1</a></td><td class=s><a class=ally href="/org/104/details/ally/TCBO1" title="Details of TCBO1 show">TCBO1</a></td><td class=s>7.308</td></tr>
+
+                    <tr><td class=s>1132</td><td class=s><a href="/org/104/details/player/Thorian" title="Details of Thorian show">Thorian</a></td><td class=s><a class=ally href="/org/104/details/ally/Ordo" title="Details of Ordo show">Ordo</a></td><td class=s>7.307</td></tr>
+
+
+                    <tr><td class=s>1133</td><td class=s><a href="/org/104/details/player/greatreturns" title="Details of greatreturns show">greatreturns</a></td><td class=s><a class=ally href="/org/104/details/ally/Simple" title="Details of Simple show">Simple</a></td><td class=s>7.300</td></tr>
+
+                    <tr><td class=s>1134</td><td class=s><a href="/org/104/details/player/Imperium" title="Details of Imperium show">Imperium</a></td><td class=s><a class=ally href="/org/104/details/ally/The CS" title="Details of The CS show">The CS</a></td><td class=s>7.294</td></tr>
+
+                    <tr><td class=s>1135</td><td class=s><a href="/org/104/details/player/rabbit0456" title="Details of rabbit0456 show">rabbit0456</a></td><td class=s><a class=ally href="/org/104/details/ally/NeverDie" title="Details of NeverDie show">NeverDie</a></td><td class=s>7.272</td></tr>
+
+
+                    <tr><td class=s>1136</td><td class=s><a href="/org/104/details/player/haruka" title="Details of haruka show">haruka</a></td><td class=s><a class=ally href="/org/104/details/ally/Simple" title="Details of Simple show">Simple</a></td><td class=s>7.271</td></tr>
+
+                    <tr><td class=s>1137</td><td class=s><a href="/org/104/details/player/d_m" title="Details of d_m show">d_m</a></td><td class=s><a class=ally href="/org/104/details/ally/Republic" title="Details of Republic show">Republic</a></td><td class=s>7.255</td></tr>
+
+                    <tr><td class=s>1138</td><td class=s><a href="/org/104/details/player/Angelfighters" title="Details of Angelfighters show">Angelfighters</a></td><td class=s><a class=ally href="/org/104/details/ally/FUSION" title="Details of FUSION show">FUSION</a></td><td class=s>7.254</td></tr>
+
+
+                    <tr><td class=s>1139</td><td class=s><a href="/org/104/details/player/NzBlackOps" title="Details of NzBlackOps show">NzBlackOps</a></td><td class=s><a class=ally href="/org/104/details/ally/ANATHEMA" title="Details of ANATHEMA show">ANATHEMA</a></td><td class=s>7.247</td></tr>
+
+                    <tr><td class=s>1140</td><td class=s><a href="/org/104/details/player/Maurits" title="Details of Maurits show">Maurits</a></td><td class=s><a class=ally href="/org/104/details/ally/M.O.B" title="Details of M.O.B show">M.O.B</a></td><td class=s>7.242</td></tr>
+
+                    <tr><td class=s>1141</td><td class=s><a href="/org/104/details/player/nemcaninz" title="Details of nemcaninz show">nemcaninz</a></td><td class=s><a class=ally href="/org/104/details/ally/Beer" title="Details of Beer show">Beer</a></td><td class=s>7.205</td></tr>
+
+
+                    <tr><td class=s>1142</td><td class=s><a href="/org/104/details/player/bigdsa1" title="Details of bigdsa1 show">bigdsa1</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>7.198</td></tr>
+
+                    <tr><td class=s>1143</td><td class=s><a href="/org/104/details/player/ipleadthe5th" title="Details of ipleadthe5th show">ipleadthe5th</a></td><td class=s><a class=ally href="/org/104/details/ally/kr0nik" title="Details of kr0nik show">kr0nik</a></td><td class=s>7.189</td></tr>
+
+                    <tr><td class=s>1144</td><td class=s><a href="/org/104/details/player/leestor" title="Details of leestor show">leestor</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>7.185</td></tr>
+
+                    <tr><td class=s>1145</td><td class=s><a href="/org/104/details/player/jeods" title="Details of jeods show">jeods</a></td><td class=s><a class=ally href="/org/104/details/ally/J.D.P" title="Details of J.D.P show">J.D.P</a></td><td class=s>7.181</td></tr>
+
+
+                    <tr><td class=s>1146</td><td class=s><a href="/org/104/details/player/Kommander" title="Details of Kommander show">Kommander</a></td><td class=s><a class=ally href="/org/104/details/ally/GMF" title="Details of GMF show">GMF</a></td><td class=s>7.180</td></tr>
+
+                    <tr><td class=s>1147</td><td class=s><a href="/org/104/details/player/Joldan" title="Details of Joldan show">Joldan</a></td><td class=s><a class=ally href="/org/104/details/ally/NKB" title="Details of NKB show">NKB</a></td><td class=s>7.179</td></tr>
+
+                    <tr><td class=s>1148</td><td class=s><a href="/org/104/details/player/Mercurius" title="Details of Mercurius show">Mercurius</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>7.177</td></tr>
+
+
+                    <tr><td class=s>1149</td><td class=s><a href="/org/104/details/player/Ramzes" title="Details of Ramzes show">Ramzes</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>7.169</td></tr>
+
+                    <tr><td class=s>1150</td><td class=s><a href="/org/104/details/player/atreides" title="Details of atreides show">atreides</a></td><td class=s><a class=ally href="/org/104/details/ally/UED" title="Details of UED show">UED</a></td><td class=s>7.167</td></tr>
+
+                    <tr><td class=s>1151</td><td class=s><a href="/org/104/details/player/ga qua ko can ten" title="Details of ga qua ko can ten show">ga qua ko can ten</a></td><td class=s><a class=ally href="/org/104/details/ally/WOLFPAK" title="Details of WOLFPAK show">WOLFPAK</a></td><td class=s>7.160</td></tr>
+
+
+                    <tr><td class=s>1152</td><td class=s><a href="/org/104/details/player/Thebigo" title="Details of Thebigo show">Thebigo</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>7.145</td></tr>
+
+                    <tr><td class=s>1153</td><td class=s><a href="/org/104/details/player/Guybrush" title="Details of Guybrush show">Guybrush</a></td><td class=s><a class=ally href="/org/104/details/ally/UED" title="Details of UED show">UED</a></td><td class=s>7.138</td></tr>
+
+                    <tr><td class=s>1154</td><td class=s><a href="/org/104/details/player/theshiznick" title="Details of theshiznick show">theshiznick</a></td><td class=s><a class=ally href="/org/104/details/ally/-Jedi-" title="Details of -Jedi- show">-Jedi-</a></td><td class=s>7.132</td></tr>
+
+
+                    <tr><td class=s>1155</td><td class=s><a href="/org/104/details/player/BubbaBooey" title="Details of BubbaBooey show">BubbaBooey</a></td><td class=s><a class=ally href="/org/104/details/ally/v V v" title="Details of v V v show">v V v</a></td><td class=s>7.124</td></tr>
+
+                    <tr><td class=s>1156</td><td class=s><a href="/org/104/details/player/azsx123" title="Details of azsx123 show">azsx123</a></td><td class=s><a class=ally href="/org/104/details/ally/Simple" title="Details of Simple show">Simple</a></td><td class=s>7.120</td></tr>
+
+                    <tr><td class=s>1157</td><td class=s><a href="/org/104/details/player/grundi" title="Details of grundi show">grundi</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>7.120</td></tr>
+
+
+                    <tr><td class=s>1158</td><td class=s><a href="/org/104/details/player/Destroyer" title="Details of Destroyer show">Destroyer</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>7.117</td></tr>
+
+                    <tr><td class=s>1159</td><td class=s><a href="/org/104/details/player/Davicus" title="Details of Davicus show">Davicus</a></td><td class=s><a class=ally href="/org/104/details/ally/I.O.M" title="Details of I.O.M show">I.O.M</a></td><td class=s>7.105</td></tr>
+
+                    <tr><td class=s>1160</td><td class=s><a href="/org/104/details/player/soro" title="Details of soro show">soro</a></td><td class=s><a class=ally href="/org/104/details/ally/Pleiades" title="Details of Pleiades show">Pleiades</a></td><td class=s>7.096</td></tr>
+
+
+                    <tr><td class=s>1161</td><td class=s><a href="/org/104/details/player/V1-Helden" title="Details of V1-Helden show">V1-Helden</a></td><td class=s><a class=ally href="/org/104/details/ally/A.C." title="Details of A.C. show">A.C.</a></td><td class=s>7.090</td></tr>
+
+                    <tr><td class=s>1162</td><td class=s><a href="/org/104/details/player/blackflamer" title="Details of blackflamer show">blackflamer</a></td><td class=s><a class=ally href="/org/104/details/ally/ELM" title="Details of ELM show">ELM</a></td><td class=s>7.080</td></tr>
+
+                    <tr><td class=s>1163</td><td class=s><a href="/org/104/details/player/Hyperion" title="Details of Hyperion show">Hyperion</a></td><td class=s><a class=ally href="/org/104/details/ally/B.B.Q" title="Details of B.B.Q show">B.B.Q</a></td><td class=s>7.069</td></tr>
+
+
+                    <tr><td class=s>1164</td><td class=s><a href="/org/104/details/player/ragee" title="Details of ragee show">ragee</a></td><td class=s><a class=ally href="/org/104/details/ally/M.O.B" title="Details of M.O.B show">M.O.B</a></td><td class=s>7.026</td></tr>
+
+                    <tr><td class=s>1165</td><td class=s><a href="/org/104/details/player/ranshai" title="Details of ranshai show">ranshai</a></td><td class=s><a class=ally href="/org/104/details/ally/WOLFPAK" title="Details of WOLFPAK show">WOLFPAK</a></td><td class=s>6.996</td></tr>
+
+                    <tr><td class=s>1166</td><td class=s><a href="/org/104/details/player/Conor D" title="Details of Conor D show">Conor D</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>6.987</td></tr>
+
+
+                    <tr><td class=s>1167</td><td class=s><a href="/org/104/details/player/lkc57" title="Details of lkc57 show">lkc57</a></td><td class=s><a class=ally href="/org/104/details/ally/RotS" title="Details of RotS show">RotS</a></td><td class=s>6.982</td></tr>
+
+                    <tr><td class=s>1168</td><td class=s><a href="/org/104/details/player/Vin" title="Details of Vin show">Vin</a></td><td class=s><a class=ally href="/org/104/details/ally/OWNED" title="Details of OWNED show">OWNED</a></td><td class=s>6.980</td></tr>
+
+                    <tr><td class=s>1169</td><td class=s><a href="/org/104/details/player/keneager" title="Details of keneager show">keneager</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>6.968</td></tr>
+
+
+                    <tr><td class=s>1170</td><td class=s><a href="/org/104/details/player/dragonamv" title="Details of dragonamv show">dragonamv</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>6.967</td></tr>
+
+                    <tr><td class=s>1171</td><td class=s><a href="/org/104/details/player/Jughead" title="Details of Jughead show">Jughead</a></td><td class=s><a class=ally href="/org/104/details/ally/3-M" title="Details of 3-M show">3-M</a></td><td class=s>6.963</td></tr>
+
+                    <tr><td class=s>1172</td><td class=s><a href="/org/104/details/player/wax" title="Details of wax show">wax</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>6.960</td></tr>
+
+                    <tr><td class=s>1173</td><td class=s><a href="/org/104/details/player/detomac" title="Details of detomac show">detomac</a></td><td class=s><a class=ally href="/org/104/details/ally/RaZoR" title="Details of RaZoR show">RaZoR</a></td><td class=s>6.953</td></tr>
+
+
+                    <tr><td class=s>1174</td><td class=s><a href="/org/104/details/player/Burt Gummer" title="Details of Burt Gummer show">Burt Gummer</a></td><td class=s><a class=ally href="/org/104/details/ally/Angels" title="Details of Angels show">Angels</a></td><td class=s>6.951</td></tr>
+
+                    <tr><td class=s>1175</td><td class=s><a href="/org/104/details/player/CarU" title="Details of CarU show">CarU</a></td><td class=s><a class=ally href="/org/104/details/ally/Simple" title="Details of Simple show">Simple</a></td><td class=s>6.945</td></tr>
+
+                    <tr><td class=s>1176</td><td class=s><a href="/org/104/details/player/ATG" title="Details of ATG show">ATG</a></td><td class=s><a class=ally href="/org/104/details/ally/RotS" title="Details of RotS show">RotS</a></td><td class=s>6.934</td></tr>
+
+
+                    <tr><td class=s>1177</td><td class=s><a href="/org/104/details/player/krystianq1984" title="Details of krystianq1984 show">krystianq1984</a></td><td class=s><a class=ally href="/org/104/details/ally/WOLFPAK" title="Details of WOLFPAK show">WOLFPAK</a></td><td class=s>6.929</td></tr>
+
+                    <tr><td class=s>1178</td><td class=s><a href="/org/104/details/player/RedRodent" title="Details of RedRodent show">RedRodent</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>6.915</td></tr>
+
+                    <tr><td class=s>1179</td><td class=s><a href="/org/104/details/player/kamina" title="Details of kamina show">kamina</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>6.915</td></tr>
+
+                    <tr><td class=s>1180</td><td class=s><a href="/org/104/details/player/Bard" title="Details of Bard show">Bard</a></td><td class=s><a class=ally href="/org/104/details/ally/B.R" title="Details of B.R show">B.R</a></td><td class=s>6.896</td></tr>
+
+
+                    <tr><td class=s>1181</td><td class=s><a href="/org/104/details/player/devilcv8" title="Details of devilcv8 show">devilcv8</a></td><td class=s><a class=ally href="/org/104/details/ally/Whirl" title="Details of Whirl show">Whirl</a></td><td class=s>6.895</td></tr>
+
+                    <tr><td class=s>1182</td><td class=s><a href="/org/104/details/player/Furious" title="Details of Furious show">Furious</a></td><td class=s><a class=ally href="/org/104/details/ally/F.H." title="Details of F.H. show">F.H.</a></td><td class=s>6.881</td></tr>
+
+                    <tr><td class=s>1183</td><td class=s><a href="/org/104/details/player/MikaMika" title="Details of MikaMika show">MikaMika</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>6.875</td></tr>
+
+
+                    <tr><td class=s>1184</td><td class=s><a href="/org/104/details/player/kentavros7" title="Details of kentavros7 show">kentavros7</a></td><td class=s><a class=ally href="/org/104/details/ally/PfC" title="Details of PfC show">PfC</a></td><td class=s>6.873</td></tr>
+
+                    <tr><td class=s>1185</td><td class=s><a href="/org/104/details/player/PUMA" title="Details of PUMA show">PUMA</a></td><td class=s><a class=ally href="/org/104/details/ally/FaNaTiCs" title="Details of FaNaTiCs show">FaNaTiCs</a></td><td class=s>6.863</td></tr>
+
+                    <tr><td class=s>1186</td><td class=s><a href="/org/104/details/player/Exterminus" title="Details of Exterminus show">Exterminus</a></td><td class=s><a class=ally href="/org/104/details/ally/COF" title="Details of COF show">COF</a></td><td class=s>6.855</td></tr>
+
+
+                    <tr><td class=s>1187</td><td class=s><a href="/org/104/details/player/Dr Horrible" title="Details of Dr Horrible show">Dr Horrible</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>6.849</td></tr>
+
+                    <tr><td class=s>1188</td><td class=s><a href="/org/104/details/player/Howso" title="Details of Howso show">Howso</a></td><td class=s><a class=ally href="/org/104/details/ally/koa" title="Details of koa show">koa</a></td><td class=s>6.843</td></tr>
+
+                    <tr><td class=s>1189</td><td class=s><a href="/org/104/details/player/RedMistic" title="Details of RedMistic show">RedMistic</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>6.840</td></tr>
+
+                    <tr><td class=s>1190</td><td class=s><a href="/org/104/details/player/nolesx4" title="Details of nolesx4 show">nolesx4</a></td><td class=s><a class=ally href="/org/104/details/ally/UFOP-SF" title="Details of UFOP-SF show">UFOP-SF</a></td><td class=s>6.829</td></tr>
+
+
+                    <tr><td class=s>1191</td><td class=s><a href="/org/104/details/player/OnGameNet" title="Details of OnGameNet show">OnGameNet</a></td><td class=s><a class=ally href="/org/104/details/ally/ANATHEMA" title="Details of ANATHEMA show">ANATHEMA</a></td><td class=s>6.814</td></tr>
+
+                    <tr><td class=s>1192</td><td class=s><a href="/org/104/details/player/viken" title="Details of viken show">viken</a></td><td class=s><a class=ally href="/org/104/details/ally/TFA" title="Details of TFA show">TFA</a></td><td class=s>6.798</td></tr>
+
+                    <tr><td class=s>1193</td><td class=s><a href="/org/104/details/player/Pirxor" title="Details of Pirxor show">Pirxor</a></td><td class=s><a class=ally href="/org/104/details/ally/TOMS" title="Details of TOMS show">TOMS</a></td><td class=s>6.796</td></tr>
+
+
+                    <tr><td class=s>1194</td><td class=s><a href="/org/104/details/player/MegaManRocks" title="Details of MegaManRocks show">MegaManRocks</a></td><td class=s><a class=ally href="/org/104/details/ally/Zeon" title="Details of Zeon show">Zeon</a></td><td class=s>6.784</td></tr>
+
+                    <tr><td class=s>1195</td><td class=s><a href="/org/104/details/player/Drabel" title="Details of Drabel show">Drabel</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>6.779</td></tr>
+
+                    <tr><td class=s>1196</td><td class=s><a href="/org/104/details/player/Bill Lumberg" title="Details of Bill Lumberg show">Bill Lumberg</a></td><td class=s><a class=ally href="/org/104/details/ally/IPS" title="Details of IPS show">IPS</a></td><td class=s>6.760</td></tr>
+
+
+                    <tr><td class=s>1197</td><td class=s><a href="/org/104/details/player/sadam" title="Details of sadam show">sadam</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>6.754</td></tr>
+
+                    <tr><td class=s>1198</td><td class=s><a href="/org/104/details/player/hunkcules" title="Details of hunkcules show">hunkcules</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>6.752</td></tr>
+
+                    <tr><td class=s>1199</td><td class=s><a href="/org/104/details/player/Abnaer" title="Details of Abnaer show">Abnaer</a></td><td class=s><a class=ally href="/org/104/details/ally/" title="Details of  show"></a></td><td class=s>6.747</td></tr>
+
+                    <tr><td class=s>1200</td><td class=s><a href="/org/104/details/player/SaintJimmy" title="Details of SaintJimmy show">SaintJimmy</a></td><td class=s><a class=ally href="/org/104/details/ally/TLM" title="Details of TLM show">TLM</a></td><td class=s>6.743</td></tr>
+
+
+
+
+                </table>
+            </center>
+            <br>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="mostwanted">
+            <h3><a class=h href='/org/104/mostwanted'>Most Wanted</a></h3>
+            <div id="inner_mw">
+                <font class=small>Player</font><br>
+
+                <font class=bold style="line-height: 18px;"><a href='/org/104/details/player/Graf Zahl' title='Details of Graf Zahl show'>Graf Zahl</a></font><br>
+                <font class=small>Ally</font><br>
+                <font class=bold style="line-height: 18px;"><a class=ally href='/org/104/details/ally/LuLzies' title='Details of LuLzies show'>LuLzies</a></font>
+            </div>
+        </div>
+
+
+
+        <div class=discription>
+	GameStats.org We provide one of the best information and statistics about other OGame users. Planets and player or ally stats can be found very easily here. To cover the expenses of the webhosting, it's necessary to show some advertisements. Please be patient, we're students, we have to be secured.
+
+        </div>
+
+
+
+
+
+        <div id="banner">
+            <!-- ValueClick Media 468x60 and 728x90 Banner CODE for gamestats.org --><script language="javascript" src="http://media.fastclick.net/w/get.media?sid=43254&m=1&tp=5&d=j&t=n"></script><noscript><a href="http://media.fastclick.net/w/click.here?sid=43254&m=1&c=1" target="_blank"><img src="http://media.fastclick.net/w/get.media?sid=43254&m=1&tp=5&d=s&c=1"width=728 height=90 border=1></a></noscript><!-- ValueClick Media 468x60 and 728x90 Banner CODE for gamestats.org -->
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div id="ads">
+            <!-- ValueClick Media 120x600 and 160x600 SkyScraper CODE for gamestats.org --><script language="javascript" src="http://media.fastclick.net/w/get.media?sid=43254&m=3&tp=7&d=j&t=n"></script><noscript><a href="http://media.fastclick.net/w/click.here?sid=43254&m=3&c=1" target="_blank"><img src="http://media.fastclick.net/w/get.media?sid=43254&m=3&tp=7&d=s&c=1"width=160 height=600 border=1></a></noscript><!-- ValueClick Media 120x600 and 160x600 SkyScraper CODE for gamestats.org -->
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <script type="text/javascript" src="http://bin-layer.de/layer-187696-1-subid:wr_org.js"></script>
+
+
+
+
+
+    </body>
+</html>

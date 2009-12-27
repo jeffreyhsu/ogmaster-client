@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/bbcodes.css' media='screen' />
+        <link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/jquery.cluetip.css' media='screen' />
+        <link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/errorbox.css' media='screen' />
+        <link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/jquery.cluetip.css' media='screen' />
+        <link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/thickbox-iframe.css' media='screen' />
+        <link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/thickbox-message.css' media='screen' />
+        <link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/toolbox.css' media='screen' />
+        <script type='text/javascript' src='http://uni104.ogame.org/game/js/jquery.js'></script>
+        <script type='text/javascript' src='http://uni104.ogame.org/game/js/jquery.dimensions.js'></script>
+        <script type='text/javascript' src='http://uni104.ogame.org/game/js/jquery.hoverIntent.js'></script>
+        <script type='text/javascript' src='http://uni104.ogame.org/game/js/jquery.configcluetip.js'></script>
+        <script type='text/javascript' src='http://uni104.ogame.org/game/js/jquery.cluetip.js'></script>
+        <script type='text/javascript' src='http://uni104.ogame.org/game/js/utilities.js'></script>
+        <script type='text/javascript' src='http://uni104.ogame.org/game/js/errorBox.js'></script>
+
+        <script type="text/javascript">
+
+
+            $(document).ready(function() {
+
+
+
+                $(".action").click(function(){
+
+                    var action = $(this).attr('id');
+                    self.parent.$("#1686398TR").hide();
+
+
+                    if(action == 2){
+                        window.location.replace('index.php?page=showmessage&session=1e23eaf6c057&actionMsgId=1686398&msg_id=1686370&mids=%253D%2591%25CB%2515%25C30%2508%2504%255B%25E2%2523%2590p%25AA%25C9%25D15%25E4%25A5%25F7%2588%25DD%25C8%25B7%251D%2581a%251E%257E_%251E%25D7%25E7%25BE%25E4u_%259A%252B%25BDV%25A7C%25B3%25DF%258D%2514%2522%25B1%2593%2593%252C%25ABv%251A%25872w%250A%25D0%252C%25B1%25A6%257C%25A8%2527L%25D2%259E%25DAi%253D%25D4%25BB%25EAP%2B%25C9%251F-%25B1L%250F%2506fPgFM%2514%25FC%2560b%25E6x%2510%25CDqpp%253FQU%25B1%2588o1V%25A1%258FR%253E%25CD0%2599V%259E%25B6%251A%258DVV%2505I%25B6%25A4%258D%2511-d%25B4%25D2%2592h%2503%25A3%2595Nc%25F3x%2510%2507%258D%2583%2503UZi%2588w%25C1h%25A5%25AE%2582Q%25B4%2592%2525%25D2%25C9h%25253p%2517%25A7%25D5%25FE%2512U%2587U%25D4%2512%259C%25CE%258D%25E8%253C%25B3%253BQy%251C%2587U%25EC%251F%25B2%250F%25F1%25FD%2501&action=2');
+                    } else {
+                        window.location.replace('index.php?page=showmessage&session=1e23eaf6c057&actionMsgId=1686398&msg_id=1686370&mids=%253D%2591%25CB%2515%25C30%2508%2504%255B%25E2%2523%2590p%25AA%25C9%25D15%25E4%25A5%25F7%2588%25DD%25C8%25B7%251D%2581a%251E%257E_%251E%25D7%25E7%25BE%25E4u_%259A%252B%25BDV%25A7C%25B3%25DF%258D%2514%2522%25B1%2593%2593%252C%25ABv%251A%25872w%250A%25D0%252C%25B1%25A6%257C%25A8%2527L%25D2%259E%25DAi%253D%25D4%25BB%25EAP%2B%25C9%251F-%25B1L%250F%2506fPgFM%2514%25FC%2560b%25E6x%2510%25CDqpp%253FQU%25B1%2588o1V%25A1%258FR%253E%25CD0%2599V%259E%25B6%251A%258DVV%2505I%25B6%25A4%258D%2511-d%25B4%25D2%2592h%2503%25A3%2595Nc%25F3x%2510%2507%258D%2583%2503UZi%2588w%25C1h%25A5%25AE%2582Q%25B4%2592%2525%25D2%25C9h%25253p%2517%25A7%25D5%25FE%2512U%2587U%25D4%2512%259C%25CE%258D%25E8%253C%25B3%253BQy%251C%2587U%25EC%251F%25B2%250F%25F1%25FD%2501&action=4');
+                    }
+
+                });
+
+                $("#melden").click(function(){
+                    var id = 0;
+                    var id = 1686398;
+                    self.parent.manageErrorbox(id, 1);
+                });
+
+                initCluetipEventlist();
+
+            });
+        </script>
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    </head>
+    <body id="showmessage">
+        <div id="messagebox" class="read">
+            <div id="wrapper">
+                <div id="contentPageNavi"  class="textCenter">
+                    <a class="closeTB" onclick="self.parent.tb_remove();">
+                        <img src="img/layout/pixel.gif" width="16" height="16" />
+                    </a>
+                    <a style="margin-right:10px; text-decoration: none;" href="index.php?page=showmessage&session=1e23eaf6c057&msg_id=1586717&mids=%253D%2591%25CB%2515%25C30%2508%2504%255B%25E2%2523%2590p%25AA%25C9%25D15%25E4%25A5%25F7%2588%25DD%25C8%25B7%251D%2581a%251E%257E_%251E%25D7%25E7%25BE%25E4u_%259A%252B%25BDV%25A7C%25B3%25DF%258D%2514%2522%25B1%2593%2593%252C%25ABv%251A%25872w%250A%25D0%252C%25B1%25A6%257C%25A8%2527L%25D2%259E%25DAi%253D%25D4%25BB%25EAP%2B%25C9%251F-%25B1L%250F%2506fPgFM%2514%25FC%2560b%25E6x%2510%25CDqpp%253FQU%25B1%2588o1V%25A1%258FR%253E%25CD0%2599V%259E%25B6%251A%258DVV%2505I%25B6%25A4%258D%2511-d%25B4%25D2%2592h%2503%25A3%2595Nc%25F3x%2510%2507%258D%2583%2503UZi%2588w%25C1h%25A5%25AE%2582Q%25B4%2592%2525%25D2%25C9h%25253p%2517%25A7%25D5%25FE%2512U%2587U%25D4%2512%259C%25CE%258D%25E8%253C%25B3%253BQy%251C%2587U%25EC%251F%25B2%250F%25F1%25FD%2501">
+                        <img alt="" src="img/icons/rewind.gif" height="16" width="16" style="vertical-align:middle" />
+                    </a>&nbsp;
+                    <strong>1</strong> from <strong>35</strong>&nbsp;
+                    <a style="margin-left:10px; text-decoration: none;" href="index.php?page=showmessage&session=1e23eaf6c057&msg_id=1686370&mids=%253D%2591%25CB%2515%25C30%2508%2504%255B%25E2%2523%2590p%25AA%25C9%25D15%25E4%25A5%25F7%2588%25DD%25C8%25B7%251D%2581a%251E%257E_%251E%25D7%25E7%25BE%25E4u_%259A%252B%25BDV%25A7C%25B3%25DF%258D%2514%2522%25B1%2593%2593%252C%25ABv%251A%25872w%250A%25D0%252C%25B1%25A6%257C%25A8%2527L%25D2%259E%25DAi%253D%25D4%25BB%25EAP%2B%25C9%251F-%25B1L%250F%2506fPgFM%2514%25FC%2560b%25E6x%2510%25CDqpp%253FQU%25B1%2588o1V%25A1%258FR%253E%25CD0%2599V%259E%25B6%251A%258DVV%2505I%25B6%25A4%258D%2511-d%25B4%25D2%2592h%2503%25A3%2595Nc%25F3x%2510%2507%258D%2583%2503UZi%2588w%25C1h%25A5%25AE%2582Q%25B4%2592%2525%25D2%25C9h%25253p%2517%25A7%25D5%25FE%2512U%2587U%25D4%2512%259C%25CE%258D%25E8%253C%25B3%253BQy%251C%2587U%25EC%251F%25B2%250F%25F1%25FD%2501">
+                        <img alt="" src="img/icons/fastforward.gif" height="16" width="16" style="vertical-align:middle" />
+                    </a>
+                </div>
+                <div class="infohead">
+                    <table cellspacing="2" cellpadding="0">
+                        <tr>
+                            <th scope="row">From:</th>
+                            <td>
+                                <span class="playerName">
+                                    Fleet Command                            </span>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">To:</th>
+                            <td>jeffrey</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Subject:</th>
+                            <td>Return of a fleet</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Date:</th>
+                            <td>02.11.2009 07:22:00</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="showMsgNavi">
+                    <ul class="toolbar">
+                        <li class="delete">
+                            <a href="#"
+                               id="2"
+                               class="tips2 action"
+                               title="|Delete this message">
+                                delete                    </a>
+                        </li>
+
+                    </ul>
+                    <div class="clearfloat"></div>
+                </div>
+                <div class="textWrapper">
+
+                    <div class="note">
+                        Your <span class='tips' title='|Small Cargo: 3<br>Light Fighter: 1<br>'>fleet</span> is returning from planet <a onclick="self.parent.tb_remove();"  target="_parent" href="javascript:showGalaxy(2,420,10)" >[2:420:10]</a> to planet Dark City <a onclick="self.parent.tb_remove();"  target="_parent" href="javascript:showGalaxy(2,420,6)" >[2:420:6]</a>.<br><br>The fleet is delivering 5.893 Metal, 4.545 Crystal and 2.035 Deuterium.<br>            <br />
+                                    </div>
+
+                                    </div>
+                                    </div>
+
+                                    </div>
+                                    <script>
+                                        $(document).ready(function(){
+                                            $("div.note p:first").after("<span class=\"seperator\">");
+
+                                            $('#messagebox .answerHeadline').hover(function() {
+                                                $(this).addClass("pushable");
+                                            }, function() {
+                                                $(this).removeClass("pushable");
+                                            });
+                                        });
+                                    </script>
+                                    </body>
+                                    </html>

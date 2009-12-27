@@ -1,0 +1,143 @@
+[2009-12-23 07:10:08,695](INFO)WebAdapter : leestor login successful
+[2009-12-23 07:13:18,811](INFO)WebAdapter : leestor login successful
+[2009-12-23 07:16:25,904](INFO)WebAdapter : leestor login successful
+[2009-12-23 07:19:36,874](INFO)WebAdapter : leestor login successful
+[2009-12-23 07:22:41,977](INFO)WebAdapter : leestor login successful
+[2009-12-23 08:00:02,740](INFO)Master : Welcome, leestor
+[2009-12-23 08:00:02,756](INFO)Master : Connecting to server draco.ogame.org
+[2009-12-23 08:00:06,134](INFO)WebAdapter : leestor login successful
+[2009-12-23 08:00:10,895](DEBUG)WebAdapter : http://draco.ogame.org/game/index.php?page=overview&session=da697fb2e61e&lgn=1
+[2009-12-23 08:00:10,982](INFO)Master : ServerTime: 2009-12-23 01:00:10
+[2009-12-23 08:00:13,808](INFO)Master : Current planet: Planet[GEMINI,[2:422:4]]
+[2009-12-23 08:03:35,121](INFO)WebAdapter : leestor login successful
+[2009-12-23 08:06:46,209](INFO)WebAdapter : leestor login successful
+[2009-12-23 08:10:18,378](INFO)WebAdapter : leestor login successful
+[2009-12-23 09:00:02,428](INFO)Master : Welcome, leestor
+[2009-12-23 09:00:02,442](INFO)Master : Connecting to server draco.ogame.org
+[2009-12-23 09:00:05,699](INFO)WebAdapter : leestor login successful
+[2009-12-23 09:00:10,564](DEBUG)WebAdapter : http://draco.ogame.org/game/index.php?page=overview&session=f24e40771748&lgn=1
+[2009-12-23 09:00:10,577](INFO)Master : ServerTime: 2009-12-23 02:00:10
+[2009-12-23 09:00:13,285](INFO)Master : Current planet: Planet[GEMINI,[2:422:4]]
+[2009-12-23 09:03:33,175](INFO)WebAdapter : leestor login successful
+[2009-12-23 09:06:39,230](INFO)WebAdapter : leestor login successful
+[2009-12-23 09:09:53,299](INFO)WebAdapter : leestor login successful
+[2009-12-23 09:13:04,367](INFO)WebAdapter : leestor login successful
+[2009-12-23 09:16:14,246](INFO)WebAdapter : leestor login successful
+[2009-12-23 09:19:14,196](INFO)WebAdapter : leestor login successful
+[2009-12-23 09:22:18,142](INFO)WebAdapter : leestor login successful
+[2009-12-23 10:00:02,747](INFO)Master : Welcome, leestor
+[2009-12-23 10:00:02,787](INFO)Master : Connecting to server draco.ogame.org
+[2009-12-23 10:00:06,420](INFO)WebAdapter : leestor login successful
+[2009-12-23 10:00:11,213](DEBUG)WebAdapter : http://draco.ogame.org/game/index.php?page=overview&session=2214f4ec6779&lgn=1
+[2009-12-23 10:00:11,240](INFO)Master : ServerTime: 2009-12-23 03:00:11
+[2009-12-23 10:00:13,688](INFO)Master : Current planet: Planet[GEMINI,[2:422:4]]
+[2009-12-23 10:03:29,991](INFO)WebAdapter : leestor login successful
+[2009-12-23 10:06:37,280](INFO)WebAdapter : leestor login successful
+[2009-12-23 10:09:39,863](INFO)WebAdapter : leestor login successful
+[2009-12-23 10:12:45,473](INFO)WebAdapter : leestor login successful
+[2009-12-23 10:15:54,551](INFO)WebAdapter : leestor login successful
+[2009-12-23 10:18:59,743](INFO)WebAdapter : leestor login successful
+[2009-12-23 10:22:07,743](INFO)WebAdapter : leestor login successful
+[2009-12-23 11:00:02,674](INFO)Master : Welcome, leestor
+[2009-12-23 11:00:02,740](INFO)Master : Connecting to server draco.ogame.org
+[2009-12-23 11:00:10,558](INFO)WebAdapter : leestor login successful
+[2009-12-23 11:00:24,425](DEBUG)WebAdapter : http://draco.ogame.org/game/index.php?page=overview&session=e27988514ff3&lgn=1
+[2009-12-23 11:00:24,466](INFO)Master : ServerTime: 2009-12-23 04:00:24
+[2009-12-23 11:00:35,313](INFO)Master : Current planet: Planet[GEMINI,[2:422:4]]
+[2009-12-23 11:03:56,459](INFO)WebAdapter : leestor login successful
+[2009-12-23 11:07:13,477](INFO)WebAdapter : leestor login successful
+[2009-12-23 11:10:24,483](INFO)WebAdapter : leestor login successful
+[2009-12-23 11:13:26,711](INFO)WebAdapter : leestor login successful
+[2009-12-23 11:16:55,822](INFO)WebAdapter : leestor login successful
+[2009-12-23 11:20:05,468](INFO)WebAdapter : leestor login successful
+[2009-12-23 11:23:06,968](INFO)WebAdapter : leestor login successful
+[2009-12-23 12:00:02,193](INFO)Master : Welcome, leestor
+[2009-12-23 12:00:02,231](INFO)Master : Connecting to server draco.ogame.org
+[2009-12-23 12:00:05,745](INFO)WebAdapter : leestor login successful
+[2009-12-23 12:00:10,887](DEBUG)WebAdapter : http://draco.ogame.org/game/index.php?page=overview&session=b22f43fb7a49&lgn=1
+[2009-12-23 12:00:10,899](INFO)Master : ServerTime: 2009-12-23 05:00:10
+[2009-12-23 12:00:13,359](INFO)Master : Current planet: Planet[GEMINI,[2:422:4]]
+[2009-12-23 12:03:24,443](INFO)WebAdapter : leestor login successful
+[2009-12-23 12:06:31,706](INFO)WebAdapter : leestor login successful
+[2009-12-23 12:09:33,632](INFO)WebAdapter : leestor login successful
+[2009-12-23 12:12:39,854](INFO)WebAdapter : leestor login successful
+[2009-12-23 12:18:17,015](INFO)WebAdapter : leestor login successful
+[2009-12-23 12:21:15,108](INFO)WebAdapter : leestor login successful
+[2009-12-23 12:24:17,997](INFO)WebAdapter : leestor login successful
+[2009-12-23 13:00:02,014](INFO)Master : Welcome, leestor
+[2009-12-23 13:00:02,061](INFO)Master : Connecting to server draco.ogame.org
+[2009-12-23 13:00:05,389](INFO)WebAdapter : leestor login successful
+[2009-12-23 13:00:11,181](DEBUG)WebAdapter : http://draco.ogame.org/game/index.php?page=overview&session=bfaef69a874f&lgn=1
+[2009-12-23 13:00:11,192](INFO)Master : ServerTime: 2009-12-23 06:00:11
+[2009-12-23 13:00:15,907](INFO)Master : Current planet: Planet[GEMINI,[2:422:4]]
+[2009-12-23 13:03:51,039](INFO)WebAdapter : leestor login successful
+[2009-12-23 13:07:09,414](INFO)WebAdapter : leestor login successful
+[2009-12-23 13:10:17,808](INFO)WebAdapter : leestor login successful
+[2009-12-23 13:13:19,994](INFO)WebAdapter : leestor login successful
+[2009-12-23 13:16:30,669](INFO)WebAdapter : leestor login successful
+[2009-12-23 13:19:39,381](INFO)WebAdapter : leestor login successful
+[2009-12-23 14:00:04,102](INFO)Master : Welcome, leestor
+[2009-12-23 14:00:04,162](INFO)Master : Connecting to server draco.ogame.org
+[2009-12-23 14:00:07,820](INFO)WebAdapter : leestor login successful
+[2009-12-23 14:00:13,561](DEBUG)WebAdapter : http://draco.ogame.org/game/index.php?page=overview&session=6e2a2abdc796&lgn=1
+[2009-12-23 14:00:13,588](INFO)Master : ServerTime: 2009-12-23 07:00:13
+[2009-12-23 14:00:16,152](INFO)Master : Current planet: Planet[GEMINI,[2:422:4]]
+[2009-12-23 14:03:40,307](INFO)WebAdapter : leestor login successful
+[2009-12-23 14:06:57,115](INFO)WebAdapter : leestor login successful
+[2009-12-23 14:10:10,309](INFO)WebAdapter : leestor login successful
+[2009-12-23 14:13:18,465](INFO)WebAdapter : leestor login successful
+[2009-12-23 14:16:39,164](INFO)WebAdapter : leestor login successful
+[2009-12-23 14:19:57,887](INFO)WebAdapter : leestor login successful
+[2009-12-23 14:23:15,922](INFO)WebAdapter : leestor login successful
+[2009-12-23 15:00:03,412](INFO)Master : Welcome, leestor
+[2009-12-23 15:00:03,462](INFO)Master : Connecting to server draco.ogame.org
+[2009-12-23 15:00:14,303](INFO)WebAdapter : leestor login successful
+[2009-12-23 15:00:19,705](DEBUG)WebAdapter : http://draco.ogame.org/game/index.php?page=overview&session=2243d9ed15ba&lgn=1
+[2009-12-23 15:00:19,728](INFO)Master : ServerTime: 2009-12-23 08:00:19
+[2009-12-23 15:00:22,673](INFO)Master : Current planet: Planet[GEMINI,[2:422:4]]
+[2009-12-23 15:03:48,449](INFO)WebAdapter : leestor login successful
+[2009-12-23 15:09:54,452](INFO)WebAdapter : leestor login successful
+[2009-12-23 15:13:25,342](INFO)WebAdapter : leestor login successful
+[2009-12-23 15:16:46,197](INFO)WebAdapter : leestor login successful
+[2009-12-23 15:20:19,639](INFO)WebAdapter : leestor login successful
+[2009-12-23 15:23:33,689](INFO)WebAdapter : leestor login successful
+[2009-12-23 15:26:58,243](INFO)WebAdapter : leestor login successful
+[2009-12-23 16:00:04,057](INFO)Master : Welcome, leestor
+[2009-12-23 16:00:04,100](INFO)Master : Connecting to server draco.ogame.org
+[2009-12-23 16:00:08,959](INFO)WebAdapter : leestor login successful
+[2009-12-23 16:00:14,692](DEBUG)WebAdapter : http://draco.ogame.org/game/index.php?page=overview&session=ca71300f5447&lgn=1
+[2009-12-23 16:00:14,703](INFO)Master : ServerTime: 2009-12-23 09:00:14
+[2009-12-23 16:00:17,412](INFO)Master : Current planet: Planet[GEMINI,[2:422:4]]
+[2009-12-23 16:03:54,852](INFO)WebAdapter : leestor login successful
+[2009-12-23 16:07:23,130](INFO)WebAdapter : leestor login successful
+[2009-12-23 16:10:43,023](INFO)WebAdapter : leestor login successful
+[2009-12-23 16:14:09,874](INFO)WebAdapter : leestor login successful
+[2009-12-23 16:17:28,228](INFO)WebAdapter : leestor login successful
+[2009-12-23 16:26:35,019](INFO)WebAdapter : leestor login successful
+[2009-12-23 16:30:03,638](INFO)WebAdapter : leestor login successful
+[2009-12-23 17:00:01,902](INFO)Master : Welcome, leestor
+[2009-12-23 17:00:01,934](INFO)Master : Connecting to server draco.ogame.org
+[2009-12-23 17:00:05,301](INFO)WebAdapter : leestor login successful
+[2009-12-23 17:00:10,435](DEBUG)WebAdapter : http://draco.ogame.org/game/index.php?page=overview&session=eefe7484a647&lgn=1
+[2009-12-23 17:00:10,446](INFO)Master : ServerTime: 2009-12-23 10:00:10
+[2009-12-23 17:00:13,757](INFO)Master : Current planet: Planet[GEMINI,[2:422:4]]
+[2009-12-23 17:03:23,734](INFO)WebAdapter : leestor login successful
+[2009-12-23 17:06:45,092](INFO)WebAdapter : leestor login successful
+[2009-12-23 17:09:59,603](INFO)WebAdapter : leestor login successful
+[2009-12-23 17:13:08,865](INFO)WebAdapter : leestor login successful
+[2009-12-23 17:16:24,026](INFO)WebAdapter : leestor login successful
+[2009-12-23 17:19:31,928](INFO)WebAdapter : leestor login successful
+[2009-12-23 17:22:35,018](INFO)WebAdapter : leestor login successful
+[2009-12-23 18:00:02,542](INFO)Master : Welcome, leestor
+[2009-12-23 18:00:02,557](INFO)Master : Connecting to server draco.ogame.org
+[2009-12-23 18:00:05,952](INFO)WebAdapter : leestor login successful
+[2009-12-23 18:00:11,040](DEBUG)WebAdapter : http://draco.ogame.org/game/index.php?page=overview&session=05e128cf7c5e&lgn=1
+[2009-12-23 18:00:11,051](INFO)Master : ServerTime: 2009-12-23 11:00:11
+[2009-12-23 18:00:13,553](INFO)Master : Current planet: Planet[GEMINI,[2:422:4]]
+[2009-12-23 18:03:28,596](INFO)WebAdapter : leestor login successful
+[2009-12-23 18:06:34,840](INFO)WebAdapter : leestor login successful
+[2009-12-23 18:09:38,350](INFO)WebAdapter : leestor login successful
+[2009-12-23 18:12:45,505](INFO)WebAdapter : leestor login successful
+[2009-12-23 18:15:58,392](INFO)WebAdapter : leestor login successful
+[2009-12-23 18:19:08,681](INFO)WebAdapter : leestor login successful
+[2009-12-23 18:22:08,854](INFO)WebAdapter : leestor login successful

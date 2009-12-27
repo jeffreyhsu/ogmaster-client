@@ -1,0 +1,30 @@
+
+username : jeffrey
+password : killjava
+domain : org
+universe : draco
+
+planet : MJ_II
+
+sense:
+  -
+    status : on
+    planet : MJ_II
+    radius : 50
+  -
+    status : off
+    planet : MJ_I
+    radius : 50
+  -
+    status : off
+    planet : This is it
+    radius : 50
+
+spy_conditions:
+    alliances :
+      exclude : [P.R.C., P.L.A., GFW]
+      include : []
+    players :
+      exclude : []
+      include : []
+    rank : 70-1500

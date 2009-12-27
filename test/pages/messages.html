@@ -1,0 +1,496 @@
+<script>
+    var aktPage = 1;
+    var aktCat = 9;
+
+
+    if (!$.isFunction(clickFunction)) {
+        var clickFunction = function() {
+            $(".reiter").removeClass("active");
+            $(this).addClass("active");
+            ajaxLoad($(this).attr("id"), 1);
+        }
+    } else {
+        $(".reiter").unbind('click', clickFunction);
+    }
+    $(".reiter").click(clickFunction);
+
+    $("#checkAll").click(function(){
+        if($(this).attr("checked")){
+            $(".checker").attr({checked: "checked" });
+        }else{
+            $(".checker").removeAttr("checked");
+        }
+    });
+
+    function hide(id)
+    {
+        $("#" + id + "TR").hide();
+    }
+
+    function switchView(id)
+    {
+        if ( $("#" + id + ":hidden").length > 0 ){
+            $("#" + id).show();
+        } else {
+            $("#" + id).hide();
+        }
+    }
+
+    function markAsRead(id)
+    {
+        $("#" + id + "TR").removeClass("new");
+    }
+
+    $(".ajax_thickbox").click(function(){
+        var msg_id = $(this).attr("id");
+        markAsRead(msg_id);
+    });
+
+    $("select").change(function(){
+        $(".buttonOK").show();
+        mod = $("select option:selected").attr("id");
+    });
+
+    $(".del").click(function(){
+        mod = $(this).attr("id");
+    })
+
+    $(".underlined").click(function(){
+        $(".buttonOK").hide();
+    });
+
+
+    $(".deleteIt").click(function(){
+
+        if (mod == 7)
+        {
+            delIds = [];
+            $(":checkbox:checked").each(function() { delIds.push(this.id) });
+            executeAction(delIds, 7);
+        }
+        else if (mod == 10)
+        {
+            delIds = [];
+            $(":checkbox:not(:checked)").each(function() { delIds.push(this.id) });
+            executeAction(delIds, 10);
+
+        }
+        else if (mod == 9)
+        {
+            delIds = [];
+            $(":checkbox").each(function() { delIds.push(this.id) });
+            executeAction(delIds, 9);
+
+        }
+        else if (mod == 1)
+        {
+            delIds = [];
+            executeAction(delIds, 1);
+        }
+        else if (mod == 11)
+        {
+
+            delIds = new Array(5472867,5470363,5470303,5468590,5468153,5468098,5468095,5467821,5467637,5467614,5467576,5467178,5465388,5461599,5460756,5460728);
+
+
+            executeAction(delIds, 11);
+        }
+        else if (mod == 2)
+        {
+            delIds = [];
+            delIds.push($(this).attr("rel"));
+            executeAction(delIds, 2);
+        }
+        else if (mod == 4)
+        {
+            restoreIds = [];
+            restoreIds.push($(this).attr("rel"));
+            executeAction(restoreIds, 4);
+        }
+        else if (mod == 8)
+        {
+            delIds = [];
+            $(":checkbox:checked").each(function() { delIds.push(this.id) });
+            executeAction(delIds, 8);
+        }
+        else if (mod == 12)
+        {
+            delIds = [];
+            $(":checkbox:checked").each(function() { delIds.push(this.id) });
+            executeAction(delIds, 12);
+        }
+        else if (mod == 5)
+        {
+            delIds = [];
+            $(":checkbox:checked").each(function() { delIds.push(this.id) });
+            executeAction(delIds, 5);
+        }
+        else if (mod == 3)
+        {
+            delIds = [];
+            executeAction(delIds, 3);
+        }
+    });
+
+    $(".espionageReport").click(function(){
+        shareEspionageReport(this);
+        return false;
+    });
+
+    reduceMsgCount(aktCat);
+
+    tb_init('a.ajax_thickbox');
+    initCluetipEventlist();
+
+</script>
+
+<form method="POST"
+      name="delMsg"
+      action="index.php?page=messages&session=d1fd0023daf1&displayCategory=9&displayPage=1">
+    <input type="hidden" value="1" id="new_msg_count">
+    <table cellspacing="0" cellpadding="0" class="list" id="mailz">
+        <tbody>
+            <tr class="first">
+                <th class="check">
+                    <input type="checkbox" class="checker" id="checkAll" title="" />
+                </th>
+
+                <th class="from">Sender</th>
+                <th class="subject">Subject</th>
+                <th class="date">Date</th>
+                <th class="action"></th>
+            </tr>
+
+            <tr class="entry trigger new" id="5472867TR">
+                <td class="check">
+                    <input type="checkbox" class="checker" id="5472867" />
+                </td>
+                <td class="from">Fleet Command</td>
+                <td class="subject">
+                    <a class="ajax_thickbox"
+                       id="5472867"
+                       href="index.php?page=showmessage&session=d1fd0023daf1&ajax=1&msg_id=5472867&mids=%253D%25CE%25CB%250D%25C30%250C%2503%25D0%2595D%252B%25FA%25D8%2599%25A6%25C7%25CCPd%25F7%259A%25B6%25DC%259B%251E%2501%2512%25FA%250C%25F8%25F8%253EC%25EEg%25D8%2515-%253D%25E6%2585-Q%25D7y%25B5%2523%25A1t%25C9%25D3%253A%253BW%2509%25B6%25F2%2592%25F4%259C%2597%25FF%25C5%253C%25B6%2522%251B%25D7%25B3%25E4%25CA%25BC%251F%2581%257B%2590%25A2%2505%2527%2580%2522%2582-%25ECw%25DC4%2517%25EB%251FX%25E7%250A%25EA%2521%2509%255B%255D%253Bly%25BF%253F&cat=4&height=500&width=770&TB_iframe=1">
+                        Reaching a planet            </a>
+                </td>
+                <td class="date">10.12.2009 18:12:02</td>
+                <td class="actions" id="test">
+                    <a href="#"
+                       rel="5472867"
+                       class="del tips deleteIt"
+                       title="|Delete this message"
+                       id="2">
+                        <img src="img/icons/trash.gif" width="16" height="16" />
+                    </a>
+
+
+                </td>
+            </tr>
+
+            <tr class="entry trigger " id="5470363TR">
+                <td class="check">
+                    <input type="checkbox" class="checker" id="5470363" />
+                </td>
+                <td class="from">Fleet Command</td>
+                <td class="subject">
+                    <a class="ajax_thickbox"
+                       id="5470363"
+                       href="index.php?page=showmessage&session=d1fd0023daf1&ajax=1&msg_id=5470363&mids=%253D%25CE%25CB%250D%25C30%250C%2503%25D0%2595D%252B%25FA%25D8%2599%25A6%25C7%25CCPd%25F7%259A%25B6%25DC%259B%251E%2501%2512%25FA%250C%25F8%25F8%253EC%25EEg%25D8%2515-%253D%25E6%2585-Q%25D7y%25B5%2523%25A1t%25C9%25D3%253A%253BW%2509%25B6%25F2%2592%25F4%259C%2597%25FF%25C5%253C%25B6%2522%251B%25D7%25B3%25E4%25CA%25BC%251F%2581%257B%2590%25A2%2505%2527%2580%2522%2582-%25ECw%25DC4%2517%25EB%251FX%25E7%250A%25EA%2521%2509%255B%255D%253Bly%25BF%253F&cat=4&height=500&width=770&TB_iframe=1">
+                        Return of a fleet            </a>
+                </td>
+                <td class="date">10.12.2009 17:36:10</td>
+                <td class="actions" id="test">
+                    <a href="#"
+                       rel="5470363"
+                       class="del tips deleteIt"
+                       title="|Delete this message"
+                       id="2">
+                        <img src="img/icons/trash.gif" width="16" height="16" />
+                    </a>
+
+
+                </td>
+            </tr>
+
+            <tr class="entry trigger " id="5470303TR">
+                <td class="check">
+                    <input type="checkbox" class="checker" id="5470303" />
+                </td>
+                <td class="from">Fleet Command</td>
+                <td class="subject">
+                    <a class="ajax_thickbox"
+                       id="5470303"
+                       href="index.php?page=showmessage&session=d1fd0023daf1&ajax=1&msg_id=5470303&mids=%253D%25CE%25CB%250D%25C30%250C%2503%25D0%2595D%252B%25FA%25D8%2599%25A6%25C7%25CCPd%25F7%259A%25B6%25DC%259B%251E%2501%2512%25FA%250C%25F8%25F8%253EC%25EEg%25D8%2515-%253D%25E6%2585-Q%25D7y%25B5%2523%25A1t%25C9%25D3%253A%253BW%2509%25B6%25F2%2592%25F4%259C%2597%25FF%25C5%253C%25B6%2522%251B%25D7%25B3%25E4%25CA%25BC%251F%2581%257B%2590%25A2%2505%2527%2580%2522%2582-%25ECw%25DC4%2517%25EB%251FX%25E7%250A%25EA%2521%2509%255B%255D%253Bly%25BF%253F&cat=4&height=500&width=770&TB_iframe=1">
+                        Return of a fleet            </a>
+                </td>
+                <td class="date">10.12.2009 17:35:16</td>
+                <td class="actions" id="test">
+                    <a href="#"
+                       rel="5470303"
+                       class="del tips deleteIt"
+                       title="|Delete this message"
+                       id="2">
+                        <img src="img/icons/trash.gif" width="16" height="16" />
+                    </a>
+
+
+                </td>
+            </tr>
+
+            <tr class="entry trigger " id="5468590TR">
+                <td class="check">
+                    <input type="checkbox" class="checker" id="5468590" />
+                </td>
+                <td class="from">Fleet Command</td>
+                <td class="subject">
+                    <a class="ajax_thickbox"
+                       id="5468590"
+                       href="index.php?page=showmessage&session=d1fd0023daf1&ajax=1&msg_id=5468590&mids=%253D%25CE%25CB%250D%25C30%250C%2503%25D0%2595D%252B%25FA%25D8%2599%25A6%25C7%25CCPd%25F7%259A%25B6%25DC%259B%251E%2501%2512%25FA%250C%25F8%25F8%253EC%25EEg%25D8%2515-%253D%25E6%2585-Q%25D7y%25B5%2523%25A1t%25C9%25D3%253A%253BW%2509%25B6%25F2%2592%25F4%259C%2597%25FF%25C5%253C%25B6%2522%251B%25D7%25B3%25E4%25CA%25BC%251F%2581%257B%2590%25A2%2505%2527%2580%2522%2582-%25ECw%25DC4%2517%25EB%251FX%25E7%250A%25EA%2521%2509%255B%255D%253Bly%25BF%253F&cat=5&height=500&width=770&TB_iframe=1">
+                        <span class="combatreport_ididattack_iwon">Combat Report [2:323:12] (D: 668.000, A: 0)</span>            </a>
+                </td>
+                <td class="date">10.12.2009 17:08:49</td>
+                <td class="actions" id="test">
+                    <a href="#"
+                       rel="5468590"
+                       class="del tips deleteIt"
+                       title="|Delete this message"
+                       id="2">
+                        <img src="img/icons/trash.gif" width="16" height="16" />
+                    </a>
+
+
+                </td>
+            </tr>
+
+            <tr class="entry trigger " id="5468153TR">
+                <td class="check">
+                    <input type="checkbox" class="checker" id="5468153" />
+                </td>
+                <td class="from">Fleet Command</td>
+                <td class="subject">
+                    <a class="ajax_thickbox"
+                       id="5468153"
+                       href="index.php?page=showmessage&session=d1fd0023daf1&ajax=1&msg_id=5468153&mids=%253D%25CE%25CB%250D%25C30%250C%2503%25D0%2595D%252B%25FA%25D8%2599%25A6%25C7%25CCPd%25F7%259A%25B6%25DC%259B%251E%2501%2512%25FA%250C%25F8%25F8%253EC%25EEg%25D8%2515-%253D%25E6%2585-Q%25D7y%25B5%2523%25A1t%25C9%25D3%253A%253BW%2509%25B6%25F2%2592%25F4%259C%2597%25FF%25C5%253C%25B6%2522%251B%25D7%25B3%25E4%25CA%25BC%251F%2581%257B%2590%25A2%2505%2527%2580%2522%2582-%25ECw%25DC4%2517%25EB%251FX%25E7%250A%25EA%2521%2509%255B%255D%253Bly%25BF%253F&cat=4&height=500&width=770&TB_iframe=1">
+                        Return of a fleet            </a>
+                </td>
+                <td class="date">10.12.2009 17:01:23</td>
+                <td class="actions" id="test">
+                    <a href="#"
+                       rel="5468153"
+                       class="del tips deleteIt"
+                       title="|Delete this message"
+                       id="2">
+                        <img src="img/icons/trash.gif" width="16" height="16" />
+                    </a>
+
+
+                </td>
+            </tr>
+
+            <tr id="5552397TR" class="entry trigger new alt">
+                <td class="check">
+                    <input type="checkbox" id="5552397" class="checker"/>
+                </td>
+                <td class="from">Fleet Command</td>
+                <td class="subject">
+                    <a onclick="switchView('spioDetails_5552397'); return false;" href="#">
+                        Espionage report of XXL [4:147:5]			</a>
+                </td>
+                <td class="date">11.12.2009 15:08:56</td>
+                <td id="test" class="actions">
+                    <a id="2" title="|Delete this message" class="del tips deleteIt" rel="5552397" href="#">
+                        <img height="16" width="16" src="img/icons/trash.gif"/>
+                    </a>
+
+
+                </td>
+            </tr>
+
+            <tr id="spioDetails_5630401">
+                <td colspan="6">
+                    <div id="showSpyReportsNow">
+
+                        <table cellpadding="0" cellspacing="0" class="material spy">
+                            <tr>
+                                <th class="area" colspan="6">Resources at Slave1 <a onclick="self.parent.tb_remove();"  target="_parent" href="javascript:showGalaxy(2,356,8)" >[2:356:8]</a> (Player 'L42') on 12-12 10:48:59</th>
+                            </tr>
+                            <tr class="areadetail">
+                                <td></td>
+                                <td colspan="4">
+                                    <table class="fragment spy2">
+                                        <tbody>
+                                            <tr><td class="item">Metal:</td><td> 48.031</td> <td class="item">Crystal:</td> <td>15.396</td></tr>
+                                            <tr><td class="item">Deuterium:</td><td> 3.972</td> <td class="item">Energy:</td> <td>3.540</td></tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <table cellpadding="0" cellspacing="0" class="aktiv spy">
+                            <tr><th class="area" colspan="6">Activity</th></tr>
+                            <tr>
+                                <td colspan=4>
+                                    <span class="tooltip_sticky" style="display:none;">
+                                        <div class="TTInner" id="TTTechinfo">
+                                            <div class="techHeadline">Activity</div>
+                                            <div class="techDescription">
+                                                Activity means that the scanned player has been active on that planet or another player had fleet contact with the planet you scanned.
+                                            </div>
+
+                                        </div>
+                                    </span>
+                                    Your espionage does not show abnormalities in the atmosphere of the planet. There appears to have been no activity on the planet within the last hour.
+                                </td>
+                            </tr>
+                        </table>
+                        <table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy">
+                            <tr>
+                                <th class="area" colspan="6">fleets</th>
+                            </tr>
+                            <tr>
+                                <td class=key>Small Cargo</td><td class=value>30</td>
+                                <td class=key>Battleship</td><td class=value>1</td>
+                            </tr>
+                            <tr>
+                                <td class=key>Colony Ship</td><td class=value>1</td><td class=key>Espionage Probe</td><td class=value>27</td></tr><td class=key>Solar Satellite</td><td class=value>25</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Defense</th></tr></tr><td class=key>Rocket Launcher</td><td class=value>74</td><td class=key>Light Laser</td><td class=value>119</td></tr><td class=key>Heavy Laser</td><td class=value>5</td><td class=key>Gauss Cannon</td><td class=value>50</td></tr><td class=key>Ion Cannon</td><td class=value>3</td><td class=key>Small Shield Dome</td><td class=value>1</td></tr><td class=key>Large Shield Dome</td><td class=value>1</td><td class=key>Anti-Ballistic Missiles</td><td class=value>30</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Building</th></tr></tr><td class=key>Metal Mine</td><td class=value>22</td><td class=key>Crystal Mine</td><td class=value>17</td></tr><td class=key>Deuterium Synthesizer</td><td class=value>12</td><td class=key>Solar Plant</td><td class=value>20</td></tr><td class=key>Robotics Factory</td><td class=value>5</td><td class=key>Shipyard</td><td class=value>8</td></tr><td class=key>Metal Storage</td><td class=value>7</td><td class=key>Crystal Storage</td><td class=value>6</td></tr><td class=key>Deuterium Tank</td><td class=value>5</td><td class=key>Research Lab</td><td class=value>7</td></tr><td class=key>Missile Silo</td><td class=value>3</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Research</th></tr></tr><td class=key>Espionage Technology</td><td class=value>8</td><td class=key>Computer Technology</td><td class=value>8</td></tr><td class=key>Weapons Technology</td><td class=value>8</td><td class=key>Shielding Technology</td><td class=value>7</td></tr><td class=key>Armour Technology</td><td class=value>7</td><td class=key>Energy Technology</td><td class=value>7</td></tr><td class=key>Hyperspace Technology</td><td class=value>5</td><td class=key>Combustion Drive</td><td class=value>6</td></tr><td class=key>Impulse Drive</td><td class=value>5</td><td class=key>Hyperspace Drive</td><td class=value>4</td></tr><td class=key>Laser Technology</td><td class=value>11</td><td class=key>Ion Technology</td><td class=value>5</td></tr><td class=key>Astrophysics</td><td class=value>7</td></table> <table cellpadding="0" cellspacing="0" class="defenseattack spy">
+
+                            <tr>
+                                <td class="defense textCenter textBeefy" colspan="2">Chance of counter-espionage: 8 %</td>
+                            </tr>
+                            <tr>
+                                <td class="attack" align="center" colspan="2"><a class="buttonSave" target="_parent" href="index.php?page=fleet1&session=04214ce2d0d1&galaxy=2&system=356&position=8&type=1&mission=1"><span>Attack</span></a></td>
+                            </tr>
+                        </table>	    	</div>
+                </td>
+            </tr>
+
+            <tr id="5557462TR" class="entry trigger new">
+                <td class="check">
+                    <input type="checkbox" id="5557462" class="checker"/>
+                </td>
+                <td class="from">Space monitoring</td>
+                <td class="subject">
+                    <a href="index.php?page=showmessage&amp;session=35349f6a7094&amp;ajax=1&amp;msg_id=5557462&amp;mids=%253D%25CC%25C1%250D%25C00%2508%2504%25C1%2596l%25E08%2581%25AB%25C9%25D35D%25E9%253DXD%25F9%25ED%257C%25F6J%25E6%25BDs%25AC%259D%2500h%258E%25AA%25F9K%25AA%25A4%25E5%2580Ui%250B%25D4%25A8%25B2%2596h%25F0%25D4%25A7%25A1%25E7%25E7%25ADi%258C%25F5%25BC&amp;cat=4&amp;height=500&amp;width=770&amp;TB_iframe=1" id="5557462" class="ajax_thickbox">
+                        Espionage action            </a>
+                </td>
+                <td class="date">11.12.2009 16:20:13</td>
+                <td id="test" class="actions">
+                    <a id="2" title="|Delete this message" class="del tips deleteIt" rel="5557462" href="#">
+                        <img height="16" width="16" src="img/icons/trash.gif"/>
+                    </a>
+
+
+                </td>
+            </tr>
+
+            <tr class="entry trigger " id="5467821TR">
+                <td class="check">
+                    <input type="checkbox" class="checker" id="5467821" />
+                </td>
+                <td class="from">Fleet Command</td>
+                <td class="subject">
+                    <a class="ajax_thickbox"
+                       id="5467821"
+                       href="index.php?page=showmessage&session=d1fd0023daf1&ajax=1&msg_id=5467821&mids=%253D%25CE%25CB%250D%25C30%250C%2503%25D0%2595D%252B%25FA%25D8%2599%25A6%25C7%25CCPd%25F7%259A%25B6%25DC%259B%251E%2501%2512%25FA%250C%25F8%25F8%253EC%25EEg%25D8%2515-%253D%25E6%2585-Q%25D7y%25B5%2523%25A1t%25C9%25D3%253A%253BW%2509%25B6%25F2%2592%25F4%259C%2597%25FF%25C5%253C%25B6%2522%251B%25D7%25B3%25E4%25CA%25BC%251F%2581%257B%2590%25A2%2505%2527%2580%2522%2582-%25ECw%25DC4%2517%25EB%251FX%25E7%250A%25EA%2521%2509%255B%255D%253Bly%25BF%253F&cat=5&height=500&width=770&TB_iframe=1">
+                        <span class="combatreport_ididattack_iwon">Combat Report [2:337:6] (D: 680.000, A: 0)</span>            </a>
+                </td>
+                <td class="date">10.12.2009 16:56:25</td>
+                <td class="actions" id="test">
+                    <a href="#"
+                       rel="5467821"
+                       class="del tips deleteIt"
+                       title="|Delete this message"
+                       id="2">
+                        <img src="img/icons/trash.gif" width="16" height="16" />
+                    </a>
+
+
+                </td>
+            </tr>
+
+            <tr class="entry trigger " id="5537375TR">
+                <td class="check">
+                    <input type="checkbox" class="checker" id="5537375" />
+                </td>
+                <td class="from">Dita Thacey</td>
+                <td class="subject">
+                    <a class="ajax_thickbox"
+                       id="5537375"
+                       href="index.php?page=showmessage&session=e7d3aad3b32c&ajax=1&msg_id=5537375&mids=%253D%2592%25C9q%25C40%250C%2504S%2522nR%258E%25C6%25CF%258D%25C1%25B5%25B9%255B%2518r%25F8P%2515%25BAD%250C%259A%25C7%25EFS%25F2%25FC%257D%259E%25F1%25F3y%2522l%25E9%25D4%25B7%2592Me%2515o%25A5%259B2%25D2%25DF%25CA6EeW%257E%25C8%2502%25D5%2521%25D1%25A6%253C4f%25A7%2517%25C9%253Bo%2592%25AC%25ABERL%253F2%25BEV%258F%2510%2521%25CE%25CE%2510%25BD%25D8%25E3%25C4%2588%25F0%2591%2523%25E4saq%255CDr%2512%25ABC%25A5%2588%25DE%2523e%2512%25B5%2585d%255D%25EC6%25A5%25D5D%259B%25D2%25AA%25A2%252B%25A5U9%258E%258CV%2585uJ%25AB%25AC%259E%25A1%25B4J8%252B%25AD2%2590%255C%2517%2511E%25AB4%2B%25AD%2502%25DB7Z%25BD_%2523%25AD%251CGg%25B4r%255C%2581%25D1%25CA1%25D7h%25F5%25FEn%25A4%2595A%25C3he%25D8%259B%25D1J%250B%257F%25E7%25C5%251Ei%25B4R%25F4%253A%25AD%2514%25BAN%252BI%2B%25AD%2504BN%25AB1%253B%25D4i5%250A%258B%25E3b%25A78%25ADF%2502i5%25B0%257D%253FV%25B6f%25A7%25F8%2522%2506%25DA%2506q%251B%2508qoU%252FB%25C8%2588%25FB%250D%251D%252B%259Bs%25A7%2510%25B1%25A3H%25E2%258E%252A%25E2%25BE%25CBy%25113h5%25F1%25E0%2592VU%25DD%259B%25B4%252A%25B4%2525%25AD%250A%2517%2590v%25B1%25AB%25A4U%25E1I%2525%25ADj%2527%25D3%252AG%258FLZ%25C5%25EA%2519I%25AB%25D8%2583h%25158%259C%25A2U%25BC7%25FD%25FD%2507&cat=6&height=500&width=770&TB_iframe=1">
+                        no subject            </a>
+                </td>
+                <td class="date">11.12.2009 11:13:05</td>
+                <td class="actions" id="test">
+                    <a href="#"
+                       rel="5537375"
+                       class="del tips deleteIt"
+                       title="|Delete this message"
+                       id="2">
+                        <img src="img/icons/trash.gif" width="16" height="16" />
+                    </a>
+
+
+                </td>
+            </tr>
+
+
+            <tr class="entry trigger " id="5467614TR">
+                <td class="check">
+                    <input type="checkbox" class="checker" id="5467614" />
+                </td>
+                <td class="from">Fleet Command</td>
+                <td class="subject">
+                    <a class="ajax_thickbox"
+                       id="5467614"
+                       href="index.php?page=showmessage&session=d1fd0023daf1&ajax=1&msg_id=5467614&mids=%253D%25CE%25CB%250D%25C30%250C%2503%25D0%2595D%252B%25FA%25D8%2599%25A6%25C7%25CCPd%25F7%259A%25B6%25DC%259B%251E%2501%2512%25FA%250C%25F8%25F8%253EC%25EEg%25D8%2515-%253D%25E6%2585-Q%25D7y%25B5%2523%25A1t%25C9%25D3%253A%253BW%2509%25B6%25F2%2592%25F4%259C%2597%25FF%25C5%253C%25B6%2522%251B%25D7%25B3%25E4%25CA%25BC%251F%2581%257B%2590%25A2%2505%2527%2580%2522%2582-%25ECw%25DC4%2517%25EB%251FX%25E7%250A%25EA%2521%2509%255B%255D%253Bly%25BF%253F&cat=8&height=500&width=770&TB_iframe=1">
+                        Expedition Result [2:356:16]            </a>
+                </td>
+                <td class="date">10.12.2009 16:53:18</td>
+                <td class="actions" id="test">
+                    <a href="#"
+                       rel="5467614"
+                       class="del tips deleteIt"
+                       title="|Delete this message"
+                       id="2">
+                        <img src="img/icons/trash.gif" width="16" height="16" />
+                    </a>
+
+                </td>
+            </tr>
+
+            <tr class="last">
+                <td align="left" colspan="3">
+                    <select class="choose" name="deletemessages">
+                        <option class="underlined">Select action</option>
+                        <option class="method" id="12">Mark message as read</option>
+                        <option class="method" id="7">Delete marked messages</option>
+                        <option class="method" id="10">Delete all unmarked messages</option>
+                        <option class="method" id="9">Delete shown messages</option>
+                        <option class="method" id="1">Delete all messages</option>
+
+                    </select>
+                    <input type="button" name="submit_" value="Ok" class="buttonOK deleteIt" id="" style="display:none;" />
+                </td>
+                <td colspan="2">
+                    <div class="selectContainer">
+                        <div>
+                            <a><img src="img/icons/skip-back.gif" /></a>
+                            <a><img src="img/icons/rewind.gif" /></a>
+                        </div>
+                        <div class="msgpersite">1 - 10</div>
+                        <div>
+                            <a href="#" onClick="ajaxLoad(9,2);" style="margin-right:2px;" class="changePage"><img src="img/icons/fastforward.gif" /></a>
+                            <a href="#" class="changePage" onClick="ajaxLoad(9,2)"><img src="img/icons/skip.gif" /></a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+<script type="text/javascript">
+    $(document).ready(function(){
+        //JQuery ready is quicker than onload
+        $(".list tr.entry:even").addClass("alt");
+    });
+</script>

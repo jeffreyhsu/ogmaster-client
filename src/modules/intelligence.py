@@ -1,0 +1,77 @@
+# -*- coding: utf-8 -*-
+
+from time import sleep
+
+import app
+from entity import *
+import logging
+import re
+import threading
+import traceback
+from utils import *
+
+class Target(Base):
+
+    __tablename__ = 'ai_target'
+
+    id = Column(Integer, primary_key=True)
+
+    planet_id = Column(Integer)
+    value = Column(Integer)
+
+def analyze_galaxy(datas):
+
+    def valid(row):
+        planet = row['planet']
+        if planet.status != 'colonized':
+            return False
+        if not planet.player:
+            return False
+        return planet.player.can_attack()
+
+    # remove specific alliances and players
+    conditions = app.config['spy_conditions']
+
+    planets_to_spy = []
+    dead_planets = {}
+    dead_planets_query = db.query(Target).filter_by(value=0)
+
+    for d in dead_planets_query:
+        dead_planets[d.planet_id] = d
+
+
+    for row in datas:
+        planet = row['planet']
+        if not valid(row):
+            continue
+
+        # check rank range
+        r = conditions['rank'].split('-')
+        if not (int(r[0]) <= planet.player.rank <= int(r[1])):
+            continue
+
+        # skip dead planets (low resource mine and inactive player)
+        if dead_planets.has_key(planet.id):
+            continue
+
+        # skip specific alliances and players
+        player = planet.player
+        
+        if player.alliance:
+            ally = player.alliance.name
+            if ally in conditions['alliances']['exclude'] and (ally not in conditions['alliances']['include']):
+                continue
+        if player.name in conditions['players']['exclude'] and (player.name not in conditions['players']['include']):
+            continue
+
+        # skip planet has event
+        if row.get('ogevent') and (not planet.player.is_inactive()):
+            continue
+
+        planets_to_spy.append(planet)
+
+    return planets_to_spy
+    
+def analyze_esp_reports():
+
+    pass

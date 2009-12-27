@@ -1,0 +1,1071 @@
+<table cellpadding="0" cellspacing="0" id="galaxytable" border="0">
+    <tr class="info info_header">
+        <td colspan="13">
+            <span id="probes">
+                <span id="probeValue">6</span>
+                Spy probes            </span>
+            <span id="recycler">
+                <span id="recyclerValue">0</span>
+                Recycler            </span>
+            <span id="rockets">
+                <span id="missileValue">0</span>
+                Interplanetary missiles</span>
+            <span id="slots">
+                <span id="slotValue" >
+                    <span id='slotUsed'>1</span>/3                </span>
+                used slots            </span>
+        </td>
+    </tr>
+    <tr id="galaxyheadbg2">
+        <th colspan="3" style="text-align:center; width:74px; overflow:hidden;">Planet</th>
+        <th style="width:161px;">Name</th>
+        <th colspan="2" style="text-align:left; width:48px;">moon</th>
+        <th style="width:34px;">DF</th>
+        <th style="width:151px;">Player (status)</th>
+        <th colspan="2" style="width:106px;">Alliance</th>
+        <th style="width:4px;"></th>
+        <th style="width:72px;">Action</th>
+        <th style="width:4px;"></th>
+    </tr>
+
+    <tr class="row">
+        <td class="spacer01"></td>
+        <td class="position">1</td>
+        <td class="microplanet1"></td>
+        <td class="planetname1">
+            <a class="ajaxTips" href="#" title="|Due to the proximity to sun, collection of solar energy is highly efficient. However, planets in this position tend to be small and provide only small amounts of deuterium.<br>You do not possess sufficient technology. You have to do further research in astrotechnology to colonise a new planet." onClick="errorBoxColonization(); return false;">
+                [Colonization]
+            </a>
+        </td>
+        <td class="moon">
+        </td>
+        <td class="spacer02"></td>
+        <td class="debris">
+        </td>
+        <td class="playername ">
+            <a href="#" class="TTgalaxy" rel="#player">
+                <span class="status_abbr_active"></span>
+            </a>
+            <span class="status"></span>
+            <div id="player" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Player: <span></span></span></h4>
+                    <div class="body" id="TTPlayer">
+                        <ul class="ListLinks">
+                            <li class="rank">Ranking: </li>
+                            <li><a href="index.php?page=writemessage&session=83f745502258&to=&ajax=1&height=500&width=750&TB_iframe=1&modal=true" class="thickbox">Message</a></li>
+                            <li><a href="index.php?page=buddies&session=83f745502258&action=7&buddyId=&ajax=1&height=500&width=770&TB_iframe=1" class="thickbox">Buddy request</a></li>
+                            <li><a href="index.php?page=statistics&session=83f745502258&start=">Statistic</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>                    </td>
+        <td class="spacer03"></td>
+        <td class="allytag">
+        </td>
+        <td class="spacer04"></td>
+        <td class="action" colspan="2">
+            <a></a>
+            <a></a>
+
+            <a></a>
+        </td>
+    </tr>
+    <tr class="row">
+        <td class="spacer01"></td>
+        <td class="position">2</td>
+        <td rel="#planet2" class="TTgalaxy microplanet" style="position:relative;background:url(img/planets/micro/dry_4_1.gif) no-repeat 7px 0;">
+            <div id="planet2" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Planet: <span class="textNormal">Arakis</span></span> </h4>
+                    <div class="body">
+                        <ul class="ListImage">
+                            <li><span id="pos-planet">[1:1:2]</span></li>
+                            <li><img src="img/planets/micro/dry_4_1.gif" alt="" height="30" width="30"/></li>
+                        </ul>
+                        <ul class="ListLinks">
+                            <li><a href="#" onClick="sendShips(6,1,1,2,1,2);return false">Espionage</a></li>
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=2&type=1&mission=1">Attack</a></li>
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=2&type=1&mission=3">Transport</a></li>
+
+
+                        </ul>
+                        <br class="clearfloat"/>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>
+            <span id="ownFleetStatus_2" class="fleetAction" style="position:absolute;" title="">
+                <img src="img/layout/pixel.gif" width="12" height="12" />
+            </span>
+
+        </td>
+        <td class="planetname">
+            Arakis                    </td>
+        <td class="moon">
+            <a href="#" class="TTgalaxy" rel="#moon2"
+               onClick="return false;"
+               >
+                <img src="img/galaxy/moon_a.gif"
+                     width="30"
+                     height="30" />
+            </a>
+            <div id="moon2" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Mond</h4>
+                    <div class="body">
+                        <ul class="ListImage">
+                            <li><span id="pos-moon">[1:1:2]</span></li>
+                            <li><img src="img/galaxy/moon_a.gif" alt="Mond"/></li>
+                            <li><span id="moonsize" title="Diameter of moon in km">4998 km</span></li>
+                        </ul>
+                        <ul class="ListLinks">
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=2&type=3&mission=1">Attack</a></li>
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=2&type=3&mission=3">Transport</a></li>
+
+
+                        </ul>
+                        <br class="clearfloat"/>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>                                </td>
+        <td class="spacer02"></td>
+        <td class="debris">
+        </td>
+        <td class="playername longinactive">
+            <a href="#" class="TTgalaxy" rel="#player1">
+                <span class="status_abbr_longinactive">Legor</span>
+            </a>
+            <span class="status">(<span class='status_abbr_longinactive'><span class="status_abbr_longinactive">I</span></span>)</span>
+            <div id="player1" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Player: <span>Legor</span></span></h4>
+                    <div class="body" id="TTPlayer">
+                        <ul class="ListLinks">
+                            <li class="rank">Ranking: -</li>
+                            <li><a href="index.php?page=writemessage&session=83f745502258&to=1&ajax=1&height=500&width=750&TB_iframe=1&modal=true" class="thickbox">Message</a></li>
+                            <li><a href="index.php?page=buddies&session=83f745502258&action=7&buddyId=1&ajax=1&height=500&width=770&TB_iframe=1" class="thickbox">Buddy request</a></li>
+                            <li><a href="index.php?page=statistics&session=83f745502258&start=-">Statistic</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>                    </td>
+        <td class="spacer03"></td>
+        <td class="allytag">
+        </td>
+        <td class="spacer04"></td>
+        <td class="action" colspan="2">
+            <a class="ajaxTips" title="|Espionage" href="#" onClick="sendShips(6, 1, 1, 2, 1, 2);return false"><img src="img/icons/auge.gif" width="16" height="16" /></a>
+            <a class="ajaxTips thickbox" title="|write message" href="index.php?page=writemessage&session=83f745502258&to=1&ajax=1&height=500&width=750&TB_iframe=1"><img src="img/icons/mail.gif" width="16" height="16" /></a>
+            <a class="ajaxTips thickbox" title="|Buddy request" href="index.php?page=buddies&session=83f745502258&action=7&buddyId=1&ajax=1&height=500&width=770&TB_iframe=1"><img src="img/icons/user.gif" width="16" height="16" /></a>
+
+            <a></a>
+        </td>
+    </tr>
+    <tr class="row">
+        <td class="spacer01"></td>
+        <td class="position">3</td>
+        <td class="microplanet1"></td>
+        <td class="planetname1">
+            <a class="ajaxTips" href="#" title="|Due to the proximity to sun, collection of solar energy is highly efficient. However, planets in this position tend to be small and provide only small amounts of deuterium.<br>You do not possess sufficient technology. You have to do further research in astrotechnology to colonise a new planet." onClick="errorBoxColonization(); return false;">
+                [Colonization]
+            </a>
+        </td>
+        <td class="moon">
+        </td>
+        <td class="spacer02"></td>
+        <td class="debris">
+        </td>
+        <td class="playername ">
+            <a href="#" class="TTgalaxy" rel="#player">
+                <span class="status_abbr_active"></span>
+            </a>
+            <span class="status"></span>
+            <div id="player" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Player: <span></span></span></h4>
+                    <div class="body" id="TTPlayer">
+                        <ul class="ListLinks">
+                            <li class="rank">Ranking: </li>
+                            <li><a href="index.php?page=writemessage&session=83f745502258&to=&ajax=1&height=500&width=750&TB_iframe=1&modal=true" class="thickbox">Message</a></li>
+                            <li><a href="index.php?page=buddies&session=83f745502258&action=7&buddyId=&ajax=1&height=500&width=770&TB_iframe=1" class="thickbox">Buddy request</a></li>
+                            <li><a href="index.php?page=statistics&session=83f745502258&start=">Statistic</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>                    </td>
+        <td class="spacer03"></td>
+        <td class="allytag">
+        </td>
+        <td class="spacer04"></td>
+        <td class="action" colspan="2">
+            <a></a>
+            <a></a>
+
+            <a></a>
+        </td>
+    </tr>
+    <tr class="row">
+        <td class="spacer01"></td>
+        <td class="position">4</td>
+        <td rel="#planet4" class="TTgalaxy microplanet" style="position:relative;background:url(img/planets/micro/normal_6_1.gif) no-repeat 7px 0;">
+            <div id="planet4" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Planet: <span class="textNormal">GameAdmin</span></span> </h4>
+                    <div class="body">
+                        <ul class="ListImage">
+                            <li><span id="pos-planet">[1:1:4]</span></li>
+                            <li><img src="img/planets/micro/normal_6_1.gif" alt="" height="30" width="30"/></li>
+                        </ul>
+                        <ul class="ListLinks">
+                            <li><a href="#" onClick="sendShips(6,1,1,4,1,2);return false">Espionage</a></li>
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=4&type=1&mission=1">Attack</a></li>
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=4&type=1&mission=3">Transport</a></li>
+
+
+                        </ul>
+                        <br class="clearfloat"/>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>
+            <span id="ownFleetStatus_4" class="fleetAction" style="position:absolute;" title="">
+                <img src="img/layout/pixel.gif" width="12" height="12" />
+            </span>
+
+        </td>
+        <td class="planetname">
+            GameAdmin                    </td>
+        <td class="moon">
+        </td>
+        <td class="spacer02"></td>
+        <td class="debris">
+        </td>
+        <td class="playername longinactive">
+            <a href="#" class="TTgalaxy" rel="#player100000">
+                <span class="status_abbr_longinactive">GameAdmin</span>
+            </a>
+            <span class="status">(<span class='status_abbr_longinactive'><span class="status_abbr_longinactive">I</span></span>)</span>
+            <div id="player100000" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Player: <span>GameAdmin</span></span></h4>
+                    <div class="body" id="TTPlayer">
+                        <ul class="ListLinks">
+                            <li class="rank">Ranking: -</li>
+                            <li><a href="index.php?page=writemessage&session=83f745502258&to=100000&ajax=1&height=500&width=750&TB_iframe=1&modal=true" class="thickbox">Message</a></li>
+                            <li><a href="index.php?page=buddies&session=83f745502258&action=7&buddyId=100000&ajax=1&height=500&width=770&TB_iframe=1" class="thickbox">Buddy request</a></li>
+                            <li><a href="index.php?page=statistics&session=83f745502258&start=-">Statistic</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>                    </td>
+        <td class="spacer03"></td>
+        <td class="allytag">
+        </td>
+        <td class="spacer04"></td>
+        <td class="action" colspan="2">
+            <a class="ajaxTips" title="|Espionage" href="#" onClick="sendShips(6, 1, 1, 4, 1, 2);return false"><img src="img/icons/auge.gif" width="16" height="16" /></a>
+            <a class="ajaxTips thickbox" title="|write message" href="index.php?page=writemessage&session=83f745502258&to=100000&ajax=1&height=500&width=750&TB_iframe=1"><img src="img/icons/mail.gif" width="16" height="16" /></a>
+            <a class="ajaxTips thickbox" title="|Buddy request" href="index.php?page=buddies&session=83f745502258&action=7&buddyId=100000&ajax=1&height=500&width=770&TB_iframe=1"><img src="img/icons/user.gif" width="16" height="16" /></a>
+
+            <a></a>
+        </td>
+    </tr>
+    <tr class="row">
+        <td class="spacer01"></td>
+        <td class="position">5</td>
+        <td rel="#planet5" class="TTgalaxy microplanet" style="position:relative;background:url(img/planets/micro/normal_7_1.gif) no-repeat 7px 0;">
+            <div id="planet5" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Planet: <span class="textNormal">Trade Anytime</span></span> Activity: 16m</h4>
+                    <div class="body">
+                        <ul class="ListImage">
+                            <li><span id="pos-planet">[1:1:5]</span></li>
+                            <li><img src="img/planets/micro/normal_7_1.gif" alt="" height="30" width="30"/></li>
+                        </ul>
+                        <ul class="ListLinks">
+                            <li><a href="#" onClick="sendShips(6,1,1,5,1,2);return false">Espionage</a></li>
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=5&type=1&mission=1">Attack</a></li>
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=5&type=1&mission=3">Transport</a></li>
+
+
+                        </ul>
+                        <br class="clearfloat"/>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>
+            <span id="ownFleetStatus_5" class="fleetAction" style="position:absolute;" title="">
+                <img src="img/layout/pixel.gif" width="12" height="12" />
+            </span>
+
+        </td>
+        <td class="planetname">
+            Trade Anytime(<span class='undermark'>16</span>)                    </td>
+        <td class="moon">
+        </td>
+        <td class="spacer02"></td>
+        <td class="debris">
+        </td>
+        <td class="playername ">
+            <a href="#" class="TTgalaxy" rel="#player100004">
+                <span class="status_abbr_active">Merchant</span>
+            </a>
+            <span class="status"></span>
+            <div id="player100004" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Player: <span>Merchant</span></span></h4>
+                    <div class="body" id="TTPlayer">
+                        <ul class="ListLinks">
+                            <li class="rank">Ranking: 363</li>
+                            <li><a href="index.php?page=writemessage&session=83f745502258&to=100004&ajax=1&height=500&width=750&TB_iframe=1&modal=true" class="thickbox">Message</a></li>
+                            <li><a href="index.php?page=buddies&session=83f745502258&action=7&buddyId=100004&ajax=1&height=500&width=770&TB_iframe=1" class="thickbox">Buddy request</a></li>
+                            <li><a href="index.php?page=statistics&session=83f745502258&start=363">Statistic</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>                    </td>
+        <td class="spacer03"></td>
+        <td class="allytag">
+            <span class="allytagwrapper TTgalaxy" rel="#alliance2">Simple<div id="alliance2" style="display: none;">
+                    <div class="TTInner" id="TTWrapper">
+                        <h4><span class="spacing">Alliance Simple</span></h4>
+                        <div id="TTAlly" class="body">
+                            <ul class="ListLinks">
+                                <li class="rank">Rank: 5</li>
+                                <li class="members">Member: 1</li>
+                                <li><a href="ainfo.php?allyid=2" target="_ally">Alliance Page</a></li>
+                                <li><a href="index.php?page=statistics&session=83f745502258&who=ally&start=5">Statistics</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="footer"></div>
+                    </div>
+                </div></span>
+        </td>
+        <td class="spacer04"></td>
+        <td class="action" colspan="2">
+            <a class="ajaxTips" title="|Espionage" href="#" onClick="sendShips(6, 1, 1, 5, 1, 2);return false"><img src="img/icons/auge.gif" width="16" height="16" /></a>
+            <a class="ajaxTips thickbox" title="|write message" href="index.php?page=writemessage&session=83f745502258&to=100004&ajax=1&height=500&width=750&TB_iframe=1"><img src="img/icons/mail.gif" width="16" height="16" /></a>
+            <a class="ajaxTips thickbox" title="|Buddy request" href="index.php?page=buddies&session=83f745502258&action=7&buddyId=100004&ajax=1&height=500&width=770&TB_iframe=1"><img src="img/icons/user.gif" width="16" height="16" /></a>
+
+            <a></a>
+        </td>
+    </tr>
+    <tr class="row">
+        <td class="spacer01"></td>
+        <td class="position">6</td>
+        <td rel="#planet6" class="TTgalaxy microplanet" style="position:relative;background:url(img/planets/micro/jungle_8_1.gif) no-repeat 7px 0;">
+            <div id="planet6" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Planet: <span class="textNormal">Green World</span></span> Activity: 45m</h4>
+                    <div class="body">
+                        <ul class="ListImage">
+                            <li><span id="pos-planet">[1:1:6]</span></li>
+                            <li><img src="img/planets/micro/jungle_8_1.gif" alt="" height="30" width="30"/></li>
+                        </ul>
+                        <ul class="ListLinks">
+                            <li><a href="#" onClick="sendShips(6,1,1,6,1,2);return false">Espionage</a></li>
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=6&type=1&mission=1">Attack</a></li>
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=6&type=1&mission=3">Transport</a></li>
+
+
+                        </ul>
+                        <br class="clearfloat"/>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>
+            <span id="ownFleetStatus_6" class="fleetAction" style="position:absolute;" title="">
+                <img src="img/layout/pixel.gif" width="12" height="12" />
+            </span>
+
+        </td>
+        <td class="planetname">
+            Green World(<span class='undermark'>45</span>)                    </td>
+        <td class="moon">
+        </td>
+        <td class="spacer02"></td>
+        <td class="debris">
+        </td>
+        <td class="playername ">
+            <a href="#" class="TTgalaxy" rel="#player100445">
+                <span class="status_abbr_active">kixu</span>
+            </a>
+            <span class="status"></span>
+            <div id="player100445" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Player: <span>kixu</span></span></h4>
+                    <div class="body" id="TTPlayer">
+                        <ul class="ListLinks">
+                            <li class="rank">Ranking: 628</li>
+                            <li><a href="index.php?page=writemessage&session=83f745502258&to=100445&ajax=1&height=500&width=750&TB_iframe=1&modal=true" class="thickbox">Message</a></li>
+                            <li><a href="index.php?page=buddies&session=83f745502258&action=7&buddyId=100445&ajax=1&height=500&width=770&TB_iframe=1" class="thickbox">Buddy request</a></li>
+                            <li><a href="index.php?page=statistics&session=83f745502258&start=628">Statistic</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>                    </td>
+        <td class="spacer03"></td>
+        <td class="allytag">
+            <span class="allytagwrapper TTgalaxy" rel="#alliance773">STORM<div id="alliance773" style="display: none;">
+                    <div class="TTInner" id="TTWrapper">
+                        <h4><span class="spacing">Alliance STORM</span></h4>
+                        <div id="TTAlly" class="body">
+                            <ul class="ListLinks">
+                                <li class="rank">Rank: 64</li>
+                                <li class="members">Member: 1</li>
+                                <li><a href="ainfo.php?allyid=773" target="_ally">Alliance Page</a></li>
+                                <li><a href="index.php?page=statistics&session=83f745502258&who=ally&start=64">Statistics</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="footer"></div>
+                    </div>
+                </div></span>
+        </td>
+        <td class="spacer04"></td>
+        <td class="action" colspan="2">
+            <a class="ajaxTips" title="|Espionage" href="#" onClick="sendShips(6, 1, 1, 6, 1, 2);return false"><img src="img/icons/auge.gif" width="16" height="16" /></a>
+            <a class="ajaxTips thickbox" title="|write message" href="index.php?page=writemessage&session=83f745502258&to=100445&ajax=1&height=500&width=750&TB_iframe=1"><img src="img/icons/mail.gif" width="16" height="16" /></a>
+            <a class="ajaxTips thickbox" title="|Buddy request" href="index.php?page=buddies&session=83f745502258&action=7&buddyId=100445&ajax=1&height=500&width=770&TB_iframe=1"><img src="img/icons/user.gif" width="16" height="16" /></a>
+
+            <a></a>
+        </td>
+    </tr>
+    <tr class="row">
+        <td class="spacer01"></td>
+        <td class="position">7</td>
+        <td rel="#planet7" class="TTgalaxy microplanet" style="position:relative;background:url(img/planets/micro/jungle_9_1.gif) no-repeat 7px 0;">
+            <div id="planet7" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Planet: <span class="textNormal">Homeworld</span></span> </h4>
+                    <div class="body">
+                        <ul class="ListImage">
+                            <li><span id="pos-planet">[1:1:7]</span></li>
+                            <li><img src="img/planets/micro/jungle_9_1.gif" alt="" height="30" width="30"/></li>
+                        </ul>
+                        <ul class="ListLinks">
+
+
+
+
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=7&type=1&mission=3">Transport</a></li>
+
+
+                        </ul>
+                        <br class="clearfloat"/>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>
+            <span id="ownFleetStatus_7" class="fleetAction" style="position:absolute;" title="">
+                <img src="img/layout/pixel.gif" width="12" height="12" />
+            </span>
+
+        </td>
+        <td class="planetname">
+            Homeworld                    </td>
+        <td class="moon">
+        </td>
+        <td class="spacer02"></td>
+        <td class="debris">
+        </td>
+        <td class="playername noob">
+            <a href="#" class="TTgalaxy" rel="#player110716">
+                <span class="status_abbr_noob">Snortz</span>
+            </a>
+            <span class="status">(<span class='status_abbr_noob'><span class="status_abbr_noob">n</span></span>)</span>
+            <div id="player110716" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Player: <span>Snortz</span></span></h4>
+                    <div class="body" id="TTPlayer">
+                        <ul class="ListLinks">
+                            <li class="rank">Ranking: 7040</li>
+                            <li><a href="index.php?page=writemessage&session=83f745502258&to=110716&ajax=1&height=500&width=750&TB_iframe=1&modal=true" class="thickbox">Message</a></li>
+                            <li><a href="index.php?page=buddies&session=83f745502258&action=7&buddyId=110716&ajax=1&height=500&width=770&TB_iframe=1" class="thickbox">Buddy request</a></li>
+                            <li><a href="index.php?page=statistics&session=83f745502258&start=7040">Statistic</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>                    </td>
+        <td class="spacer03"></td>
+        <td class="allytag">
+        </td>
+        <td class="spacer04"></td>
+        <td class="action" colspan="2">
+            <a class="ajaxTips thickbox" title="|write message" href="index.php?page=writemessage&session=83f745502258&to=110716&ajax=1&height=500&width=750&TB_iframe=1"><img src="img/icons/mail.gif" width="16" height="16" /></a>
+            <a class="ajaxTips thickbox" title="|Buddy request" href="index.php?page=buddies&session=83f745502258&action=7&buddyId=110716&ajax=1&height=500&width=770&TB_iframe=1"><img src="img/icons/user.gif" width="16" height="16" /></a>
+
+            <a></a>
+        </td>
+    </tr>
+    <tr class="row">
+        <td class="spacer01"></td>
+        <td class="position">8</td>
+        <td rel="#planet8" class="TTgalaxy microplanet" style="position:relative;background:url(img/planets/micro/water_10_1.gif) no-repeat 7px 0;">
+            <div id="planet8" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Planet: <span class="textNormal">Heimatplanet</span></span> </h4>
+                    <div class="body">
+                        <ul class="ListImage">
+                            <li><span id="pos-planet">[1:1:8]</span></li>
+                            <li><img src="img/planets/micro/water_10_1.gif" alt="" height="30" width="30"/></li>
+                        </ul>
+                        <ul class="ListLinks">
+
+
+
+
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=8&type=1&mission=3">Transport</a></li>
+
+
+                        </ul>
+                        <br class="clearfloat"/>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>
+            <span id="ownFleetStatus_8" class="fleetAction" style="position:absolute;" title="">
+                <img src="img/layout/pixel.gif" width="12" height="12" />
+            </span>
+
+        </td>
+        <td class="planetname">
+            Heimatplanet                    </td>
+        <td class="moon">
+        </td>
+        <td class="spacer02"></td>
+        <td class="debris">
+        </td>
+        <td class="playername noob">
+            <a href="#" class="TTgalaxy" rel="#player100003">
+                <span class="status_abbr_noob">comagf</span>
+            </a>
+            <span class="status">(<span class='status_abbr_noob'><span class="status_abbr_noob">n</span></span>)</span>
+            <div id="player100003" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Player: <span>comagf</span></span></h4>
+                    <div class="body" id="TTPlayer">
+                        <ul class="ListLinks">
+                            <li class="rank">Ranking: -</li>
+                            <li><a href="index.php?page=writemessage&session=83f745502258&to=100003&ajax=1&height=500&width=750&TB_iframe=1&modal=true" class="thickbox">Message</a></li>
+                            <li><a href="index.php?page=buddies&session=83f745502258&action=7&buddyId=100003&ajax=1&height=500&width=770&TB_iframe=1" class="thickbox">Buddy request</a></li>
+                            <li><a href="index.php?page=statistics&session=83f745502258&start=-">Statistic</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>                    </td>
+        <td class="spacer03"></td>
+        <td class="allytag">
+        </td>
+        <td class="spacer04"></td>
+        <td class="action" colspan="2">
+            <a class="ajaxTips thickbox" title="|write message" href="index.php?page=writemessage&session=83f745502258&to=100003&ajax=1&height=500&width=750&TB_iframe=1"><img src="img/icons/mail.gif" width="16" height="16" /></a>
+            <a class="ajaxTips thickbox" title="|Buddy request" href="index.php?page=buddies&session=83f745502258&action=7&buddyId=100003&ajax=1&height=500&width=770&TB_iframe=1"><img src="img/icons/user.gif" width="16" height="16" /></a>
+
+            <a></a>
+        </td>
+    </tr>
+    <tr class="row">
+        <td class="spacer01"></td>
+        <td class="position">9</td>
+        <td rel="#planet9" class="TTgalaxy microplanet" style="position:relative;background:url(img/planets/micro/water_1_1.gif) no-repeat 7px 0;">
+            <div id="planet9" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Planet: <span class="textNormal">Dreamland</span></span> Activity: 50m</h4>
+                    <div class="body">
+                        <ul class="ListImage">
+                            <li><span id="pos-planet">[1:1:9]</span></li>
+                            <li><img src="img/planets/micro/water_1_1.gif" alt="" height="30" width="30"/></li>
+                        </ul>
+                        <ul class="ListLinks">
+                            <li><a href="#" onClick="sendShips(6,1,1,9,1,2);return false">Espionage</a></li>
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=9&type=1&mission=1">Attack</a></li>
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=9&type=1&mission=3">Transport</a></li>
+
+
+                        </ul>
+                        <br class="clearfloat"/>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>
+            <span id="ownFleetStatus_9" class="fleetAction" style="position:absolute;" title="">
+                <img src="img/layout/pixel.gif" width="12" height="12" />
+            </span>
+
+        </td>
+        <td class="planetname">
+            Dreamland(<span class='undermark'>50</span>)                    </td>
+        <td class="moon">
+        </td>
+        <td class="spacer02"></td>
+        <td class="debris">
+        </td>
+        <td class="playername ">
+            <a href="#" class="TTgalaxy" rel="#player101883">
+                <span class="status_abbr_active">cccp</span>
+            </a>
+            <span class="status"></span>
+            <div id="player101883" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Player: <span>cccp</span></span></h4>
+                    <div class="body" id="TTPlayer">
+                        <ul class="ListLinks">
+                            <li class="rank">Ranking: 617</li>
+                            <li><a href="index.php?page=writemessage&session=83f745502258&to=101883&ajax=1&height=500&width=750&TB_iframe=1&modal=true" class="thickbox">Message</a></li>
+                            <li><a href="index.php?page=buddies&session=83f745502258&action=7&buddyId=101883&ajax=1&height=500&width=770&TB_iframe=1" class="thickbox">Buddy request</a></li>
+                            <li><a href="index.php?page=statistics&session=83f745502258&start=617">Statistic</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>                    </td>
+        <td class="spacer03"></td>
+        <td class="allytag">
+        </td>
+        <td class="spacer04"></td>
+        <td class="action" colspan="2">
+            <a class="ajaxTips" title="|Espionage" href="#" onClick="sendShips(6, 1, 1, 9, 1, 2);return false"><img src="img/icons/auge.gif" width="16" height="16" /></a>
+            <a class="ajaxTips thickbox" title="|write message" href="index.php?page=writemessage&session=83f745502258&to=101883&ajax=1&height=500&width=750&TB_iframe=1"><img src="img/icons/mail.gif" width="16" height="16" /></a>
+            <a class="ajaxTips thickbox" title="|Buddy request" href="index.php?page=buddies&session=83f745502258&action=7&buddyId=101883&ajax=1&height=500&width=770&TB_iframe=1"><img src="img/icons/user.gif" width="16" height="16" /></a>
+
+            <a></a>
+        </td>
+    </tr>
+    <tr class="row">
+        <td class="spacer01"></td>
+        <td class="position">10</td>
+        <td class="microplanet1"></td>
+        <td class="planetname1">
+            <a class="ajaxTips" href="#" title="|Normally, in this Position, there are balanced planets with sufficient sources of deuterium, a good supply of solar energy and enough room for development." onClick="errorBoxColonization(); return false;">
+                [Colonization]
+            </a>
+        </td>
+        <td class="moon">
+        </td>
+        <td class="spacer02"></td>
+        <td class="debris">
+        </td>
+        <td class="playername ">
+            <a href="#" class="TTgalaxy" rel="#player">
+                <span class="status_abbr_active"></span>
+            </a>
+            <span class="status"></span>
+            <div id="player" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Player: <span></span></span></h4>
+                    <div class="body" id="TTPlayer">
+                        <ul class="ListLinks">
+                            <li class="rank">Ranking: </li>
+                            <li><a href="index.php?page=writemessage&session=83f745502258&to=&ajax=1&height=500&width=750&TB_iframe=1&modal=true" class="thickbox">Message</a></li>
+                            <li><a href="index.php?page=buddies&session=83f745502258&action=7&buddyId=&ajax=1&height=500&width=770&TB_iframe=1" class="thickbox">Buddy request</a></li>
+                            <li><a href="index.php?page=statistics&session=83f745502258&start=">Statistic</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>                    </td>
+        <td class="spacer03"></td>
+        <td class="allytag">
+        </td>
+        <td class="spacer04"></td>
+        <td class="action" colspan="2">
+            <a></a>
+            <a></a>
+
+            <a></a>
+        </td>
+    </tr>
+    <tr class="row">
+        <td class="spacer01"></td>
+        <td class="position">11</td>
+        <td rel="#planet11" class="TTgalaxy microplanet" style="position:relative;background:url(img/planets/micro/ice_3_1.gif) no-repeat 7px 0;">
+            <div id="planet11" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Planet: <span class="textNormal">Moj mali sv...</span></span> Activity: 49m</h4>
+                    <div class="body">
+                        <ul class="ListImage">
+                            <li><span id="pos-planet">[1:1:11]</span></li>
+                            <li><img src="img/planets/micro/ice_3_1.gif" alt="" height="30" width="30"/></li>
+                        </ul>
+                        <ul class="ListLinks">
+                            <li><a href="#" onClick="sendShips(6,1,1,11,1,2);return false">Espionage</a></li>
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=11&type=1&mission=1">Attack</a></li>
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=11&type=1&mission=3">Transport</a></li>
+
+
+                        </ul>
+                        <br class="clearfloat"/>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>
+            <span id="ownFleetStatus_11" class="fleetAction" style="position:absolute;" title="">
+                <img src="img/layout/pixel.gif" width="12" height="12" />
+            </span>
+
+        </td>
+        <td class="planetname">
+            Moj mali sv...(<span class='undermark'>49</span>)                    </td>
+        <td class="moon">
+        </td>
+        <td class="spacer02"></td>
+        <td class="debris">
+        </td>
+        <td class="playername ">
+            <a href="#" class="TTgalaxy" rel="#player104329">
+                <span class="status_abbr_active">sasha</span>
+            </a>
+            <span class="status"></span>
+            <div id="player104329" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Player: <span>sasha</span></span></h4>
+                    <div class="body" id="TTPlayer">
+                        <ul class="ListLinks">
+                            <li class="rank">Ranking: 1131</li>
+                            <li><a href="index.php?page=writemessage&session=83f745502258&to=104329&ajax=1&height=500&width=750&TB_iframe=1&modal=true" class="thickbox">Message</a></li>
+                            <li><a href="index.php?page=buddies&session=83f745502258&action=7&buddyId=104329&ajax=1&height=500&width=770&TB_iframe=1" class="thickbox">Buddy request</a></li>
+                            <li><a href="index.php?page=statistics&session=83f745502258&start=1131">Statistic</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>                    </td>
+        <td class="spacer03"></td>
+        <td class="allytag">
+            <span class="allytagwrapper TTgalaxy" rel="#alliance254">TPR<div id="alliance254" style="display: none;">
+                    <div class="TTInner" id="TTWrapper">
+                        <h4><span class="spacing">Alliance TPR</span></h4>
+                        <div id="TTAlly" class="body">
+                            <ul class="ListLinks">
+                                <li class="rank">Rank: 12</li>
+                                <li class="members">Member: 1</li>
+                                <li><a href="ainfo.php?allyid=254" target="_ally">Alliance Page</a></li>
+                                <li><a href="index.php?page=statistics&session=83f745502258&who=ally&start=12">Statistics</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="footer"></div>
+                    </div>
+                </div></span>
+        </td>
+        <td class="spacer04"></td>
+        <td class="action" colspan="2">
+            <a class="ajaxTips" title="|Espionage" href="#" onClick="sendShips(6, 1, 1, 11, 1, 2);return false"><img src="img/icons/auge.gif" width="16" height="16" /></a>
+            <a class="ajaxTips thickbox" title="|write message" href="index.php?page=writemessage&session=83f745502258&to=104329&ajax=1&height=500&width=750&TB_iframe=1"><img src="img/icons/mail.gif" width="16" height="16" /></a>
+            <a class="ajaxTips thickbox" title="|Buddy request" href="index.php?page=buddies&session=83f745502258&action=7&buddyId=104329&ajax=1&height=500&width=770&TB_iframe=1"><img src="img/icons/user.gif" width="16" height="16" /></a>
+
+            <a></a>
+        </td>
+    </tr>
+    <tr class="row">
+        <td class="spacer01"></td>
+        <td class="position">12</td>
+        <td rel="#planet12" class="TTgalaxy microplanet" style="position:relative;background:url(img/planets/micro/gas_4_1.gif) no-repeat 7px 0;">
+            <div id="planet12" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Planet: <span class="textNormal">terraform</span></span> </h4>
+                    <div class="body">
+                        <ul class="ListImage">
+                            <li><span id="pos-planet">[1:1:12]</span></li>
+                            <li><img src="img/planets/micro/gas_4_1.gif" alt="" height="30" width="30"/></li>
+                        </ul>
+                        <ul class="ListLinks">
+                            <li><a href="#" onClick="sendShips(6,1,1,12,1,2);return false">Espionage</a></li>
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=12&type=1&mission=1">Attack</a></li>
+
+
+                            <li><a href="index.php?page=fleet1&session=83f745502258&galaxy=1&system=1&position=12&type=1&mission=3">Transport</a></li>
+
+
+                        </ul>
+                        <br class="clearfloat"/>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>
+            <span id="ownFleetStatus_12" class="fleetAction" style="position:absolute;" title="">
+                <img src="img/layout/pixel.gif" width="12" height="12" />
+            </span>
+
+        </td>
+        <td class="planetname">
+            terraform                    </td>
+        <td class="moon">
+        </td>
+        <td class="spacer02"></td>
+        <td class="debris">
+        </td>
+        <td class="playername vacation
+            inactive
+            banned">
+            <a href="#" class="TTgalaxy" rel="#player106324">
+                <span class="status_abbr_vacation">bookworm2.70</span>
+            </a>
+            <span class="status">(<span class='status_abbr_vacation'><span class="status_abbr_vacation">v</span></span> <span class='status_abbr_inactive'><span class="status_abbr_inactive">i</span></span> <span class='status_abbr_banned'><a href="pranger.php" class="status_abbr_banned" target="_blank">b</a></span>)</span>
+            <div id="player106324" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Player: <span>bookworm2.70</span></span></h4>
+                    <div class="body" id="TTPlayer">
+                        <ul class="ListLinks">
+                            <li class="rank">Ranking: 1</li>
+                            <li><a href="index.php?page=writemessage&session=83f745502258&to=106324&ajax=1&height=500&width=750&TB_iframe=1&modal=true" class="thickbox">Message</a></li>
+                            <li><a href="index.php?page=buddies&session=83f745502258&action=7&buddyId=106324&ajax=1&height=500&width=770&TB_iframe=1" class="thickbox">Buddy request</a></li>
+                            <li><a href="index.php?page=statistics&session=83f745502258&start=1">Statistic</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>                    </td>
+        <td class="spacer03"></td>
+        <td class="allytag">
+        </td>
+        <td class="spacer04"></td>
+        <td class="action" colspan="2">
+            <a class="ajaxTips" title="|Espionage" href="#" onClick="sendShips(6, 1, 1, 12, 1, 2);return false"><img src="img/icons/auge.gif" width="16" height="16" /></a>
+            <a class="ajaxTips thickbox" title="|write message" href="index.php?page=writemessage&session=83f745502258&to=106324&ajax=1&height=500&width=750&TB_iframe=1"><img src="img/icons/mail.gif" width="16" height="16" /></a>
+            <a class="ajaxTips thickbox" title="|Buddy request" href="index.php?page=buddies&session=83f745502258&action=7&buddyId=106324&ajax=1&height=500&width=770&TB_iframe=1"><img src="img/icons/user.gif" width="16" height="16" /></a>
+
+            <a></a>
+        </td>
+    </tr>
+    <tr class="row">
+        <td class="spacer01"></td>
+        <td class="position">13</td>
+        <td class="microplanet1"></td>
+        <td class="planetname1">
+            <a class="ajaxTips" href="#" title="|Due to the vast distance to sun, collection of solar energy is limited. However these planets usually provide significant sources of deuterium.<br>You do not possess sufficient technology. You have to do further research in astrotechnology to colonise a new planet." onClick="errorBoxColonization(); return false;">
+                [Colonization]
+            </a>
+        </td>
+        <td class="moon">
+        </td>
+        <td class="spacer02"></td>
+        <td class="debris">
+        </td>
+        <td class="playername ">
+            <a href="#" class="TTgalaxy" rel="#player">
+                <span class="status_abbr_active"></span>
+            </a>
+            <span class="status"></span>
+            <div id="player" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Player: <span></span></span></h4>
+                    <div class="body" id="TTPlayer">
+                        <ul class="ListLinks">
+                            <li class="rank">Ranking: </li>
+                            <li><a href="index.php?page=writemessage&session=83f745502258&to=&ajax=1&height=500&width=750&TB_iframe=1&modal=true" class="thickbox">Message</a></li>
+                            <li><a href="index.php?page=buddies&session=83f745502258&action=7&buddyId=&ajax=1&height=500&width=770&TB_iframe=1" class="thickbox">Buddy request</a></li>
+                            <li><a href="index.php?page=statistics&session=83f745502258&start=">Statistic</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>                    </td>
+        <td class="spacer03"></td>
+        <td class="allytag">
+        </td>
+        <td class="spacer04"></td>
+        <td class="action" colspan="2">
+            <a></a>
+            <a></a>
+
+            <a></a>
+        </td>
+    </tr>
+    <tr class="row">
+        <td class="spacer01"></td>
+        <td class="position">14</td>
+        <td class="microplanet1"></td>
+        <td class="planetname1">
+            <a class="ajaxTips" href="#" title="|Due to the vast distance to sun, collection of solar energy is limited. However these planets usually provide significant sources of deuterium.<br>You do not possess sufficient technology. You have to do further research in astrotechnology to colonise a new planet." onClick="errorBoxColonization(); return false;">
+                [Colonization]
+            </a>
+        </td>
+        <td class="moon">
+        </td>
+        <td class="spacer02"></td>
+        <td class="debris">
+        </td>
+        <td class="playername ">
+            <a href="#" class="TTgalaxy" rel="#player">
+                <span class="status_abbr_active"></span>
+            </a>
+            <span class="status"></span>
+            <div id="player" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Player: <span></span></span></h4>
+                    <div class="body" id="TTPlayer">
+                        <ul class="ListLinks">
+                            <li class="rank">Ranking: </li>
+                            <li><a href="index.php?page=writemessage&session=83f745502258&to=&ajax=1&height=500&width=750&TB_iframe=1&modal=true" class="thickbox">Message</a></li>
+                            <li><a href="index.php?page=buddies&session=83f745502258&action=7&buddyId=&ajax=1&height=500&width=770&TB_iframe=1" class="thickbox">Buddy request</a></li>
+                            <li><a href="index.php?page=statistics&session=83f745502258&start=">Statistic</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>                    </td>
+        <td class="spacer03"></td>
+        <td class="allytag">
+        </td>
+        <td class="spacer04"></td>
+        <td class="action" colspan="2">
+            <a></a>
+            <a></a>
+
+            <a></a>
+        </td>
+    </tr>
+    <tr class="row">
+        <td class="spacer01"></td>
+        <td class="position">15</td>
+        <td class="microplanet1"></td>
+        <td class="planetname1">
+            <a class="ajaxTips" href="#" title="|Due to the vast distance to sun, collection of solar energy is limited. However these planets usually provide significant sources of deuterium.<br>You do not possess sufficient technology. You have to do further research in astrotechnology to colonise a new planet." onClick="errorBoxColonization(); return false;">
+                [Colonization]
+            </a>
+        </td>
+        <td class="moon">
+        </td>
+        <td class="spacer02"></td>
+        <td class="debris">
+        </td>
+        <td class="playername ">
+            <a href="#" class="TTgalaxy" rel="#player">
+                <span class="status_abbr_active"></span>
+            </a>
+            <span class="status"></span>
+            <div id="player" style="display: none;">
+                <div class="TTInner" id="TTWrapper">
+                    <h4><span class="spacing">Player: <span></span></span></h4>
+                    <div class="body" id="TTPlayer">
+                        <ul class="ListLinks">
+                            <li class="rank">Ranking: </li>
+                            <li><a href="index.php?page=writemessage&session=83f745502258&to=&ajax=1&height=500&width=750&TB_iframe=1&modal=true" class="thickbox">Message</a></li>
+                            <li><a href="index.php?page=buddies&session=83f745502258&action=7&buddyId=&ajax=1&height=500&width=770&TB_iframe=1" class="thickbox">Buddy request</a></li>
+                            <li><a href="index.php?page=statistics&session=83f745502258&start=">Statistic</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>                    </td>
+        <td class="spacer03"></td>
+        <td class="allytag">
+        </td>
+        <td class="spacer04"></td>
+        <td class="action" colspan="2">
+            <a></a>
+            <a></a>
+
+            <a></a>
+        </td>
+    </tr>
+    <tr class="footer" id="fleetstatus">
+        <td colspan="13" id="fleetstatusrow">
+            <!-- will be filled with content later on while processing ajax replys -->
+        </td>
+    </tr>
+    <tr class="info">
+        <td colspan="13">
+            <span id="colonized" style="float:left;">9 Planets colonized</span>
+            <span id="legend" style="float:right; padding:0px 6px 0px">
+                <a href="#" class="TTgalaxy"><img class="legendInfoIcon" src="img/icons/info.gif" /></a>
+            </span>
+            <br class="clearfloat" />
+        </td>
+    </tr>
+
+    <!--    <tr><td colspan="9"><img src="css/iepngfix/opacity.png" /></td></tr>-->
+</table>
+<div id="legendTT" class="hidden">
+    <div class="TTInner">
+        <table cellpadding="0" cellspacing="0" class="legende" width="100">
+            <tr><th colspan="2">Legend</th></tr>
+            <tr class="body">
+                <td class="description">Stronger Player</td>
+                <td class="abbreviation status_abbr_strong">s</td>
+            </tr>
+            <tr class="body">
+                <td class="description">Weaker Player (newbie)</td>
+                <td class="abbreviation status_abbr_noob">n</td>
+            </tr>
+            <tr class="body">
+                <td class="description">Vacation Mode</td>
+                <td class="abbreviation status_abbr_vacation">v</td>
+            </tr>
+            <tr class="body">
+                <td class="description">Banned</td>
+                <td class="abbreviation status_abbr_banned">b</td>
+            </tr>
+            <tr class="body">
+                <td class="description">7 days inactive</td>
+                <td class="abbreviation status_abbr_inactive">i</td>
+            </tr>
+            <tr class="body">
+                <td class="description">28 days inactive</td>
+                <td class="abbreviation status_abbr_longinactive">I</td>
+            </tr>
+            <tr class="footer">
+                <td colspan="2"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#legend').hover(function() {
+            $('#legendTT').addClass('visible');
+            $('#legendTT').removeClass('hidden');
+        }, function() {
+            $('#legendTT').removeClass('visible');
+            $('#legendTT').addClass('hidden');
+        });
+    });
+</script>
+

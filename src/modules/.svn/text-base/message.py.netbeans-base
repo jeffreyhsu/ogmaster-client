@@ -1,0 +1,56 @@
+# -*- coding: utf-8 -*-
+
+from time import sleep
+
+from BeautifulSoup import BeautifulSoup
+from entity import *
+import logging
+import re
+import threading
+import traceback
+from utils import *
+
+def parse_messages(page):
+
+    soup = BeautifulSoup(page)
+
+    messages_html = soup.findAll("tr", {'class':True}, id=True)
+
+    messages = []
+
+    next_page = 0
+    if soup.find("div", "selectContainer"):
+        next = soup.find("a", "changePage", style="margin-right:2px;", href=True)
+        if next:
+            next_page = int(re.search(r'\d,(\d)', next['onclick']).group(1))
+
+    for m in messages_html:
+
+        sender = m.find("td", "from").string.strip()
+
+        date_str = m.find("td", "date").string.strip()
+        sender = m.find("td", "from").string.strip()
+        servertime = parse_time(date_str)
+        subject_p = m.find("td", "subject")
+        subject = subject_p.find("span").string.strip() if subject_p.find('span') else subject_p.find("a").contents[0].strip()
+        # skip own fleet activity
+        if subject in ("Reaching a planet", "Return of a fleet") or subject.startswith('Expedition Result [') or sender == 'Fleet':
+            continue
+
+        link = subject_p.find("a").get('href')
+
+        msg = None
+        
+        if sender == "Space monitoring":
+            msg = Message(type='EspAction', subject=subject, servertime=servertime, content="", link=link, sender='SYSTEM')
+        elif sender == "Fleet Command":
+            if subject.startswith('Combat Report'):
+                msg = Message(type='ComatReport', subject=subject, servertime=servertime, content="", link=link, sender='SYSTEM')
+            elif subject.startswith('Espionage report'):
+                msg = Message(type='SpyReport', subject=subject, servertime=servertime, content="", link=link, sender='SYSTEM')
+        else:
+            msg = Message(type='msg', subject=subject, servertime=servertime, content="", sender=sender)
+
+        messages.append(msg)
+
+    return messages, next_page

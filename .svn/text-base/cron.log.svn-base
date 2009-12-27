@@ -1,0 +1,67 @@
+Sun Dec 20 23:21:06 2009 cron: started with file ./crontab
+Sun Dec 20 23:22:00 2009 ./run.sh -ct
+Sun Dec 20 23:58:48 2009 Adjusted system clock.
+Mon Dec 21 02:07:59 2009 cron: started with file ./crontab
+Mon Dec 21 03:00:00 2009 ./run.sh -ct
+Mon Dec 21 03:25:10 2009 Adjusted system clock.
+Mon Dec 21 04:00:00 2009 ./run.sh -ct
+Mon Dec 21 04:25:07 2009 Adjusted system clock.
+Mon Dec 21 05:00:00 2009 ./run.sh -ct
+Mon Dec 21 05:25:25 2009 Adjusted system clock.
+Mon Dec 21 06:00:00 2009 ./run.sh -ct
+Mon Dec 21 06:24:41 2009 Adjusted system clock.
+Mon Dec 21 07:00:00 2009 ./run.sh -ct
+Mon Dec 21 07:31:05 2009 Adjusted system clock.
+Mon Dec 21 08:00:00 2009 ./run.sh -ct
+Mon Dec 21 08:10:17 2009 Adjusted system clock.
+Mon Dec 21 09:00:00 2009 ./run.sh -ct
+Mon Dec 21 09:22:44 2009 Adjusted system clock.
+Mon Dec 21 10:00:00 2009 ./run.sh -ct
+Mon Dec 21 10:22:38 2009 Adjusted system clock.
+Mon Dec 21 11:00:00 2009 ./run.sh -ct
+Mon Dec 21 11:22:48 2009 Adjusted system clock.
+Mon Dec 21 12:00:00 2009 ./run.sh -ct
+Mon Dec 21 12:22:52 2009 Adjusted system clock.
+Mon Dec 21 13:00:00 2009 ./run.sh -ct
+Mon Dec 21 13:31:23 2009 Adjusted system clock.
+Mon Dec 21 14:00:00 2009 ./run.sh -ct
+Mon Dec 21 14:26:59 2009 Adjusted system clock.
+Mon Dec 21 15:00:00 2009 ./run.sh -ct
+Mon Dec 21 15:25:50 2009 Adjusted system clock.
+Wed Dec 23 01:28:18 2009 cron: started with file ./crontab
+Wed Dec 23 01:29:07 2009 cron: started with file ./crontab
+Wed Dec 23 02:00:00 2009 ./run.sh -ct
+Wed Dec 23 02:24:03 2009 Adjusted system clock.
+Wed Dec 23 03:00:00 2009 ./run.sh -ct
+Wed Dec 23 03:24:23 2009 Adjusted system clock.
+Wed Dec 23 04:00:00 2009 ./run.sh -ct
+Wed Dec 23 04:27:18 2009 Adjusted system clock.
+Wed Dec 23 05:00:00 2009 ./run.sh -ct
+Wed Dec 23 05:23:35 2009 Adjusted system clock.
+Wed Dec 23 06:00:00 2009 ./run.sh -ct
+Wed Dec 23 06:23:30 2009 Adjusted system clock.
+Wed Dec 23 07:00:00 2009 ./run.sh -ct
+Wed Dec 23 07:23:47 2009 Adjusted system clock.
+Wed Dec 23 08:00:00 2009 ./run.sh -ct
+Wed Dec 23 08:10:29 2009 Adjusted system clock.
+Wed Dec 23 09:00:00 2009 ./run.sh -ct
+Wed Dec 23 09:23:14 2009 Adjusted system clock.
+Wed Dec 23 10:00:00 2009 ./run.sh -ct
+Wed Dec 23 10:23:02 2009 Adjusted system clock.
+Wed Dec 23 11:00:00 2009 ./run.sh -ct
+Wed Dec 23 11:23:56 2009 Adjusted system clock.
+Wed Dec 23 11:54:35 2009 cron: started with file ./crontab
+Wed Dec 23 12:00:00 2009 ./run.sh -ct
+Wed Dec 23 12:25:10 2009 Adjusted system clock.
+Wed Dec 23 13:00:00 2009 ./run.sh -ct
+Wed Dec 23 13:25:18 2009 Adjusted system clock.
+Wed Dec 23 14:00:00 2009 ./run.sh -ct
+Wed Dec 23 14:24:45 2009 Adjusted system clock.
+Wed Dec 23 15:00:00 2009 ./run.sh -ct
+Wed Dec 23 15:28:26 2009 Adjusted system clock.
+Wed Dec 23 16:00:00 2009 ./run.sh -ct
+Wed Dec 23 16:31:23 2009 Adjusted system clock.
+Wed Dec 23 17:00:00 2009 ./run.sh -ct
+Wed Dec 23 17:23:32 2009 Adjusted system clock.
+Wed Dec 23 18:00:00 2009 ./run.sh -ct
+Wed Dec 23 18:23:02 2009 Adjusted system clock.

@@ -1,0 +1,329 @@
+# -*- coding:utf-8 -*-
+
+import unittest
+
+from BeautifulSoup import BeautifulSoup
+
+from base import BaseFileTest
+
+import re
+
+import datetime
+from time import strptime
+
+def parse_time(time_str):
+    """
+    >>> parse_time('11.12.2009 11:45:02')
+    datetime.datetime(2009, 12, 11, 11, 45, 2)
+    """
+    return datetime.datetime(*strptime(time_str,"%d.%m.%Y %H:%M:%S")[0:6])
+
+class Test
+
+class TestParseStat(BaseFileTest):
+
+    url = 'pages/stat'
+
+    def testParseStat(self):
+
+        soup = BeautifulSoup(self.content)
+
+#        p = re.compile(r'<td class="position">\w*(\d+)&nbsp;&nbsp;.*?target=\'_ally\'>\[(.+?)\]</a>.*?<td class="score">([\d\.]+)</td>', re.DOTALL)
+
+        print parse_time(soup.find("h3").string.strip()[21:-1])
+
+        opts = soup.find("select").findAll("option")[1:]
+
+        print [int(op['value']) for op in opts]
+
+        trs = soup.find("table", id="ranks").findAll("tr")
+
+        for row in trs[1:]:
+            rank = re.compile('\d+').search(row.find("td", "position").contents[0].strip()).group()
+            name_p = row.find("td", "name")
+            ally_p = name_p.find("span")
+            if ally_p:
+                ally = ally_p.a.string.strip()[1:-1]
+            else:
+                ally = None
+            player_name = name_p.findAll("a")[-1].string.strip()
+            score = row.find("td", "score").string.strip()
+
+            ogameid = re.compile('&to=(\d+)&ajax=1').search(row.find("td", "sendmsg").a['href']).group(1)
+            print rank, player_name, ally, score, ogameid
+
+
+class TestParseOverview(BaseFileTest):
+
+    url = 'pages/overview'
+
+    def testParseOverview(self):
+        soup = BeautifulSoup(self.content)
+
+        home_p = re.compile(r'<span class="planet-name">(.+?)</span>\s*?<span class="planet-koords">\[(.+?)\]</span>', re.DOTALL)
+        colonies_p = re.compile(r'cp=([\d\w]+)".+?<span class="planet-name">(.+?)</span>\s*?<span class="planet-koords">\[(.+?)\]</span>', re.DOTALL)
+
+        home = home_p.findall(self.content)[0]
+        self.assertEqual(home, ('This is it', '2:420:6'))
+
+        colonies = colonies_p.findall(self.content)
+        self.assertEqual(colonies, [('33649009', 'MJ_I', '2:356:5'), ('33647069', 'MJ_II', '2:291:4'), ('33656785', 'MJ_III', '2:151:4')])
+
+class TestParseInbox(BaseFileTest):
+
+    url = 'pages/inbox'
+
+    def testParseInbox(self):
+
+        soup = BeautifulSoup(self.content)
+
+        p = re.compile(r'<a class="ajax_thickbox".*?href=".*?">')
+
+#        print soup.find("table").findAll("tr")[1].find("a", "ajax_thickbox")['href']
+
+
+class TestParseSpyReport(BaseFileTest):
+
+    url = 'pages/spyreport'
+
+    def testParseSpyReport(self):
+
+        soup = BeautifulSoup(self.content)
+        
+        p = re.compile(r'>\[(.*)\]</a> \(Player \'(.*)\'\).*?Metal:</td><td> ([\d\.]+)</td> .*?Crystal:</td> <td>([\d\.]+)</td>.*?Deuterium:</td><td> ([\d\.]+)</td> .*?Energy:</td> <td>([\d\.]+)</td>', re.DOTALL)
+
+        g = p.search(self.content).groups(0)
+
+        self.assertEqual(('2:266:9', 'Missile', '86.945', '111.169', '65.226', '3.815'), g)
+
+        has_fleets = re.compile(r'colspan="6">fleets</th>').search(self.content)
+        has_defense = re.compile(r'colspan="6">Defense</th>').search(self.content)
+        has_building = re.compile(r'colspan="6">Building</th>').search(self.content)
+        has_research = re.compile(r'colspan="6">Research</th>').search(self.content)
+
+        small_cargo = re.compile(r'Small Cargo</td><td class=value>([\d\.]+)</td>')
+        large_cargo = re.compile(r'Large Cargo</td><td class=value>([\d\.]+)</td>')
+        light_fighter = re.compile(r'Light Fighter</td><td class=value>([\d\.]+)</td>')
+        heavy_fighter = re.compile(r'Heavy Fighter</td><td class=value>([\d\.]+)</td>')
+        cruiser = re.compile(r'Cruiser</td><td class=value>([\d\.]+)</td>')
+        recycler = re.compile(r'Recycler</td><td class=value>([\d\.]+)</td>')
+        esp_probe = re.compile(r'Espionage Probe</td><td class=value>([\d\.]+)</td>')
+        solar_satellite = re.compile(r'Solar Satellite</td><td class=value>([\d\.]+)</td>')
+
+        rl = re.compile(r'Rocket Launcher</td><td class=value>([\d\.]+)</td>')
+        ll = re.compile(r'Light Laser</td><td class=value>([\d\.]+)</td>')
+        hl = re.compile(r'Heavy Laser</td><td class=value>([\d\.]+)</td>')
+        gc = re.compile(r'Gauss Cannon</td><td class=value>([\d\.]+)</td>')
+        ssd = re.compile(r'Small Shield Dome</td><td class=value>([\d\.]+)</td>')
+        lsd = re.compile(r'Large Shield Dome</td><td class=value>([\d\.]+)</td>')
+        abm = re.compile(r'Anti-Ballistic Missiles</td><td class=value>([\d\.]+)</td>')
+
+        weapon = re.compile(r'Weapons Technology</td><td class=value>([\d\.]+)</td>')
+        shield = re.compile(r'Shielding Technology</td><td class=value>([\d\.]+)</td>')
+        armour = re.compile(r'Armour Technology</td><td class=value>([\d\.]+)</td>')
+
+        self.assertEqual(51, int(small_cargo.findall(self.content)[0]))
+        self.assertEqual(20, int(large_cargo.findall(self.content)[0]))
+        self.assertEqual(77, int(light_fighter.findall(self.content)[0]))
+        self.assertEqual(55, int(heavy_fighter.findall(self.content)[0]))
+        self.assertEqual(36, int(cruiser.findall(self.content)[0]))
+        self.assertEqual(12, int(recycler.findall(self.content)[0]))
+        self.assertEqual(30, int(esp_probe.findall(self.content)[0]))
+        self.assertEqual(2, int(solar_satellite.findall(self.content)[0]))
+
+        self.assertEqual(120, int(rl.findall(self.content)[0]))
+        self.assertEqual(80, int(ll.findall(self.content)[0]))
+        self.assertEqual(8, int(hl.findall(self.content)[0]))
+        self.assertEqual(7, int(gc.findall(self.content)[0]))
+        self.assertEqual(1, int(ssd.findall(self.content)[0]))
+        self.assertEqual(1, int(lsd.findall(self.content)[0]))
+        self.assertEqual(3, int(abm.findall(self.content)[0]))
+
+        self.assertEqual(6, int(weapon.findall(self.content)[0]))
+        self.assertEqual(6, int(shield.findall(self.content)[0]))
+        self.assertEqual(6, int(armour.findall(self.content)[0]))
+
+class TestParseMessages(BaseFileTest):
+
+    url = 'pages/messages'
+
+    def testParseMessages(self):
+
+        soup = BeautifulSoup(self.content)
+
+        messages = soup.findAll("tr", {'class':True}, id=True)
+
+
+        self.assertEqual(10, len(messages))
+        
+        self.assertEqual('Fleet Command', messages[0].find("td", "from").string.strip())
+        self.assertEqual('5472867', messages[0].find("td", "check").find("input")['id'])
+
+        # check normal fleet command message: Reaching a planet
+        self.assertEqual('Reaching a planet', messages[0].find("a", "ajax_thickbox").contents[0].strip())
+        self.assertEqual("10.12.2009 18:12:02", messages[0].find("td", "date").string.strip())
+
+        # check Combat Report
+        self.assertEqual("Combat Report [2:323:12] (D: 668.000, A: 0)", messages[3].find("a", "ajax_thickbox").contents[1].string.strip())
+
+        # check esp action
+        self.assertEqual("Espionage action", messages[6].find("a", "ajax_thickbox").contents[0].strip())
+
+        # check user message
+        self.assertEqual("Dita Thacey", messages[8].find("td", "from").string.strip())
+        self.assertEqual("no subject", messages[8].find("a", "ajax_thickbox").contents[0].strip())
+
+        # check Expedition
+        self.assertEqual("Expedition Result [2:356:16]", messages[9].find("a", "ajax_thickbox").contents[0].strip())
+
+
+        # get next page
+        self.assertTrue(soup.find("div", "selectContainer"))
+        next = soup.find("a", "changePage", style="margin-right:2px;", href=True)
+        self.assertEqual(u'2', re.search(r'\d,(\d)', next['onclick']).group(1))
+
+class TestParseMessage(BaseFileTest):
+
+    url = 'pages/message'
+
+    def testParseMessage(self):
+
+        soup = BeautifulSoup(self.content)
+
+        # subject:
+        subject_p = re.compile(r'<th scope="row">Subject:</th>\s+<td>(.+?)</td>')
+        self.assertEqual('Return of a fleet', subject_p.findall(self.content)[0])
+
+        # message number
+        p = re.compile(r'<strong>(\d+)</strong> from <strong>(\d+)</strong>&nbsp;')
+        message_no = p.findall(self.content)[0]
+        message_no = [int(n) for n in message_no]
+        self.assertEqual([1, 35], message_no)
+
+        # next message url
+        page_navi = soup.find("div", id="contentPageNavi").findAll("a")
+        prev_url = page_navi[1]['href']
+        next_url = page_navi[2]['href']
+
+        self.assertEqual(prev_url,
+        'index.php?page=showmessage&session=1e23eaf6c057&msg_id=1586717&mids=%253D%2591%25CB%2515%25C30%2508%2504%255B%25E2%2523%2590p%25AA%25C9%25D15%25E4%25A5%25F7%2588%25DD%25C8%25B7%251D%2581a%251E%257E_%251E%25D7%25E7%25BE%25E4u_%259A%252B%25BDV%25A7C%25B3%25DF%258D%2514%2522%25B1%2593%2593%252C%25ABv%251A%25872w%250A%25D0%252C%25B1%25A6%257C%25A8%2527L%25D2%259E%25DAi%253D%25D4%25BB%25EAP%2B%25C9%251F-%25B1L%250F%2506fPgFM%2514%25FC%2560b%25E6x%2510%25CDqpp%253FQU%25B1%2588o1V%25A1%258FR%253E%25CD0%2599V%259E%25B6%251A%258DVV%2505I%25B6%25A4%258D%2511-d%25B4%25D2%2592h%2503%25A3%2595Nc%25F3x%2510%2507%258D%2583%2503UZi%2588w%25C1h%25A5%25AE%2582Q%25B4%2592%2525%25D2%25C9h%25253p%2517%25A7%25D5%25FE%2512U%2587U%25D4%2512%259C%25CE%258D%25E8%253C%25B3%253BQy%251C%2587U%25EC%251F%25B2%250F%25F1%25FD%2501')
+        self.assertEqual(next_url,
+        'index.php?page=showmessage&session=1e23eaf6c057&msg_id=1686370&mids=%253D%2591%25CB%2515%25C30%2508%2504%255B%25E2%2523%2590p%25AA%25C9%25D15%25E4%25A5%25F7%2588%25DD%25C8%25B7%251D%2581a%251E%257E_%251E%25D7%25E7%25BE%25E4u_%259A%252B%25BDV%25A7C%25B3%25DF%258D%2514%2522%25B1%2593%2593%252C%25ABv%251A%25872w%250A%25D0%252C%25B1%25A6%257C%25A8%2527L%25D2%259E%25DAi%253D%25D4%25BB%25EAP%2B%25C9%251F-%25B1L%250F%2506fPgFM%2514%25FC%2560b%25E6x%2510%25CDqpp%253FQU%25B1%2588o1V%25A1%258FR%253E%25CD0%2599V%259E%25B6%251A%258DVV%2505I%25B6%25A4%258D%2511-d%25B4%25D2%2592h%2503%25A3%2595Nc%25F3x%2510%2507%258D%2583%2503UZi%2588w%25C1h%25A5%25AE%2582Q%25B4%2592%2525%25D2%25C9h%25253p%2517%25A7%25D5%25FE%2512U%2587U%25D4%2512%259C%25CE%258D%25E8%253C%25B3%253BQy%251C%2587U%25EC%251F%25B2%250F%25F1%25FD%2501')
+
+
+class TestParseCombatReport(BaseFileTest):
+
+    url = 'pages/combatreport'
+
+    def testParseCombatReport(self):
+
+        soup = BeautifulSoup(self.content)
+
+        # subject:
+        subject_p = re.compile(r'<th scope="row">Subject:</th>\s+<td>(.+?)</td>')
+        self.assertEqual('Combat Report [2:420:10] (D: 0, A: 0)', subject_p.findall(self.content)[0])
+
+#        msg_type = soup.find("h3", "textCenter").string.strip()
+#        self.assertEqual('Combat Report', msg_type)
+
+        # attacker & target
+        p = re.compile(r'<span>(.+) from (.+) <a  target="_parent" href=".*?" >\[(\d+):(\d+):(\d+)\]</a></span>')
+        self.assertTrue(p.findall(self.content))
+
+        winner_p = re.compile(r'<span>\s+Winner: (.+)\s+?</span>')
+        winner = winner_p.findall(self.content)[0]
+        print winner
+
+        loot_p = re.compile(r'<td>\s+([\d\.]+) Metal, ([\d\.]+) Crystal and ([\d\.]+) Deuterium.\s+</td>')
+        print loot_p.findall(self.content)[0]
+
+
+class TestParseFleet(BaseFileTest):
+
+    url = 'pages/fleet'
+
+    def testParseFreeSlog(self):
+        soup = BeautifulSoup(self.content)
+
+        slot = re.compile(r'<span>fleets:</span> (\d+/\d+)                        </div>.*?<span>Expeditions:</span> (\d+/\d+)            </div>', re.DOTALL)
+
+#        print slot.findall(self.content)
+
+
+class TestParseGalaxy(BaseFileTest):
+
+    url = 'pages/galaxy2'
+
+    def testParseGalaxy(self):
+
+        soup = BeautifulSoup(self.content)
+
+        rows = soup.findAll("tr", "row")
+
+        for row in rows:
+
+            pos_p = int(row.find("td", "position").string.strip())
+
+            # 判断是否是空白星球
+            if row.find("td", "microplanet1"):
+                continue
+
+            # 判断是否是摧毁的星球
+            position = row.find("span", id="pos-planet").string.strip()
+
+            player_e = row.find("a", rel=re.compile('#player\d+'))
+            if not player_e:
+                continue
+            else:
+                player_id = player_e['rel'][7:]
+                if player_id == '99999':
+                    continue
+                player_name = player_e.span.string.strip()
+
+            player_rank = row.find("div", id="TTPlayer").find("li", "rank").string.strip()[9:]
+            try:
+                player_rank = int(player_rank)
+            except:
+                player_rank = 0
+
+            pos = row.find("td", "position").string.strip()
+            planetName = row.h4.find("span", "textNormal").string.strip()
+            
+            activity = None
+            activity_e = row.find("span", "undermark")
+            if activity_e:
+                activity = activity_e.string.strip()
+
+            alliance_e = row.find("span", rel=re.compile('#alliance\d+'))
+            alliance,alliance_id = None,None
+            if alliance_e:
+                alliance = alliance_e.contents[0].strip()
+                alliance_id = alliance_e['rel'][9:]
+
+            debris_e = row.find("td", "debris")
+            deb_metal = None
+            deb_crystal = None
+            deb_recyclers = None
+            if debris_e.img:
+                debris_content = debris_e.findAll("li", "debris-content")
+                deb_metal = debris_content[0].string.strip()[7:]
+                deb_crystal = debris_content[1].string.strip()[9:]
+                deb_recyclers = int(debris_e.find("li", "debris-recyclers").string.strip()[18:])
+
+            has_moon, vacation,noob,inactive,long_inactive,banned = False, False,False,False,False,False
+            if row.find("span", "status_abbr_vacation"): vacation = True
+            if row.find("span", "status_abbr_noob"): noob = True
+            if row.find("span", "status_abbr_inactive"): inactive = True
+            if row.find("span", "status_abbr_longinactive"): long_inactive = True
+            if row.find("span", "status_abbr_banned") : banned = True
+
+
+            if row.find("td", "moon").a: has_moon = True
+
+
+            print player_name, noob
+#            print pos, planetName, has_moon, position, activity, player_id, player_name, alliance, alliance_id, vacation, noob, inactive, long_inactive, banned,\
+#                (deb_metal,deb_crystal,deb_recyclers), player_rank
+
+if __name__ == '__main__':
+    unittest.main()

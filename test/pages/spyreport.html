@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/bbcodes.css' media='screen' />
+        <link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/jquery.cluetip.css' media='screen' />
+        <link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/errorbox.css' media='screen' />
+        <link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/jquery.cluetip.css' media='screen' />
+        <link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/thickbox-iframe.css' media='screen' />
+        <link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/thickbox-message.css' media='screen' />
+        <link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/toolbox.css' media='screen' />
+        <script type='text/javascript' src='http://uni104.ogame.org/game/js/jquery.js'></script>
+        <script type='text/javascript' src='http://uni104.ogame.org/game/js/jquery.dimensions.js'></script>
+        <script type='text/javascript' src='http://uni104.ogame.org/game/js/jquery.hoverIntent.js'></script>
+        <script type='text/javascript' src='http://uni104.ogame.org/game/js/jquery.configcluetip.js'></script>
+        <script type='text/javascript' src='http://uni104.ogame.org/game/js/jquery.cluetip.js'></script>
+        <script type='text/javascript' src='http://uni104.ogame.org/game/js/utilities.js'></script>
+        <script type='text/javascript' src='http://uni104.ogame.org/game/js/errorBox.js'></script>
+
+        <script type="text/javascript">
+
+
+            $(document).ready(function() {
+
+
+
+                $(".action").click(function(){
+
+                    var action = $(this).attr('id');
+                    self.parent.$("#5707294TR").hide();
+
+
+                    if(action == 2){
+                        window.location.replace('index.php?page=showmessage&session=258972705d28&actionMsgId=5707294&msg_id=5707289&mids=%253D%2593Kv%25C30%250C%2503%25AF%2524%257ELJ%25C9i%25BA%25CC%2519%25FAz%25F7%2506%25B0%25C1%259D%25C6%2594%2580%25B1%25A3%25FC%25BC%25DA%255E%25BF%259F%25D7z%257F%255EW%259B%25ED%25EA%25EF%25CAD%2509r%25D2%25EAm%25F9%255D%25C5CUx%259E%250F%25F9%25E1J%25B4%25CFwU%25A2D%255E%25DF%2594%2599H%25D8%25A2%2540%25F3%25119%259E%25DB%251AD%2585%2599%25D0p%25D2%257C%2510%2503%250B%25E1%25A2y%250EB%25C6%251E%25A3%258C%25C3%25A8%25126%25A7r%258A%258B%25BD%2592%250A%25A6%25D8%2519D%2587%25CB%252A%2516V.%252B%253F8%25E6%25B2%25F2%25CD%25A9%25AC%25BC%2511%25E5%25B2%25F2%2582%2581_%2583L%2596%2595_DYy%25C2%25C0%25F7%2B%25A7%25B2rv%2584%25AC%25EC%2540%2528de%2509%25A1%2590%2595%25057%25C7%2B7%25CB%25CA%25EE%25A8k%2510%25A1%2521%252B%255B0%2508Y-%25BEo%25ECA%25EC%258B3%25C8%255B%2521%25AB%25C5%258B%2590%25B2Z%258D%25A2%2594%25D5%25A2P%253EVq%250E%250C2%2585%251B%251Dy%250D%25A2%2528k%2590g%257B%2510%251D%25B9%2585%25C5%25A83H%2583%2525%25BC80%25E1m%25EF%2583%2514%251A%25AB%25FB%2507%2590%25D5nV%25CAj%25DF%251F%25A2%2506%25EF%25C1%2BCe%25B5%25EF%25A83%2588%25D0%2592%25D5%25E6%257D.Y%25ED%25C5%25A9%250Fb_%25C9%25AA%250BQ%2595%25830%2528Y5_%25A6d%25D5%258B%257FGYU%2513%25F7%2B%2506u%2506%2511%25DAk%25D0%25DE%257F%25FF&action=2');
+                    } else {
+                        window.location.replace('index.php?page=showmessage&session=258972705d28&actionMsgId=5707294&msg_id=5707289&mids=%253D%2593Kv%25C30%250C%2503%25AF%2524%257ELJ%25C9i%25BA%25CC%2519%25FAz%25F7%2506%25B0%25C1%259D%25C6%2594%2580%25B1%25A3%25FC%25BC%25DA%255E%25BF%259F%25D7z%257F%255EW%259B%25ED%25EA%25EF%25CAD%2509r%25D2%25EAm%25F9%255D%25C5CUx%259E%250F%25F9%25E1J%25B4%25CFwU%25A2D%255E%25DF%2594%2599H%25D8%25A2%2540%25F3%25119%259E%25DB%251AD%2585%2599%25D0p%25D2%257C%2510%2503%250B%25E1%25A2y%250EB%25C6%251E%25A3%258C%25C3%25A8%25126%25A7r%258A%258B%25BD%2592%250A%25A6%25D8%2519D%2587%25CB%252A%2516V.%252B%253F8%25E6%25B2%25F2%25CD%25A9%25AC%25BC%2511%25E5%25B2%25F2%2582%2581_%2583L%2596%2595_DYy%25C2%25C0%25F7%2B%25A7%25B2rv%2584%25AC%25EC%2540%2528de%2509%25A1%2590%2595%25057%25C7%2B7%25CB%25CA%25EE%25A8k%2510%25A1%2521%252B%255B0%2508Y-%25BEo%25ECA%25EC%258B3%25C8%255B%2521%25AB%25C5%258B%2590%25B2Z%258D%25A2%2594%25D5%25A2P%253EVq%250E%250C2%2585%251B%251Dy%250D%25A2%2528k%2590g%257B%2510%251D%25B9%2585%25C5%25A83H%2583%2525%25BC80%25E1m%25EF%2583%2514%251A%25AB%25FB%2507%2590%25D5nV%25CAj%25DF%251F%25A2%2506%25EF%25C1%2BCe%25B5%25EF%25A83%2588%25D0%2592%25D5%25E6%257D.Y%25ED%25C5%25A9%250Fb_%25C9%25AA%250BQ%2595%25830%2528Y5_%25A6d%25D5%258B%257FGYU%2513%25F7%2B%2506u%2506%2511%25DAk%25D0%25DE%257F%25FF&action=4');
+                    }
+
+                });
+
+                $("#melden").click(function(){
+                    var id = 0;
+                    var id = 5707294;
+                    self.parent.manageErrorbox(id, 1);
+                });
+
+                initCluetipEventlist();
+
+            });
+        </script>
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    </head>
+    <body id="showmessage">
+        <div id="messagebox" class="read">
+            <div id="wrapper">
+                <div id="contentPageNavi"  class="textCenter">
+                    <a class="closeTB" onclick="self.parent.tb_remove();">
+                        <img src="img/layout/pixel.gif" width="16" height="16" />
+                    </a>
+                    <a style="margin-right:10px; text-decoration: none;" href="index.php?page=showmessage&session=258972705d28&msg_id=5707662&mids=%253D%2593Kv%25C30%250C%2503%25AF%2524%257ELJ%25C9i%25BA%25CC%2519%25FAz%25F7%2506%25B0%25C1%259D%25C6%2594%2580%25B1%25A3%25FC%25BC%25DA%255E%25BF%259F%25D7z%257F%255EW%259B%25ED%25EA%25EF%25CAD%2509r%25D2%25EAm%25F9%255D%25C5CUx%259E%250F%25F9%25E1J%25B4%25CFwU%25A2D%255E%25DF%2594%2599H%25D8%25A2%2540%25F3%25119%259E%25DB%251AD%2585%2599%25D0p%25D2%257C%2510%2503%250B%25E1%25A2y%250EB%25C6%251E%25A3%258C%25C3%25A8%25126%25A7r%258A%258B%25BD%2592%250A%25A6%25D8%2519D%2587%25CB%252A%2516V.%252B%253F8%25E6%25B2%25F2%25CD%25A9%25AC%25BC%2511%25E5%25B2%25F2%2582%2581_%2583L%2596%2595_DYy%25C2%25C0%25F7%2B%25A7%25B2rv%2584%25AC%25EC%2540%2528de%2509%25A1%2590%2595%25057%25C7%2B7%25CB%25CA%25EE%25A8k%2510%25A1%2521%252B%255B0%2508Y-%25BEo%25ECA%25EC%258B3%25C8%255B%2521%25AB%25C5%258B%2590%25B2Z%258D%25A2%2594%25D5%25A2P%253EVq%250E%250C2%2585%251B%251Dy%250D%25A2%2528k%2590g%257B%2510%251D%25B9%2585%25C5%25A83H%2583%2525%25BC80%25E1m%25EF%2583%2514%251A%25AB%25FB%2507%2590%25D5nV%25CAj%25DF%251F%25A2%2506%25EF%25C1%2BCe%25B5%25EF%25A83%2588%25D0%2592%25D5%25E6%257D.Y%25ED%25C5%25A9%250Fb_%25C9%25AA%250BQ%2595%25830%2528Y5_%25A6d%25D5%258B%257FGYU%2513%25F7%2B%2506u%2506%2511%25DAk%25D0%25DE%257F%25FF">
+                        <img alt="" src="img/icons/rewind.gif" height="16" width="16" style="vertical-align:middle" />
+                    </a>&nbsp;
+                    <strong>5</strong> from <strong>71</strong>&nbsp;
+                    <a style="margin-left:10px; text-decoration: none;" href="index.php?page=showmessage&session=258972705d28&msg_id=5707289&mids=%253D%2593Kv%25C30%250C%2503%25AF%2524%257ELJ%25C9i%25BA%25CC%2519%25FAz%25F7%2506%25B0%25C1%259D%25C6%2594%2580%25B1%25A3%25FC%25BC%25DA%255E%25BF%259F%25D7z%257F%255EW%259B%25ED%25EA%25EF%25CAD%2509r%25D2%25EAm%25F9%255D%25C5CUx%259E%250F%25F9%25E1J%25B4%25CFwU%25A2D%255E%25DF%2594%2599H%25D8%25A2%2540%25F3%25119%259E%25DB%251AD%2585%2599%25D0p%25D2%257C%2510%2503%250B%25E1%25A2y%250EB%25C6%251E%25A3%258C%25C3%25A8%25126%25A7r%258A%258B%25BD%2592%250A%25A6%25D8%2519D%2587%25CB%252A%2516V.%252B%253F8%25E6%25B2%25F2%25CD%25A9%25AC%25BC%2511%25E5%25B2%25F2%2582%2581_%2583L%2596%2595_DYy%25C2%25C0%25F7%2B%25A7%25B2rv%2584%25AC%25EC%2540%2528de%2509%25A1%2590%2595%25057%25C7%2B7%25CB%25CA%25EE%25A8k%2510%25A1%2521%252B%255B0%2508Y-%25BEo%25ECA%25EC%258B3%25C8%255B%2521%25AB%25C5%258B%2590%25B2Z%258D%25A2%2594%25D5%25A2P%253EVq%250E%250C2%2585%251B%251Dy%250D%25A2%2528k%2590g%257B%2510%251D%25B9%2585%25C5%25A83H%2583%2525%25BC80%25E1m%25EF%2583%2514%251A%25AB%25FB%2507%2590%25D5nV%25CAj%25DF%251F%25A2%2506%25EF%25C1%2BCe%25B5%25EF%25A83%2588%25D0%2592%25D5%25E6%257D.Y%25ED%25C5%25A9%250Fb_%25C9%25AA%250BQ%2595%25830%2528Y5_%25A6d%25D5%258B%257FGYU%2513%25F7%2B%2506u%2506%2511%25DAk%25D0%25DE%257F%25FF">
+                        <img alt="" src="img/icons/fastforward.gif" height="16" width="16" style="vertical-align:middle" />
+                    </a>
+                </div>
+                <div class="infohead">
+                    <table cellspacing="2" cellpadding="0">
+                        <tr>
+                            <th scope="row">From:</th>
+                            <td>
+                                <span class="playerName">
+                                    Fleet Command                            </span>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">To:</th>
+                            <td>jeffrey</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Subject:</th>
+                            <td>Espionage report of IRIS [2:266:9]</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Date:</th>
+                            <td>13.12.2009 06:47:26</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="showMsgNavi">
+                    <ul class="toolbar">
+                        <li class="delete">
+                            <a href="#"
+                               id="2"
+                               class="tips2 action"
+                               title="|Delete this message">
+                                delete                    </a>
+                        </li>
+
+                    </ul>
+                    <div class="clearfloat"></div>
+                </div>
+                <div class="textWrapper">
+
+                    <div class="note">
+
+                        <table cellpadding="0" cellspacing="0" class="material spy">
+                            <tr>
+                                <th class="area" colspan="6">Resources at IRIS <a onclick="self.parent.tb_remove();"  target="_parent" href="javascript:showGalaxy(2,266,9)" >[2:266:9]</a> (Player 'Missile') on 12-13 06:47:25</th>
+                            </tr>
+                            <tr class="areadetail">
+                                <td></td>
+                                <td colspan="4">
+                                    <table class="fragment spy2">
+                                        <tbody>
+                                            <tr><td class="item">Metal:</td><td> 86.945</td> <td class="item">Crystal:</td> <td>111.169</td></tr>
+                                            <tr><td class="item">Deuterium:</td><td> 65.226</td> <td class="item">Energy:</td> <td>3.815</td></tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </table><table cellpadding="0" cellspacing="0" class="aktiv spy"><tr><th class="area" colspan="6">Activity</th></tr><TR><TD colspan=4><span class="tooltip_sticky" style="display:none;"><div class="TTInner" id="TTTechinfo"><div class="techHeadline">Activity</div><div class="techDescription">Activity means that the scanned player has been active on that planet or another player had fleet contact with the planet you scanned.</div></div></span>Your espionage does not show abnormalities in the atmosphere of the planet. There appears to have been no activity on the planet within the last hour.</TD></TR></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">fleets</th></tr></tr><td class=key>Small Cargo</td><td class=value>51</td><td class=key>Large Cargo</td><td class=value>20</td></tr><td class=key>Light Fighter</td><td class=value>77</td><td class=key>Heavy Fighter</td><td class=value>55</td></tr><td class=key>Cruiser</td><td class=value>36</td><td class=key>Recycler</td><td class=value>12</td></tr><td class=key>Espionage Probe</td><td class=value>30</td><td class=key>Solar Satellite</td><td class=value>2</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Defense</th></tr></tr><td class=key>Rocket Launcher</td><td class=value>120</td><td class=key>Light Laser</td><td class=value>80</td></tr><td class=key>Heavy Laser</td><td class=value>8</td><td class=key>Gauss Cannon</td><td class=value>7</td></tr><td class=key>Small Shield Dome</td><td class=value>1</td><td class=key>Large Shield Dome</td><td class=value>1</td></tr><td class=key>Anti-Ballistic Missiles</td><td class=value>3</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Building</th></tr></tr><td class=key>Metal Mine</td><td class=value>20</td><td class=key>Crystal Mine</td><td class=value>20</td></tr><td class=key>Deuterium Synthesizer</td><td class=value>14</td><td class=key>Solar Plant</td><td class=value>22</td></tr><td class=key>Fusion Reactor</td><td class=value>4</td><td class=key>Robotics Factory</td><td class=value>6</td></tr><td class=key>Shipyard</td><td class=value>8</td><td class=key>Metal Storage</td><td class=value>7</td></tr><td class=key>Crystal Storage</td><td class=value>6</td><td class=key>Deuterium Tank</td><td class=value>4</td></tr><td class=key>Research Lab</td><td class=value>7</td><td class=key>Missile Silo</td><td class=value>2</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Research</th></tr></tr><td class=key>Espionage Technology</td><td class=value>7</td><td class=key>Computer Technology</td><td class=value>7</td></tr><td class=key>Weapons Technology</td><td class=value>6</td><td class=key>Shielding Technology</td><td class=value>6</td></tr><td class=key>Armour Technology</td><td class=value>6</td><td class=key>Energy Technology</td><td class=value>6</td></tr><td class=key>Hyperspace Technology</td><td class=value>3</td><td class=key>Combustion Drive</td><td class=value>7</td></tr><td class=key>Impulse Drive</td><td class=value>5</td><td class=key>Hyperspace Drive</td><td class=value>2</td></tr><td class=key>Laser Technology</td><td class=value>8</td><td class=key>Ion Technology</td><td class=value>2</td></tr><td class=key>Astrophysics</td><td class=value>3</td></table> <table cellpadding="0" cellspacing="0" class="defenseattack spy">
+                            <tr>
+                                <td class="defense textCenter textBeefy" colspan="2">Chance of counter-espionage: 1 %</td>
+                            </tr>
+                            <tr>
+                                <td class="attack" align="center" colspan="2"><a class="buttonSave" target="_parent" href="index.php?page=fleet1&session=258972705d28&galaxy=2&system=266&position=9&type=1&mission=1"><span>Attack</span></a></td>
+                            </tr>
+                        </table>            <br />
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("div.note p:first").after("<span class=\"seperator\">");
+
+                $('#messagebox .answerHeadline').hover(function() {
+                    $(this).addClass("pushable");
+                }, function() {
+                    $(this).removeClass("pushable");
+                });
+            });
+        </script>
+    </body>
+</html>

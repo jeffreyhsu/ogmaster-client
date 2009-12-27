@@ -1,0 +1,15 @@
+## YAML Template.
+---
+## buildings descriptor:
+# m: metal mine
+# c: crystal mine
+# d: deuterium
+# p: solar plant
+# ms: metal storage
+# cs: crystal storage
+# ds: deuterium storage
+# robot: robitics factory
+# s: shipyard
+# lab: research lab
+
+MJ_V: [p,c,c,c,p,m,m,p,c,c,p,m,c,p,m,c,p,m,c,p,m,c,p,m,c]

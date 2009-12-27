@@ -1,0 +1,65 @@
+## YAML Template.
+---
+building:
+  m:
+    name: Metal Mine
+    type: 1
+    section: resource
+    slot: button1
+  c:
+    name: Crystal Mine
+    type: 2
+    section: resource
+    slot: button2
+  d:
+    name: Deuterium Synthesizer
+    type: 3
+    section: resource
+    slot: button3
+  p:
+    name: Solar Plant
+    type: 4
+    section: resource
+    slot: button4
+  f:
+    name: Fusion Reactor
+    type: 5
+    section: resource
+    slot: button5
+  ms:
+    name: Metal Storage
+    type: 22
+    section: resource
+    slot: button7
+  cs:
+    name: Crystal Storage
+    type: 23
+    section: resource
+    slot: button8
+  dt:
+    name: Deuterium Tank
+    type: 24
+    section: resource
+    slot: button9
+  robot:
+    name: Robotics Factory
+    type: 14
+    section: station
+    slot: button0
+  shipyard:
+    name: Shipyard
+    type: 15
+    section: station
+    slot: button1
+  lab:
+    name: Research Lab
+    type: 16
+    section: station
+    slot: button2
+  nanite:
+    name: Nanite Factory
+    type: 19
+    section: station
+    slot: button5
+
+    

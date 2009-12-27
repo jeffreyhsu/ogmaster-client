@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/11/trunk/ogmaster/src
+END
+common.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/18/trunk/ogmaster/src/common.py
+END
+progressbar.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/17/trunk/ogmaster/src/progressbar.py
+END
+master.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/18/trunk/ogmaster/src/master.py
+END
+refresh.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/11/trunk/ogmaster/src/refresh.py
+END
+setup.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/13/trunk/ogmaster/src/setup.py
+END
+utils.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/18/trunk/ogmaster/src/utils.py
+END
+console.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/17/trunk/ogmaster/src/console.py
+END
+uuidtype.py
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/18/trunk/ogmaster/src/uuidtype.py
+END
+worker.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/11/trunk/ogmaster/src/worker.py
+END
+entity.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/18/trunk/ogmaster/src/entity.py
+END
+webadapter.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/18/trunk/ogmaster/src/webadapter.py
+END
+app.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/17/trunk/ogmaster/src/app.py
+END
+pytzdatetime.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/18/trunk/ogmaster/src/pytzdatetime.py
+END
+gui.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/11/trunk/ogmaster/src/gui.py
+END
+db.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/18/trunk/ogmaster/src/db.py
+END
+spider.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/11/trunk/ogmaster/src/spider.py
+END

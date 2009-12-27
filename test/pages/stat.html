@@ -1,0 +1,3345 @@
+<div class="header">
+    <h3>Statistics (Updated: 18.12.2009 07:26:09)</h3>
+</div>
+<div class="content">
+    <form id="send" name="send" action="index.php?page=statisticsContent&session=7b6cbcb95a81">
+        <input type="hidden" id="who" name="who" value="player" />
+        <input type="hidden" id="type" name="type" value="ressources" />
+        <input type="hidden" id="start_at" name="start_at" value="1" />
+        <input type="hidden" id="sort_per_member" name="sort_per_member" value="0" />
+        <div id="row">
+            <div class="buttons leftCol">
+
+                <a id="player" class="active" href="#" onClick="set_start(-1); set_who('player'); submitForm();">
+                    <img src="img/layout/pixel.gif" height="54" width="54" class="ajaxTips" title="|Show player highscore" />
+                    <span class="textLabel">Show player highscore</span>
+                    <span class="marker"></span>
+                </a>
+                <a id="alliance" class="" href="#" onClick="set_start(-1); set_who('ally'); submitForm();">
+                    <img src="img/layout/pixel.gif" height="54" width="54" class="ajaxTips" title="|Show alliance high score" />
+                    <span class="textLabel">Show alliance high score</span>
+
+                    <span class="marker"></span>
+                </a>
+            </div>
+            <div class="buttons rightCol">
+                <a id="points" class="active" href="#" onClick="set_type('ressources'); set_start(-1); submitForm();">
+                    <img src="img/layout/pixel.gif" height="54" width="54" class="ajaxTips" title="|Show score" />
+                    <span class="textLabel">Show score</span>
+                    <span class="marker"></span>
+
+                </a>
+                <a id="fleet" class="" href="#" onClick="set_type('fleet'); set_start(-1); submitForm();">
+                    <img src="img/layout/pixel.gif" height="54" width="54" class="ajaxTips" title="|Show fleets" />
+                    <span class="textLabel">Show fleets</span>
+                    <span class="marker"></span>
+                </a>
+                <a id="research" class="" href="#" onClick="set_type('research'); set_start(-1); submitForm();">
+                    <img src="img/layout/pixel.gif" height="54" width="54" class="ajaxTips" title="|Show research" />
+                    <span class="textLabel">Show research</span>
+
+                    <span class="marker"></span>
+                </a>
+            </div>
+            <div class="parameter">
+                <span class="position">Position:</span>
+                <select name="start" onChange="set_start(this.value); submitForm();">
+                    <option value="-1" >[Own position]</option>
+                    <option value="1" selected>1-100</option>
+
+                    <option value="101" >101-200</option>
+                    <option value="201" >201-300</option>
+                    <option value="301" >301-400</option>
+                    <option value="401" >401-500</option>
+                    <option value="501" >501-600</option>
+                    <option value="601" >601-700</option>
+
+                    <option value="701" >701-800</option>
+                    <option value="801" >801-900</option>
+                    <option value="901" >901-1000</option>
+                    <option value="1001" >1001-1100</option>
+                    <option value="1101" >1101-1200</option>
+                    <option value="1201" >1201-1300</option>
+
+                    <option value="1301" >1301-1400</option>
+                    <option value="1401" >1401-1500</option>
+                    <option value="1501" >1501-1600</option>
+                    <option value="1601" >1601-1700</option>
+                    <option value="1701" >1701-1800</option>
+                    <option value="1801" >1801-1900</option>
+
+                    <option value="1901" >1901-2000</option>
+                    <option value="2001" >2001-2100</option>
+                    <option value="2101" >2101-2200</option>
+                    <option value="2201" >2201-2300</option>
+                    <option value="2301" >2301-2400</option>
+                    <option value="2401" >2401-2500</option>
+
+                    <option value="2501" >2501-2600</option>
+                    <option value="2601" >2601-2700</option>
+                    <option value="2701" >2701-2800</option>
+                    <option value="2801" >2801-2900</option>
+                    <option value="2901" >2901-3000</option>
+                    <option value="3001" >3001-3100</option>
+
+                    <option value="3101" >3101-3200</option>
+                    <option value="3201" >3201-3300</option>
+                    <option value="3301" >3301-3400</option>
+                    <option value="3401" >3401-3500</option>
+                    <option value="3501" >3501-3600</option>
+                    <option value="3601" >3601-3700</option>
+
+                    <option value="3701" >3701-3800</option>
+                    <option value="3801" >3801-3900</option>
+                    <option value="3901" >3901-4000</option>
+                    <option value="4001" >4001-4100</option>
+                    <option value="4101" >4101-4200</option>
+                    <option value="4201" >4201-4300</option>
+
+                    <option value="4301" >4301-4400</option>
+                    <option value="4401" >4401-4500</option>
+                    <option value="4501" >4501-4600</option>
+                    <option value="4601" >4601-4700</option>
+                    <option value="4701" >4701-4800</option>
+                    <option value="4801" >4801-4900</option>
+
+                    <option value="4901" >4901-5000</option>
+                    <option value="5001" >5001-5100</option>
+                    <option value="5101" >5101-5200</option>
+                    <option value="5201" >5201-5300</option>
+                    <option value="5301" >5301-5400</option>
+                    <option value="5401" >5401-5500</option>
+
+                    <option value="5501" >5501-5600</option>
+                    <option value="5601" >5601-5700</option>
+                    <option value="5701" >5701-5800</option>
+                    <option value="5801" >5801-5900</option>
+                    <option value="5901" >5901-6000</option>
+                    <option value="6001" >6001-6100</option>
+
+                    <option value="6101" >6101-6200</option>
+                    <option value="6201" >6201-6300</option>
+                    <option value="6301" >6301-6400</option>
+                    <option value="6401" >6401-6500</option>
+                    <option value="6501" >6501-6600</option>
+                    <option value="6601" >6601-6700</option>
+
+                    <option value="6701" >6701-6800</option>
+                    <option value="6801" >6801-6900</option>
+                    <option value="6901" >6901-7000</option>
+                    <option value="7001" >7001-7100</option>
+                    <option value="7101" >7101-7200</option>
+                    <option value="7201" >7201-7300</option>
+
+                    <option value="7301" >7301-7400</option>
+                    <option value="7401" >7401-7500</option>
+                    <option value="7501" >7501-7600</option>
+                    <option value="7601" >7601-7700</option>
+                    <option value="7701" >7701-7800</option>
+                    <option value="7801" >7801-7900</option>
+
+                </select>
+            </div>
+            <br class="clearfloat" />
+        </div>
+        <div class="leftcol">
+            <div id="claim">
+                PLAYERHIGHSCORE Place 1-100    </div>
+
+            <table cellpadding="0" cellspacing="0" id="ranks" >
+
+                <tbody>
+
+                    <tr>
+                        <th class="position col1">Rank</th>
+                        <th class="name col2">Player</th>
+                        <th class="name col2"></th>
+                        <th class="score col5">Points</th>
+                    </tr>
+
+                    <tr class="alt"">
+
+                        <!-- rank -->
+                        <td class="position">
+                            1&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=49" target='_ally'>[Colour]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=73&position=7" >redari</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100503&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            125.213
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            2&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=129&position=5" >Catastrophe</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=104543&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            116.137
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            3&nbsp;&nbsp;
+
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=30" target='_ally'>[A A]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=38&position=7" >Santa Priest</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100260&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            107.807
+
+                        </td>
+                    </tr>
+
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            4&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=49" target='_ally'>[Colour]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=29&position=5" >Togo Heihachiro</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100196&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            101.852
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            5&nbsp;&nbsp;
+
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=2" target='_ally'>[Simple]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=55&position=7" >lastson</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100378&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            95.247
+
+                        </td>
+                    </tr>
+
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            6&nbsp;&nbsp;
+                            <span class='undermark' title="+1"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=2" target='_ally'>[Simple]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=284&position=9" >REDRPM</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101970&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            92.978
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            7&nbsp;&nbsp;
+
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=899" target='_ally'>[P.L.A.]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=104&position=9" >Death Knight</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100719&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            92.025
+
+                        </td>
+                    </tr>
+
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            8&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=30" target='_ally'>[A A]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=186&position=12" >Rore</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101289&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            88.532
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            9&nbsp;&nbsp;
+
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=49" target='_ally'>[Colour]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=148&position=4" >Gold</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101020&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            84.726
+
+                        </td>
+                    </tr>
+
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            10&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=181" target='_ally'>[B.R]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=266&position=8" >salsal</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101840&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            82.508
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            11&nbsp;&nbsp;
+
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=8" target='_ally'>[P.R.C.]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=20&position=9" >gxy</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=103604&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            75.400
+
+                        </td>
+                    </tr>
+
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            12&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=2" target='_ally'>[Simple]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=46&position=10" >bird</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100319&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            74.995
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            13&nbsp;&nbsp;
+
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=30" target='_ally'>[A A]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=101&position=9" >Smokey</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100699&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            71.065
+
+                        </td>
+                    </tr>
+
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            14&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=30" target='_ally'>[A A]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=51&position=7" >Ikaros</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100351&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            70.422
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            15&nbsp;&nbsp;
+
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=181" target='_ally'>[B.R]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=336&position=6" >Francis Drake</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=102328&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            68.732
+
+                        </td>
+                    </tr>
+
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            16&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=49" target='_ally'>[Colour]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=6&position=4" >Hona</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100036&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            66.128
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            17&nbsp;&nbsp;
+
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=181" target='_ally'>[B.R]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=36&position=11" >airmonky</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100249&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            63.242
+
+                        </td>
+                    </tr>
+
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            18&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=49" target='_ally'>[Colour]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=417&position=11" >twin</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=102892&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            62.850
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            19&nbsp;&nbsp;
+
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=151" target='_ally'>[INYEON]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=71&position=12" >Musel</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100493&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            62.021
+
+                        </td>
+                    </tr>
+
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            20&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=1036" target='_ally'>[Rev]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=196&position=8" >Luffy</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=105010&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            61.245
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            21&nbsp;&nbsp;
+
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=61&position=7" >Poker Face</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=103886&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            59.720
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+
+                        <td class="position">
+                            22&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=74" target='_ally'>[LuLzies]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=127&position=9" >Bradius</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100879&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            59.505
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            23&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=181" target='_ally'>[B.R]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=337&position=7" >black pearl</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=102335&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            58.709
+
+                        </td>
+                    </tr>
+                    <tr">
+
+                        <!-- rank -->
+                        <td class="position">
+                            24&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=74" target='_ally'>[LuLzies]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=127&position=4" >Graf Zahl</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100875&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            56.880
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            25&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=181" target='_ally'>[B.R]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=299&position=10" >DR_J</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=102075&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            56.275
+
+                        </td>
+                    </tr>
+                    <tr">
+
+                        <!-- rank -->
+                        <td class="position">
+                            26&nbsp;&nbsp;
+                            <span class='undermark' title="+1"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=2" target='_ally'>[Simple]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=77&position=9" >Simple</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100533&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            56.170
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            27&nbsp;&nbsp;
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=2" target='_ally'>[Simple]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=98&position=6" >raians</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100676&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            55.521
+
+                        </td>
+                    </tr>
+                    <tr">
+
+                        <!-- rank -->
+                        <td class="position">
+                            28&nbsp;&nbsp;
+                            <span class='undermark' title="+1"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=30" target='_ally'>[A A]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=413&position=9" >BloodY</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=107811&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            54.790
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            29&nbsp;&nbsp;
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=45&position=6" >GoodNight</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=103775&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            54.737
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            30&nbsp;&nbsp;
+
+                            <span class='undermark' title="+2"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=899" target='_ally'>[P.L.A.]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=126&position=5" >Merry Xmas!</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100869&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            53.744
+
+                        </td>
+                    </tr>
+
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            31&nbsp;&nbsp;
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=30" target='_ally'>[A A]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=278&position=7" >Awsome</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101926&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            53.708
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            32&nbsp;&nbsp;
+
+                            <span class='undermark' title="+1"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=899" target='_ally'>[P.L.A.]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=198&position=11" >FIN</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101371&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            53.655
+
+                        </td>
+                    </tr>
+
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            33&nbsp;&nbsp;
+                            <span class='overmark' title="-2"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=899" target='_ally'>[P.L.A.]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=324&position=12" >rurutia</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=102249&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            53.322
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            34&nbsp;&nbsp;
+
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=22" target='_ally'>[NONGHYUP]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=21&position=10" >NONGMIN</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100144&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            52.575
+
+                        </td>
+                    </tr>
+
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            35&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=899" target='_ally'>[P.L.A.]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=107&position=12" >dominateur</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100742&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            52.430
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            36&nbsp;&nbsp;
+
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=49" target='_ally'>[Colour]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=6&position=12" >ledzepn</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100042&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            51.068
+
+                        </td>
+                    </tr>
+
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            37&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=899" target='_ally'>[P.L.A.]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=166&position=5" >terry</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=104799&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            50.899
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            38&nbsp;&nbsp;
+
+                            <span class='undermark' title="+6"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=151" target='_ally'>[INYEON]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=54&position=7" >Gamja</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100371&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            50.627
+
+                        </td>
+                    </tr>
+
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            39&nbsp;&nbsp;
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=168" target='_ally'>[Axis]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=437&position=8" >brilliant</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=103028&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            50.529
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            40&nbsp;&nbsp;
+
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=168" target='_ally'>[Axis]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=302&position=9" >Aztec Empire</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=102094&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            50.184
+
+                        </td>
+                    </tr>
+
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            41&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=181" target='_ally'>[B.R]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=242&position=4" >BattleStar</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101671&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            49.582
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            42&nbsp;&nbsp;
+
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=2" target='_ally'>[Simple]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=24&position=5" >drist</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100162&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            49.436
+
+                        </td>
+                    </tr>
+
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            43&nbsp;&nbsp;
+                            <span class='overmark' title="-3"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=357&position=12" >Farmer</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=102477&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            49.412
+
+                        </td>
+
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            44&nbsp;&nbsp;
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=176" target='_ally'>[EoU]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=94&position=5" >hehenda</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100647&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            48.895
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+
+                            45&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=899" target='_ally'>[P.L.A.]</a>
+                            </span>
+
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=172&position=11" >Coolkiller</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101191&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            47.296
+
+                        </td>
+
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            46&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=49" target='_ally'>[Colour]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=79&position=8" >qqq</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=104011&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            45.997
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+
+                            47&nbsp;&nbsp;
+                            <span class='undermark' title="+6"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=351&position=4" >kazama</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=102430&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            45.427
+
+                        </td>
+                    </tr>
+                    <tr">
+
+                        <!-- rank -->
+                        <td class="position">
+                            48&nbsp;&nbsp;
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=49" target='_ally'>[Colour]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=131&position=7" >Nazgul</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100904&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            45.403
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            49&nbsp;&nbsp;
+                            <span class='undermark' title="+2"  style="cursor:default;">+</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=168" target='_ally'>[Axis]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=395&position=4" >Lincecum</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=102734&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            44.636
+
+                        </td>
+                    </tr>
+                    <tr">
+
+                        <!-- rank -->
+                        <td class="position">
+                            50&nbsp;&nbsp;
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=30" target='_ally'>[A A]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=39&position=10" >Mr Lee</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100270&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            44.583
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            51&nbsp;&nbsp;
+                            <span class='overmark' title="-3"  style="cursor:default;">-</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=2" target='_ally'>[Simple]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=84&position=12" >DARAD</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100583&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            44.555
+
+                        </td>
+                    </tr>
+                    <tr">
+
+                        <!-- rank -->
+                        <td class="position">
+                            52&nbsp;&nbsp;
+                            <span class='overmark' title="-2"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=213&position=7" >xofa</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101472&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            44.173
+
+                        </td>
+                    </tr>
+
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            53&nbsp;&nbsp;
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=119" target='_ally'>[TARAF]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=160&position=7" >Tosun Pasha</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101105&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            43.961
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            54&nbsp;&nbsp;
+
+                            <span class='undermark' title="+4"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=899" target='_ally'>[P.L.A.]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=18&position=5" >kdRR</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100120&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            43.938
+
+                        </td>
+                    </tr>
+
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            55&nbsp;&nbsp;
+                            <span class='undermark' title="+1"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=1129" target='_ally'>[NKB]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=470&position=8" >Asuran</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=108726&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            43.650
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            56&nbsp;&nbsp;
+
+                            <span class='undermark' title="+1"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=30" target='_ally'>[A A]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=41&position=10" >New_Owner</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100283&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            43.443
+
+                        </td>
+                    </tr>
+
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            57&nbsp;&nbsp;
+                            <span class='overmark' title="-3"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=77" target='_ally'>[ELM]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=382&position=5" >Bodestone</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=102645&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            43.433
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            58&nbsp;&nbsp;
+
+                            <span class='overmark' title="-3"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=151" target='_ally'>[INYEON]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=209&position=5" >buddy</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101444&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            43.329
+
+                        </td>
+                    </tr>
+
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            59&nbsp;&nbsp;
+                            <span class='undermark' title="+1"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=30" target='_ally'>[A A]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=149&position=7" >DELETER</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101029&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            43.150
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            60&nbsp;&nbsp;
+
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=1957" target='_ally'>[I-O]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=235&position=7" >Plague</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101625&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            42.779
+
+                        </td>
+                    </tr>
+
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            61&nbsp;&nbsp;
+                            <span class='undermark' title="+3"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=49" target='_ally'>[Colour]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=113&position=4" >MetallicRed</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100778&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            42.750
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            62&nbsp;&nbsp;
+
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=899" target='_ally'>[P.L.A.]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=120&position=12" >Sagittarius</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100832&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            42.168
+
+                        </td>
+                    </tr>
+
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            63&nbsp;&nbsp;
+                            <span class='undermark' title="+3"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=1129" target='_ally'>[NKB]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=208&position=6" >ironwood</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=111958&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            41.916
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            64&nbsp;&nbsp;
+
+                            <span class='overmark' title="-3"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=151" target='_ally'>[INYEON]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=180&position=10" >sf94116</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=104901&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            41.893
+
+                        </td>
+                    </tr>
+
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            65&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=151" target='_ally'>[INYEON]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=100&position=10" >Sorry</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100693&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            41.483
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            66&nbsp;&nbsp;
+
+                            <span class='overmark' title="-3"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=899" target='_ally'>[P.L.A.]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=271&position=10" >darcy</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101877&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            41.442
+
+                        </td>
+                    </tr>
+
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            67&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=899" target='_ally'>[P.L.A.]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=367&position=11" >Rio</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=102545&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            40.962
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            68&nbsp;&nbsp;
+
+                            <span class='undermark' title="+6"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=49" target='_ally'>[Colour]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=162&position=12" >SARS</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101123&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            40.937
+
+                        </td>
+                    </tr>
+
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            69&nbsp;&nbsp;
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=16" target='_ally'>[RotS]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=9&position=9" >patti</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100061&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+
+                        <!-- points -->
+                        <td class="score">
+                            40.869
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            70&nbsp;&nbsp;
+
+                            <span class='undermark' title="+1"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=361&position=7" >Squawk</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=107153&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            40.509
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+
+                        <td class="position">
+                            71&nbsp;&nbsp;
+                            <span class='overmark' title="-2"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=49" target='_ally'>[Colour]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=486&position=5" >dosa</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=114862&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            39.796
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            72&nbsp;&nbsp;
+                            <span class='overmark' title="-2"  style="cursor:default;">-</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=168" target='_ally'>[Axis]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=239&position=7" >Judang</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101652&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            39.777
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+
+                        <!-- rank -->
+                        <td class="position">
+                            73&nbsp;&nbsp;
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=257&position=12" >olemal</a>
+
+
+                        </td>
+
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=105672&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            39.546
+
+                        </td>
+                    </tr>
+
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            74&nbsp;&nbsp;
+                            <span class='undermark' title="+2"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=328&position=12" >meine</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=102276&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            38.909
+
+                        </td>
+
+                    </tr>
+                    <tr class="alt"">
+                        <!-- rank -->
+                        <td class="position">
+                            75&nbsp;&nbsp;
+                            <span class='undermark' title="+7"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=1957" target='_ally'>[I-O]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=436&position=6" >Slack</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=103020&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            38.859
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+
+                            76&nbsp;&nbsp;
+                            <span class='undermark' title="+4"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=60&position=5" >chokak</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=107437&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            38.802
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+
+                        <!-- rank -->
+                        <td class="position">
+                            77&nbsp;&nbsp;
+                            <span class='undermark' title="+2"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=151" target='_ally'>[INYEON]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=269&position=12" >Airwave</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101864&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            38.713
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            78&nbsp;&nbsp;
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=2" target='_ally'>[Simple]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=112&position=12" >Supreme</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100777&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            38.676
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+
+                        <!-- rank -->
+                        <td class="position">
+                            79&nbsp;&nbsp;
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=151" target='_ally'>[INYEON]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=221&position=12" >dlworn8842</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=105423&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            38.352
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            80&nbsp;&nbsp;
+                            <span class='undermark' title="+1"  style="cursor:default;">+</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=1129" target='_ally'>[NKB]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=3&system=80&position=12" >Daeken</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=110224&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            38.142
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+
+                        <!-- rank -->
+                        <td class="position">
+                            81&nbsp;&nbsp;
+                            <span class='undermark' title="+4"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=49" target='_ally'>[Colour]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=126&position=10" >Giganto makia</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=115776&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            37.686
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            82&nbsp;&nbsp;
+                            <span class='undermark' title="+1"  style="cursor:default;">+</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=2" target='_ally'>[Simple]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=346&position=10" >shadowstep</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=106756&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            37.536
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+
+                        <!-- rank -->
+                        <td class="position">
+                            83&nbsp;&nbsp;
+                            <span class='undermark' title="+1"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=16" target='_ally'>[RotS]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=13&position=10" >Mr_Spock</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100090&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            37.514
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            84&nbsp;&nbsp;
+                            <span class='undermark' title="+4"  style="cursor:default;">+</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=49" target='_ally'>[Colour]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=147&position=11" >Dark Violet</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101018&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            37.475
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+
+                        <!-- rank -->
+                        <td class="position">
+                            85&nbsp;&nbsp;
+                            <span class='undermark' title="+7"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=899" target='_ally'>[P.L.A.]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=57&position=4" >MuadDib</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100390&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            37.359
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            86&nbsp;&nbsp;
+                            <span class='undermark' title="+3"  style="cursor:default;">+</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=151" target='_ally'>[INYEON]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=262&position=9" >lucky</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101813&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            37.288
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+
+                        <!-- rank -->
+                        <td class="position">
+                            87&nbsp;&nbsp;
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=1002" target='_ally'>[Nova]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=25&position=9" >Flex</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100172&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            37.213
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            88&nbsp;&nbsp;
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=8" target='_ally'>[P.R.C.]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=309&position=4" >feiyangyang</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=102139&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            37.173
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+
+                        <!-- rank -->
+                        <td class="position">
+                            89&nbsp;&nbsp;
+                            <span class='overmark' title="-14"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=49" target='_ally'>[Colour]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=31&position=12" >ETHello</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100215&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            37.084
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            90&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=77" target='_ally'>[ELM]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=72&position=8" >positron</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=103963&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            36.883
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+
+                        <!-- rank -->
+                        <td class="position">
+                            91&nbsp;&nbsp;
+                            <span style="cursor:default;">*</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=159" target='_ally'>[NCC]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=287&position=8" >Dejime</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101990&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            36.632
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            92&nbsp;&nbsp;
+                            <span class='undermark' title="+1"  style="cursor:default;">+</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=30" target='_ally'>[A A]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=3&system=144&position=5" >aless</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=111376&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            36.038
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+
+                        <!-- rank -->
+                        <td class="position">
+                            93&nbsp;&nbsp;
+                            <span class='undermark' title="+1"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=8" target='_ally'>[P.R.C.]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=334&position=10" >Soulpoem</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=102317&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            35.881
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            94&nbsp;&nbsp;
+                            <span class='undermark' title="+2"  style="cursor:default;">+</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=8" target='_ally'>[P.R.C.]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=138&position=11" >wfv</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=106504&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            35.781
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+
+                        <!-- rank -->
+                        <td class="position">
+                            95&nbsp;&nbsp;
+                            <span class='undermark' title="+3"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=899" target='_ally'>[P.L.A.]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=50&position=11" >Distory</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100348&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            35.655
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            96&nbsp;&nbsp;
+                            <span class='undermark' title="+3"  style="cursor:default;">+</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=1002" target='_ally'>[Nova]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=111&position=6" >Unicron</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=100766&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            35.269
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+
+                        <!-- rank -->
+                        <td class="position">
+                            97&nbsp;&nbsp;
+                            <span class='overmark' title="-2"  style="cursor:default;">-</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=176" target='_ally'>[EoU]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=318&position=7" >kwanba</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=102203&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            35.248
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            98&nbsp;&nbsp;
+                            <span class='overmark' title="-1"  style="cursor:default;">-</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=49" target='_ally'>[Colour]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=250&position=8" >PTS</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101729&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            35.202
+
+                        </td>
+                    </tr>
+                    <tr class="alt"">
+
+                        <!-- rank -->
+                        <td class="position">
+                            99&nbsp;&nbsp;
+                            <span class='undermark' title="+2"  style="cursor:default;">+</span>
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=151" target='_ally'>[INYEON]</a>
+
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=1&system=257&position=12" >IzhELohN</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=101781&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+
+                            35.063
+
+                        </td>
+                    </tr>
+                    <tr">
+                        <!-- rank -->
+                        <td class="position">
+                            100&nbsp;&nbsp;
+                            <span class='undermark' title="+8"  style="cursor:default;">+</span>
+
+                        </td>
+                        <!-- nick -->
+                        <td class="name">
+                            <span class="ally-tag">
+                                <a href="ainfo.php?allyid=1957" target='_ally'>[I-O]</a>
+                            </span>
+
+
+
+                            <a href="index.php?page=galaxy&session=7b6cbcb95a81&galaxy=2&system=113&position=4" >Karl Hungus</a>
+
+
+                        </td>
+                        <!--  message-icon -->
+
+                        <td class="sendmsg">
+                            <a title="|write message" class="ajaxTips thickbox" href="index.php?page=writemessage&session=7b6cbcb95a81&to=104244&ajax=1&height=500&width=750&TB_iframe=1&modal=false"><img alt="write message" src="img/icons/mail.gif" /></a>
+                        </td>
+                        <!-- points -->
+                        <td class="score">
+                            35.004
+
+                        </td>
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div><!--leftcol -->
+        <div class="rightcol">
+            <div class="claimsmall textCenter">
+                <p>
+                    Top 10 Alliances        </p>
+            </div>
+            <table class="top10" cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td class="rankcol alt">1</td>
+                    <td class="namecol ">
+
+                        <span class="ally-tag">
+                            <a href="ainfo.php?allyid=49"
+                               target='_ally'
+                               class="ajaxTips"
+                               title="|To the alliance page of Colour Alliance">
+                                [Colour]
+                            </a>
+                        </span>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="rankcol ">2</td>
+                    <td class="namecol ">
+
+                        <span class="ally-tag">
+                            <a href="ainfo.php?allyid=2"
+                               target='_ally'
+                               class="ajaxTips"
+                               title="|To the alliance page of Simple">
+                                [Simple]
+                            </a>
+                        </span>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="rankcol alt">3</td>
+                    <td class="namecol ">
+
+                        <span class="ally-tag">
+                            <a href="ainfo.php?allyid=151"
+                               target='_ally'
+                               class="ajaxTips"
+                               title="|To the alliance page of INYEON">
+                                [INYEON]
+                            </a>
+                        </span>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="rankcol ">4</td>
+                    <td class="namecol ">
+
+                        <span class="ally-tag">
+                            <a href="ainfo.php?allyid=8"
+                               target='_ally'
+                               class="ajaxTips"
+                               title="|To the alliance page of P.R.C">
+                                [P.R.C.]
+                            </a>
+                        </span>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="rankcol alt">5</td>
+                    <td class="namecol ">
+
+                        <span class="ally-tag">
+                            <a href="ainfo.php?allyid=899"
+                               target='_ally'
+                               class="ajaxTips"
+                               title="|To the alliance page of peace love and harmony">
+                                [P.L.A.]
+                            </a>
+                        </span>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="rankcol ">6</td>
+                    <td class="namecol ">
+
+                        <span class="ally-tag">
+                            <a href="ainfo.php?allyid=77"
+                               target='_ally'
+                               class="ajaxTips"
+                               title="|To the alliance page of Elemental">
+                                [ELM]
+                            </a>
+                        </span>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="rankcol alt">7</td>
+                    <td class="namecol ">
+
+                        <span class="ally-tag">
+                            <a href="ainfo.php?allyid=30"
+                               target='_ally'
+                               class="ajaxTips"
+                               title="|To the alliance page of Annoying alcoholics">
+                                [A A]
+                            </a>
+                        </span>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="rankcol ">8</td>
+                    <td class="namecol ">
+
+                        <span class="ally-tag">
+                            <a href="ainfo.php?allyid=5"
+                               target='_ally'
+                               class="ajaxTips"
+                               title="|To the alliance page of PANDEMIC">
+                                [P.D.M]
+                            </a>
+                        </span>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="rankcol alt">9</td>
+                    <td class="namecol ">
+
+                        <span class="ally-tag">
+                            <a href="ainfo.php?allyid=85"
+                               target='_ally'
+                               class="ajaxTips"
+                               title="|To the alliance page of Wolf Pack">
+                                [WOLFPAK]
+                            </a>
+                        </span>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="rankcol ">10</td>
+                    <td class="namecol ">
+
+                        <span class="ally-tag">
+                            <a href="ainfo.php?allyid=181"
+                               target='_ally'
+                               class="ajaxTips"
+                               title="|To the alliance page of Blue Revolution">
+                                [B.R]
+                            </a>
+                        </span>
+                    </td>
+
+                </tr>
+            </table>
+
+        </div>
+        <br class="clearfloat" />
+        <div id="paging">
+
+            &laquo; previous page
+            <span>|</span>
+            <a href="#" onClick="set_start(101); submitForm();">
+                next page<span style="color:#5E699E;"> &raquo;</span>
+
+            </a>
+        </div>
+    </form>
+</div><div class="footer"></div>

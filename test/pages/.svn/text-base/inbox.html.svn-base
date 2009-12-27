@@ -1,0 +1,448 @@
+<script>
+var aktPage = 1;
+var aktCat = 9;
+
+
+if (!$.isFunction(clickFunction)) {
+  var clickFunction = function() {
+     $(".reiter").removeClass("active");
+     $(this).addClass("active");
+     ajaxLoad($(this).attr("id"), 1);
+  }
+} else {
+  $(".reiter").unbind('click', clickFunction);
+}
+$(".reiter").click(clickFunction);
+
+$("#checkAll").click(function(){
+    if($(this).attr("checked")){
+        $(".checker").attr({checked: "checked" });
+    }else{
+        $(".checker").removeAttr("checked");
+    }
+});
+
+function hide(id)
+{
+    $("#" + id + "TR").hide();
+}
+
+function switchView(id)
+{
+	if ( $("#" + id + ":hidden").length > 0 ){
+		$("#" + id).show();
+	} else {
+		$("#" + id).hide();
+	}
+}
+
+function markAsRead(id)
+{
+    $("#" + id + "TR").removeClass("new");
+}
+
+$(".ajax_thickbox").click(function(){
+    var msg_id = $(this).attr("id");
+    markAsRead(msg_id);
+});
+
+$("select").change(function(){
+    $(".buttonOK").show();
+    mod = $("select option:selected").attr("id");
+});
+
+$(".del").click(function(){
+    mod = $(this).attr("id");
+})
+
+$(".underlined").click(function(){
+    $(".buttonOK").hide();
+});
+
+
+$(".deleteIt").click(function(){
+
+    if (mod == 7)
+    {
+        delIds = [];
+        $(":checkbox:checked").each(function() { delIds.push(this.id) });
+        executeAction(delIds, 7);
+    }
+    else if (mod == 10)
+    {
+        delIds = [];
+        $(":checkbox:not(:checked)").each(function() { delIds.push(this.id) });
+        executeAction(delIds, 10);
+
+    }
+    else if (mod == 9)
+    {
+        delIds = [];
+        $(":checkbox").each(function() { delIds.push(this.id) });
+        executeAction(delIds, 9);
+
+    }
+    else if (mod == 1)
+    {
+        delIds = [];
+        executeAction(delIds, 1);
+    }
+    else if (mod == 11)
+    {
+
+                            delIds = new Array(1685005,1682699,1682666,1679026,1679022,1676867,1676861,1676859,1676263,1676257,1675971,1675968,1675967,1675947,1671119,1654895,1637221,1636281,1629959,1624452,1619054,1617259,1617250,1617249,1615035,1613104,1608008,1607511,1603508,1598063,1593861,1591967,1586717,1584206,1584181,1583919);
+
+
+        executeAction(delIds, 11);
+    }
+    else if (mod == 2)
+    {
+        delIds = [];
+        delIds.push($(this).attr("rel"));
+        executeAction(delIds, 2);
+    }
+    else if (mod == 4)
+    {
+        restoreIds = [];
+        restoreIds.push($(this).attr("rel"));
+        executeAction(restoreIds, 4);
+    }
+    else if (mod == 8)
+    {
+        delIds = [];
+        $(":checkbox:checked").each(function() { delIds.push(this.id) });
+        executeAction(delIds, 8);
+    }
+    else if (mod == 12)
+    {
+        delIds = [];
+        $(":checkbox:checked").each(function() { delIds.push(this.id) });
+        executeAction(delIds, 12);
+    }
+    else if (mod == 5)
+    {
+        delIds = [];
+        $(":checkbox:checked").each(function() { delIds.push(this.id) });
+        executeAction(delIds, 5);
+    }
+    else if (mod == 3)
+    {
+        delIds = [];
+        executeAction(delIds, 3);
+    }
+});
+
+$(".espionageReport").click(function(){
+    shareEspionageReport(this);
+    return false;
+});
+
+reduceMsgCount(aktCat);
+
+tb_init('a.ajax_thickbox');
+initCluetipEventlist();
+
+</script>
+
+<form method="POST"
+      name="delMsg"
+      action="index.php?page=messages&session=1e23eaf6c057&displayCategory=9&displayPage=1">
+    <input type="hidden" value="0" id="new_msg_count">
+	<table cellspacing="0" cellpadding="0" class="list" id="mailz">
+	<tbody>
+	<tr class="first">
+	    <th class="check">
+	        <input type="checkbox" class="checker" id="checkAll" title="" />
+	    </th>
+
+    	    <th class="from">Sender</th>
+    	    <th class="subject">Subject</th>
+	    <th class="date">Date</th>
+	    <th class="action"></th>
+	</tr>
+
+	<tr class="entry trigger " id="1685005TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="1685005" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+                <a class="ajax_thickbox"
+	           id="1685005"
+	           href="index.php?page=showmessage&session=1e23eaf6c057&ajax=1&msg_id=1685005&mids=%253D%2591K%2512%2503%2521%2508D%25AF%25C4GP%2526%25A7%25C92gH%25E5%25EE%2591%25EEq6%2516%25AF%25C4%25F6%25A1%25EF%25CB%25F3%25FA%257E.y%257D.%25CD%2515%2522%25D1%2515%25C9%25B2jWv%2528sW%250E%259A%2525%25D64%251E%25EA%25AE%2B%25E5%25CA%25B9%25AB%257C%25A8%25F3%25E6%25A1%25E8%25CCu%2593e%25E7%25D5%25A1%2540%2517ef%25D4%2584%2588%251EL%259C%25B2%2507%25D1%25EC%2507%2507%25F0%2516RU%2584%25D2%2528%25C6%252AVX%257C%259A%2521%2594N%259E%25B6%2580%2594%25B2%252A%25282%2Bm%258C%25E8%252B%258DVZ%2512%257D%2507%2503R%25A7%25A1%25D9%25EC%25C1%25EE3%253F8%25B0K%252B%250D%25F1%25D60%25BA%25A8%25AB%2B%258AV%25B2D%25DA%25C0h%252530%25B9%25D1j%259F%25E4.%25C7%25AA%2525x9%2517%25A2%25F3%2591%255D%2589%25CA%25C7qX%25C5%25FE%250E%258C%25EAN%251C%2526%25F8%25C9q%25A3b%257C%25A8m%25F4%257D%25FA%25F5%25FB%2503&cat=5&height=500&width=770&TB_iframe=1">
+                <span class="combatreport_ididattack_iwon">Combat Report [2:408:7] (D: 28.000, A: 0)</span>            </a>
+    	    </td>
+	    <td class="date">02.11.2009 06:56:10</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="1685005"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+
+	<tr class="entry trigger " id="1682699TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="1682699" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+                <a class="ajax_thickbox"
+	           id="1682699"
+	           href="index.php?page=showmessage&session=1e23eaf6c057&ajax=1&msg_id=1682699&mids=%253D%2591K%2512%2503%2521%2508D%25AF%25C4GP%2526%25A7%25C92gH%25E5%25EE%2591%25EEq6%2516%25AF%25C4%25F6%25A1%25EF%25CB%25F3%25FA%257E.y%257D.%25CD%2515%2522%25D1%2515%25C9%25B2jWv%2528sW%250E%259A%2525%25D64%251E%25EA%25AE%2B%25E5%25CA%25B9%25AB%257C%25A8%25F3%25E6%25A1%25E8%25CCu%2593e%25E7%25D5%25A1%2540%2517ef%25D4%2584%2588%251EL%259C%25B2%2507%25D1%25EC%2507%2507%25F0%2516RU%2584%25D2%2528%25C6%252AVX%257C%259A%2521%2594N%259E%25B6%2580%2594%25B2%252A%25282%2Bm%258C%25E8%252B%258DVZ%2512%257D%2507%2503R%25A7%25A1%25D9%25EC%25C1%25EE3%253F8%25B0K%252B%250D%25F1%25D60%25BA%25A8%25AB%2B%258AV%25B2D%25DA%25C0h%252530%25B9%25D1j%259F%25E4.%25C7%25AA%2525x9%2517%25A2%25F3%2591%255D%2589%25CA%25C7qX%25C5%25FE%250E%258C%25EAN%251C%2526%25F8%25C9q%25A3b%257C%25A8m%25F4%257D%25FA%25F5%25FB%2503&cat=5&height=500&width=770&TB_iframe=1">
+                <span class="combatreport_ididattack_iwon">Combat Report [2:420:10] (D: 0, A: 0)</span>            </a>
+    	    </td>
+	    <td class="date">02.11.2009 06:15:58</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="1682699"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+
+	<tr class="entry trigger " id="1682666TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="1682666" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+                <a class="ajax_thickbox"
+	           id="1682666"
+	           href="index.php?page=showmessage&session=1e23eaf6c057&ajax=1&msg_id=1682666&mids=%253D%2591K%2512%2503%2521%2508D%25AF%25C4GP%2526%25A7%25C92gH%25E5%25EE%2591%25EEq6%2516%25AF%25C4%25F6%25A1%25EF%25CB%25F3%25FA%257E.y%257D.%25CD%2515%2522%25D1%2515%25C9%25B2jWv%2528sW%250E%259A%2525%25D64%251E%25EA%25AE%2B%25E5%25CA%25B9%25AB%257C%25A8%25F3%25E6%25A1%25E8%25CCu%2593e%25E7%25D5%25A1%2540%2517ef%25D4%2584%2588%251EL%259C%25B2%2507%25D1%25EC%2507%2507%25F0%2516RU%2584%25D2%2528%25C6%252AVX%257C%259A%2521%2594N%259E%25B6%2580%2594%25B2%252A%25282%2Bm%258C%25E8%252B%258DVZ%2512%257D%2507%2503R%25A7%25A1%25D9%25EC%25C1%25EE3%253F8%25B0K%252B%250D%25F1%25D60%25BA%25A8%25AB%2B%258AV%25B2D%25DA%25C0h%252530%25B9%25D1j%259F%25E4.%25C7%25AA%2525x9%2517%25A2%25F3%2591%255D%2589%25CA%25C7qX%25C5%25FE%250E%258C%25EAN%251C%2526%25F8%25C9q%25A3b%257C%25A8m%25F4%257D%25FA%25F5%25FB%2503&cat=5&height=500&width=770&TB_iframe=1">
+                <span class="combatreport_ididattack_iwon">Combat Report [2:420:10] (D: 10.000, A: 0)</span>            </a>
+    	    </td>
+	    <td class="date">02.11.2009 06:15:17</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="1682666"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+
+	<tr class="entry trigger " id="1679026TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="1679026" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+                <a class="ajax_thickbox"
+	           id="1679026"
+	           href="index.php?page=showmessage&session=1e23eaf6c057&ajax=1&msg_id=1679026&mids=%253D%2591K%2512%2503%2521%2508D%25AF%25C4GP%2526%25A7%25C92gH%25E5%25EE%2591%25EEq6%2516%25AF%25C4%25F6%25A1%25EF%25CB%25F3%25FA%257E.y%257D.%25CD%2515%2522%25D1%2515%25C9%25B2jWv%2528sW%250E%259A%2525%25D64%251E%25EA%25AE%2B%25E5%25CA%25B9%25AB%257C%25A8%25F3%25E6%25A1%25E8%25CCu%2593e%25E7%25D5%25A1%2540%2517ef%25D4%2584%2588%251EL%259C%25B2%2507%25D1%25EC%2507%2507%25F0%2516RU%2584%25D2%2528%25C6%252AVX%257C%259A%2521%2594N%259E%25B6%2580%2594%25B2%252A%25282%2Bm%258C%25E8%252B%258DVZ%2512%257D%2507%2503R%25A7%25A1%25D9%25EC%25C1%25EE3%253F8%25B0K%252B%250D%25F1%25D60%25BA%25A8%25AB%2B%258AV%25B2D%25DA%25C0h%252530%25B9%25D1j%259F%25E4.%25C7%25AA%2525x9%2517%25A2%25F3%2591%255D%2589%25CA%25C7qX%25C5%25FE%250E%258C%25EAN%251C%2526%25F8%25C9q%25A3b%257C%25A8m%25F4%257D%25FA%25F5%25FB%2503&cat=7&height=500&width=770&TB_iframe=1">
+                Espionage report of GEMINI [2:422:4]            </a>
+    	    </td>
+	    <td class="date">02.11.2009 05:05:28</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="1679026"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+
+	<tr class="entry trigger " id="1679022TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="1679022" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+                <a class="ajax_thickbox"
+	           id="1679022"
+	           href="index.php?page=showmessage&session=1e23eaf6c057&ajax=1&msg_id=1679022&mids=%253D%2591K%2512%2503%2521%2508D%25AF%25C4GP%2526%25A7%25C92gH%25E5%25EE%2591%25EEq6%2516%25AF%25C4%25F6%25A1%25EF%25CB%25F3%25FA%257E.y%257D.%25CD%2515%2522%25D1%2515%25C9%25B2jWv%2528sW%250E%259A%2525%25D64%251E%25EA%25AE%2B%25E5%25CA%25B9%25AB%257C%25A8%25F3%25E6%25A1%25E8%25CCu%2593e%25E7%25D5%25A1%2540%2517ef%25D4%2584%2588%251EL%259C%25B2%2507%25D1%25EC%2507%2507%25F0%2516RU%2584%25D2%2528%25C6%252AVX%257C%259A%2521%2594N%259E%25B6%2580%2594%25B2%252A%25282%2Bm%258C%25E8%252B%258DVZ%2512%257D%2507%2503R%25A7%25A1%25D9%25EC%25C1%25EE3%253F8%25B0K%252B%250D%25F1%25D60%25BA%25A8%25AB%2B%258AV%25B2D%25DA%25C0h%252530%25B9%25D1j%259F%25E4.%25C7%25AA%2525x9%2517%25A2%25F3%2591%255D%2589%25CA%25C7qX%25C5%25FE%250E%258C%25EAN%251C%2526%25F8%25C9q%25A3b%257C%25A8m%25F4%257D%25FA%25F5%25FB%2503&cat=7&height=500&width=770&TB_iframe=1">
+                Espionage report of GEMINI [2:422:4]            </a>
+    	    </td>
+	    <td class="date">02.11.2009 05:05:26</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="1679022"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+
+	<tr class="entry trigger " id="1676867TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="1676867" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+                <a class="ajax_thickbox"
+	           id="1676867"
+	           href="index.php?page=showmessage&session=1e23eaf6c057&ajax=1&msg_id=1676867&mids=%253D%2591K%2512%2503%2521%2508D%25AF%25C4GP%2526%25A7%25C92gH%25E5%25EE%2591%25EEq6%2516%25AF%25C4%25F6%25A1%25EF%25CB%25F3%25FA%257E.y%257D.%25CD%2515%2522%25D1%2515%25C9%25B2jWv%2528sW%250E%259A%2525%25D64%251E%25EA%25AE%2B%25E5%25CA%25B9%25AB%257C%25A8%25F3%25E6%25A1%25E8%25CCu%2593e%25E7%25D5%25A1%2540%2517ef%25D4%2584%2588%251EL%259C%25B2%2507%25D1%25EC%2507%2507%25F0%2516RU%2584%25D2%2528%25C6%252AVX%257C%259A%2521%2594N%259E%25B6%2580%2594%25B2%252A%25282%2Bm%258C%25E8%252B%258DVZ%2512%257D%2507%2503R%25A7%25A1%25D9%25EC%25C1%25EE3%253F8%25B0K%252B%250D%25F1%25D60%25BA%25A8%25AB%2B%258AV%25B2D%25DA%25C0h%252530%25B9%25D1j%259F%25E4.%25C7%25AA%2525x9%2517%25A2%25F3%2591%255D%2589%25CA%25C7qX%25C5%25FE%250E%258C%25EAN%251C%2526%25F8%25C9q%25A3b%257C%25A8m%25F4%257D%25FA%25F5%25FB%2503&cat=7&height=500&width=770&TB_iframe=1">
+                Espionage report of Homeworld [2:405:9]            </a>
+    	    </td>
+	    <td class="date">02.11.2009 04:31:08</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="1676867"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+
+	<tr class="entry trigger " id="1676861TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="1676861" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+                <a class="ajax_thickbox"
+	           id="1676861"
+	           href="index.php?page=showmessage&session=1e23eaf6c057&ajax=1&msg_id=1676861&mids=%253D%2591K%2512%2503%2521%2508D%25AF%25C4GP%2526%25A7%25C92gH%25E5%25EE%2591%25EEq6%2516%25AF%25C4%25F6%25A1%25EF%25CB%25F3%25FA%257E.y%257D.%25CD%2515%2522%25D1%2515%25C9%25B2jWv%2528sW%250E%259A%2525%25D64%251E%25EA%25AE%2B%25E5%25CA%25B9%25AB%257C%25A8%25F3%25E6%25A1%25E8%25CCu%2593e%25E7%25D5%25A1%2540%2517ef%25D4%2584%2588%251EL%259C%25B2%2507%25D1%25EC%2507%2507%25F0%2516RU%2584%25D2%2528%25C6%252AVX%257C%259A%2521%2594N%259E%25B6%2580%2594%25B2%252A%25282%2Bm%258C%25E8%252B%258DVZ%2512%257D%2507%2503R%25A7%25A1%25D9%25EC%25C1%25EE3%253F8%25B0K%252B%250D%25F1%25D60%25BA%25A8%25AB%2B%258AV%25B2D%25DA%25C0h%252530%25B9%25D1j%259F%25E4.%25C7%25AA%2525x9%2517%25A2%25F3%2591%255D%2589%25CA%25C7qX%25C5%25FE%250E%258C%25EAN%251C%2526%25F8%25C9q%25A3b%257C%25A8m%25F4%257D%25FA%25F5%25FB%2503&cat=7&height=500&width=770&TB_iframe=1">
+                Espionage report of Cadonio [2:408:9]            </a>
+    	    </td>
+	    <td class="date">02.11.2009 04:31:05</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="1676861"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+
+	<tr class="entry trigger " id="1676859TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="1676859" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+                <a class="ajax_thickbox"
+	           id="1676859"
+	           href="index.php?page=showmessage&session=1e23eaf6c057&ajax=1&msg_id=1676859&mids=%253D%2591K%2512%2503%2521%2508D%25AF%25C4GP%2526%25A7%25C92gH%25E5%25EE%2591%25EEq6%2516%25AF%25C4%25F6%25A1%25EF%25CB%25F3%25FA%257E.y%257D.%25CD%2515%2522%25D1%2515%25C9%25B2jWv%2528sW%250E%259A%2525%25D64%251E%25EA%25AE%2B%25E5%25CA%25B9%25AB%257C%25A8%25F3%25E6%25A1%25E8%25CCu%2593e%25E7%25D5%25A1%2540%2517ef%25D4%2584%2588%251EL%259C%25B2%2507%25D1%25EC%2507%2507%25F0%2516RU%2584%25D2%2528%25C6%252AVX%257C%259A%2521%2594N%259E%25B6%2580%2594%25B2%252A%25282%2Bm%258C%25E8%252B%258DVZ%2512%257D%2507%2503R%25A7%25A1%25D9%25EC%25C1%25EE3%253F8%25B0K%252B%250D%25F1%25D60%25BA%25A8%25AB%2B%258AV%25B2D%25DA%25C0h%252530%25B9%25D1j%259F%25E4.%25C7%25AA%2525x9%2517%25A2%25F3%2591%255D%2589%25CA%25C7qX%25C5%25FE%250E%258C%25EAN%251C%2526%25F8%25C9q%25A3b%257C%25A8m%25F4%257D%25FA%25F5%25FB%2503&cat=7&height=500&width=770&TB_iframe=1">
+                Espionage report of manutd.01 [2:408:7]            </a>
+    	    </td>
+	    <td class="date">02.11.2009 04:31:03</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="1676859"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+
+	<tr class="entry trigger " id="1676263TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="1676263" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+                <a class="ajax_thickbox"
+	           id="1676263"
+	           href="index.php?page=showmessage&session=1e23eaf6c057&ajax=1&msg_id=1676263&mids=%253D%2591K%2512%2503%2521%2508D%25AF%25C4GP%2526%25A7%25C92gH%25E5%25EE%2591%25EEq6%2516%25AF%25C4%25F6%25A1%25EF%25CB%25F3%25FA%257E.y%257D.%25CD%2515%2522%25D1%2515%25C9%25B2jWv%2528sW%250E%259A%2525%25D64%251E%25EA%25AE%2B%25E5%25CA%25B9%25AB%257C%25A8%25F3%25E6%25A1%25E8%25CCu%2593e%25E7%25D5%25A1%2540%2517ef%25D4%2584%2588%251EL%259C%25B2%2507%25D1%25EC%2507%2507%25F0%2516RU%2584%25D2%2528%25C6%252AVX%257C%259A%2521%2594N%259E%25B6%2580%2594%25B2%252A%25282%2Bm%258C%25E8%252B%258DVZ%2512%257D%2507%2503R%25A7%25A1%25D9%25EC%25C1%25EE3%253F8%25B0K%252B%250D%25F1%25D60%25BA%25A8%25AB%2B%258AV%25B2D%25DA%25C0h%252530%25B9%25D1j%259F%25E4.%25C7%25AA%2525x9%2517%25A2%25F3%2591%255D%2589%25CA%25C7qX%25C5%25FE%250E%258C%25EAN%251C%2526%25F8%25C9q%25A3b%257C%25A8m%25F4%257D%25FA%25F5%25FB%2503&cat=7&height=500&width=770&TB_iframe=1">
+                Espionage report of Lost Home [2:428:6]            </a>
+    	    </td>
+	    <td class="date">02.11.2009 04:19:21</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="1676263"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+
+	<tr class="entry trigger " id="1676257TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="1676257" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+                <a class="ajax_thickbox"
+	           id="1676257"
+	           href="index.php?page=showmessage&session=1e23eaf6c057&ajax=1&msg_id=1676257&mids=%253D%2591K%2512%2503%2521%2508D%25AF%25C4GP%2526%25A7%25C92gH%25E5%25EE%2591%25EEq6%2516%25AF%25C4%25F6%25A1%25EF%25CB%25F3%25FA%257E.y%257D.%25CD%2515%2522%25D1%2515%25C9%25B2jWv%2528sW%250E%259A%2525%25D64%251E%25EA%25AE%2B%25E5%25CA%25B9%25AB%257C%25A8%25F3%25E6%25A1%25E8%25CCu%2593e%25E7%25D5%25A1%2540%2517ef%25D4%2584%2588%251EL%259C%25B2%2507%25D1%25EC%2507%2507%25F0%2516RU%2584%25D2%2528%25C6%252AVX%257C%259A%2521%2594N%259E%25B6%2580%2594%25B2%252A%25282%2Bm%258C%25E8%252B%258DVZ%2512%257D%2507%2503R%25A7%25A1%25D9%25EC%25C1%25EE3%253F8%25B0K%252B%250D%25F1%25D60%25BA%25A8%25AB%2B%258AV%25B2D%25DA%25C0h%252530%25B9%25D1j%259F%25E4.%25C7%25AA%2525x9%2517%25A2%25F3%2591%255D%2589%25CA%25C7qX%25C5%25FE%250E%258C%25EAN%251C%2526%25F8%25C9q%25A3b%257C%25A8m%25F4%257D%25FA%25F5%25FB%2503&cat=7&height=500&width=770&TB_iframe=1">
+                Espionage report of DeadSpace [2:426:6]            </a>
+    	    </td>
+	    <td class="date">02.11.2009 04:19:19</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="1676257"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+    	<tr class="last">
+	    <td align="left" colspan="3">
+			<select class="choose" name="deletemessages">
+			    <option class="underlined">Select action</option>
+                    <option class="method" id="12">Mark message as read</option>
+			    <option class="method" id="7">Delete marked messages</option>
+			    <option class="method" id="10">Delete all unmarked messages</option>
+			    <option class="method" id="9">Delete shown messages</option>
+        	            <option class="method" id="1">Delete all messages</option>
+
+    			</select>
+                <input type="button" name="submit_" value="Ok" class="buttonOK deleteIt" id="" style="display:none;" />
+	    </td>
+	    <td colspan="2">
+	        <div class="selectContainer">
+    	                <div>
+	                    <a><img src="img/icons/skip-back.gif" /></a>
+	                    <a><img src="img/icons/rewind.gif" /></a>
+	                </div>
+    	                <div class="msgpersite">1 - 10</div>
+    	                <div>
+	                    <a href="#" onClick="ajaxLoad(9,2);" style="margin-right:2px;" class="changePage"><img src="img/icons/fastforward.gif" /></a>
+	                    <a href="#" class="changePage" onClick="ajaxLoad(9,4)"><img src="img/icons/skip.gif" /></a>
+	                </div>
+    	        </div>
+	   </td>
+	</tr>
+	</tbody>
+	</table>
+</form>
+<script type="text/javascript">
+$(document).ready(function(){
+	//JQuery ready is quicker than onload
+	$(".list tr.entry:even").addClass("alt");
+});
+</script>

@@ -1,0 +1,69 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 14
+/svn/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/!svn/ver/11/trunk/ogmaster
+END
+cron.log
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/18/trunk/ogmaster/cron.log
+END
+config.yml
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/18/trunk/ogmaster/config.yml
+END
+dependents.txt
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/17/trunk/ogmaster/dependents.txt
+END
+ogame.yml
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/17/trunk/ogmaster/ogame.yml
+END
+cron.py
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/18/trunk/ogmaster/cron.py
+END
+crontab
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/18/trunk/ogmaster/crontab
+END
+run.bat
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/11/trunk/ogmaster/run.bat
+END
+logging.conf
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/11/trunk/ogmaster/logging.conf
+END
+cron.pid
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/18/trunk/ogmaster/cron.pid
+END
+run.sh
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/11/trunk/ogmaster/run.sh
+END

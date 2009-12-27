@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/11/trunk/ogmaster/src/modules
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/11/trunk/ogmaster/src/modules/__init__.py
+END
+intelligence.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/18/trunk/ogmaster/src/modules/intelligence.py
+END
+message.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/18/trunk/ogmaster/src/modules/message.py
+END
+galaxy.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/18/trunk/ogmaster/src/modules/galaxy.py
+END
+statistic.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/18/trunk/ogmaster/src/modules/statistic.py
+END

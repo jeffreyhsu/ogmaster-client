@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/bbcodes.css' media='screen' />
+<link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/jquery.cluetip.css' media='screen' />
+<link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/errorbox.css' media='screen' />
+<link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/jquery.cluetip.css' media='screen' />
+<link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/thickbox-iframe.css' media='screen' />
+<link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/thickbox-message.css' media='screen' />
+<link rel='stylesheet' type='text/css' href='http://uni104.ogame.org/game/css/toolbox.css' media='screen' />
+<script type='text/javascript' src='http://uni104.ogame.org/game/js/jquery.js'></script>
+<script type='text/javascript' src='http://uni104.ogame.org/game/js/jquery.dimensions.js'></script>
+<script type='text/javascript' src='http://uni104.ogame.org/game/js/jquery.hoverIntent.js'></script>
+<script type='text/javascript' src='http://uni104.ogame.org/game/js/jquery.configcluetip.js'></script>
+<script type='text/javascript' src='http://uni104.ogame.org/game/js/jquery.cluetip.js'></script>
+<script type='text/javascript' src='http://uni104.ogame.org/game/js/utilities.js'></script>
+<script type='text/javascript' src='http://uni104.ogame.org/game/js/errorBox.js'></script>
+
+        <script type="text/javascript">
+
+
+        $(document).ready(function() {
+
+
+
+            $(".action").click(function(){
+
+                var action = $(this).attr('id');
+                self.parent.$("#1682699TR").hide();
+
+
+                if(action == 2){
+                    window.location.replace('index.php?page=showmessage&session=1e23eaf6c057&actionMsgId=1682699&msg_id=1682666&mids=%253D%2590%25CBq%25051%2508%2504S%25E2%252F%25B1%258E%25C6%25C7%2517%2583%25CB%25B9%255B%25CCX%257B%259B%2516%2508%25BA%25F8%257E%253C%259E%259F%25CF%2523_%259FGk%2597%25F7%259Eti%25CD%25BB%2591R%2524Or%2592U%25F7Iq%25A9%25EA%25A4%2504%25AD%2516%251B%25AA%2597f%25C2%2522%259D%25A9%2593%25F6K%25B3%25AB%252F%2525%2592%25FC%25A3%2515%2596%25E9%25C5%25C4%250C%25EA%25AC%25EC%2585%2582_%252C%25CC%258C%2517%25D1%259C%2517%2583%25FB%2589%25AA%258AE%257C%25CB%25D8%258D%253EJ%25F92%25C3dZy%25D9%251E4ZY7%2524%25D9R%2516%2591%2523d%25B4%25D2%2596%251C%2503%25A3%2595.cs%25BC%2588%2583%25E6%25C5%2540%2595V%259A%25E2S0Z%25A9%25AB%2560%2514%25ADd%258BL2Z%25C9J%25DC%25C5iu%257E%25A2%25EA%25B0%25CA%25DE%2582%25D3%25B9%2511%259Dgv%2527%25EA%251C%25E7%25F7%250F&action=2');
+                } else {
+                    window.location.replace('index.php?page=showmessage&session=1e23eaf6c057&actionMsgId=1682699&msg_id=1682666&mids=%253D%2590%25CBq%25051%2508%2504S%25E2%252F%25B1%258E%25C6%25C7%2517%2583%25CB%25B9%255B%25CCX%257B%259B%2516%2508%25BA%25F8%257E%253C%259E%259F%25CF%2523_%259FGk%2597%25F7%259Eti%25CD%25BB%2591R%2524Or%2592U%25F7Iq%25A9%25EA%25A4%2504%25AD%2516%251B%25AA%2597f%25C2%2522%259D%25A9%2593%25F6K%25B3%25AB%252F%2525%2592%25FC%25A3%2515%2596%25E9%25C5%25C4%250C%25EA%25AC%25EC%2585%2582_%252C%25CC%258C%2517%25D1%259C%2517%2583%25FB%2589%25AA%258AE%257C%25CB%25D8%258D%253EJ%25F92%25C3dZy%25D9%251E4ZY7%2524%25D9R%2516%2591%2523d%25B4%25D2%2596%251C%2503%25A3%2595.cs%25BC%2588%2583%25E6%25C5%2540%2595V%259A%25E2S0Z%25A9%25AB%2560%2514%25ADd%258BL2Z%25C9J%25DC%25C5iu%257E%25A2%25EA%25B0%25CA%25DE%2582%25D3%25B9%2511%259Dgv%2527%25EA%251C%25E7%25F7%250F&action=4');
+                }
+
+            });
+
+             $("#melden").click(function(){
+                 var id = 0;
+                 var id = 1682699;
+	             self.parent.manageErrorbox(id, 1);
+            });
+
+           initCluetipEventlist();
+
+        });
+        </script>
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+</head>
+<body id="showmessage">
+<div id="messagebox" class="read">
+    <div id="wrapper">
+    <div id="contentPageNavi"  class="textCenter">
+        <a class="closeTB" onclick="self.parent.tb_remove();">
+            <img src="img/layout/pixel.gif" width="16" height="16" />
+        </a>
+            <a style="margin-right:10px; text-decoration: none;" href="index.php?page=showmessage&session=1e23eaf6c057&msg_id=1685005&mids=%253D%2590%25CBq%25051%2508%2504S%25E2%252F%25B1%258E%25C6%25C7%2517%2583%25CB%25B9%255B%25CCX%257B%259B%2516%2508%25BA%25F8%257E%253C%259E%259F%25CF%2523_%259FGk%2597%25F7%259Eti%25CD%25BB%2591R%2524Or%2592U%25F7Iq%25A9%25EA%25A4%2504%25AD%2516%251B%25AA%2597f%25C2%2522%259D%25A9%2593%25F6K%25B3%25AB%252F%2525%2592%25FC%25A3%2515%2596%25E9%25C5%25C4%250C%25EA%25AC%25EC%2585%2582_%252C%25CC%258C%2517%25D1%259C%2517%2583%25FB%2589%25AA%258AE%257C%25CB%25D8%258D%253EJ%25F92%25C3dZy%25D9%251E4ZY7%2524%25D9R%2516%2591%2523d%25B4%25D2%2596%251C%2503%25A3%2595.cs%25BC%2588%2583%25E6%25C5%2540%2595V%259A%25E2S0Z%25A9%25AB%2560%2514%25ADd%258BL2Z%25C9J%25DC%25C5iu%257E%25A2%25EA%25B0%25CA%25DE%2582%25D3%25B9%2511%259Dgv%2527%25EA%251C%25E7%25F7%250F">
+            <img alt="" src="img/icons/rewind.gif" height="16" width="16" style="vertical-align:middle" />
+        </a>&nbsp;
+        <strong>4</strong> from <strong>34</strong>&nbsp;
+        <a style="margin-left:10px; text-decoration: none;" href="index.php?page=showmessage&session=1e23eaf6c057&msg_id=1682666&mids=%253D%2590%25CBq%25051%2508%2504S%25E2%252F%25B1%258E%25C6%25C7%2517%2583%25CB%25B9%255B%25CCX%257B%259B%2516%2508%25BA%25F8%257E%253C%259E%259F%25CF%2523_%259FGk%2597%25F7%259Eti%25CD%25BB%2591R%2524Or%2592U%25F7Iq%25A9%25EA%25A4%2504%25AD%2516%251B%25AA%2597f%25C2%2522%259D%25A9%2593%25F6K%25B3%25AB%252F%2525%2592%25FC%25A3%2515%2596%25E9%25C5%25C4%250C%25EA%25AC%25EC%2585%2582_%252C%25CC%258C%2517%25D1%259C%2517%2583%25FB%2589%25AA%258AE%257C%25CB%25D8%258D%253EJ%25F92%25C3dZy%25D9%251E4ZY7%2524%25D9R%2516%2591%2523d%25B4%25D2%2596%251C%2503%25A3%2595.cs%25BC%2588%2583%25E6%25C5%2540%2595V%259A%25E2S0Z%25A9%25AB%2560%2514%25ADd%258BL2Z%25C9J%25DC%25C5iu%257E%25A2%25EA%25B0%25CA%25DE%2582%25D3%25B9%2511%259Dgv%2527%25EA%251C%25E7%25F7%250F">
+            <img alt="" src="img/icons/fastforward.gif" height="16" width="16" style="vertical-align:middle" />
+        </a>
+        </div>
+        <div class="infohead">
+            <table cellspacing="2" cellpadding="0">
+                    <tr>
+                        <th scope="row">From:</th>
+                        <td>
+                            <span class="playerName">
+                                Fleet Command                            </span>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">To:</th>
+                        <td>jeffrey</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Subject:</th>
+                        <td>Combat Report [2:420:10] (D: 0, A: 0)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Date:</th>
+                        <td>02.11.2009 06:15:58</td>
+                    </tr>
+              </table>
+        </div>
+        <div class="showMsgNavi">
+            <ul class="toolbar">
+                    <li class="delete">
+                    <a href="#"
+                       id="2"
+                       class="tips2 action"
+                       title="|Delete this message">
+                        delete                    </a>
+                </li>
+
+            </ul>
+            <div class="clearfloat"></div>
+        </div>
+        <div class="textWrapper">
+
+            <div class="note">
+        <div id="battlereport">
+              <h3 class="textCenter">
+                  Combat Report              </h3>
+              <p class="textCenter">
+                  Combat at Machina Originis <a  target="_parent" href="index.php?page=galaxy&galaxy=2&system=420&position=10&session=1e23eaf6c057" >[2:420:10]</a> (02.11.2009 06:15:58)              </p>
+                <div id="combatants" class="textBeefy">
+                    <div style="width:320px">
+                               <span>jeffrey from Dark City <a  target="_parent" href="index.php?page=galaxy&galaxy=2&system=420&position=6&session=1e23eaf6c057" >[2:420:6]</a></span>
+                            </div>
+                    <div style="width:40px;">vs</div>
+                    <div style="width:320px">
+                               <span>Machina Sententia from Machina Originis <a  target="_parent" href="index.php?page=galaxy&galaxy=2&system=420&position=10&session=1e23eaf6c057" >[2:420:10]</a></span>
+                            </div>
+                    <br class="clearfloat" />
+                </div>
+             <table cellpadding="0" cellspacing="0" id="shortreport">
+                 <tr>
+                     <td class="label">
+                         Ships/Defence:
+                     </td>
+                     <td class="value">
+                         4                     </td>
+                     <td class="spacer"></td>
+                     <td class="label">
+                         Ships/Defence:
+                     </td>
+                     <td class="value">
+                         0                     </td>
+                 </tr>
+                 <tr>
+                     <td class="label">
+                         Lost units:
+                     </td>
+                     <td class="value">
+                         0                     </td>
+                     <td></td>
+                     <td class="label">
+                         Lost units:
+                     </td>
+                     <td class="value">
+                         0                     </td>
+                 </tr>
+                 <tr>
+                     <td class="label">
+                         Weapons:
+                     </td>
+                     <td class="value">
+                         50%
+                     </td>
+                     <td></td>
+                     <td class="label">
+                         Weapons:
+                     </td>
+                     <td class="value">
+                         0%
+                     </td>
+                 </tr>
+                 <tr>
+                     <td class="label">
+                         Shields:
+                     </td>
+                     <td class="value">
+                         30%
+                     </td>
+                     <td></td>
+                     <td class="label">
+                         Shields:
+                     </td>
+                     <td class="value">
+                         0%
+                     </td>
+                 </tr>
+                 <tr>
+                     <td class="label">
+                         Armour:
+                     </td>
+                     <td class="value">
+                         50%
+                     </td>
+                     <td></td>
+                     <td class="label">
+                         Armour:
+                     </td>
+                     <td class="value">
+                         0%
+                     </td>
+                 </tr>
+                 <tr>
+                    <td colspan="5">
+                        <div id="winner" class="win">
+                            <span>
+                                Winner: jeffrey                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                <td colspan="5" class="summary">
+                    <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td colspan="2" class="col01">
+                            <span class="textBeefy">
+                                The attacker has won the battle!                            </span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="col01">
+                            <span class="textBeefy">
+                                Loot                            </span>:
+                        </td>
+                        <td>
+                            5.893 Metal, 4.545 Crystal and 2.035 Deuterium.                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col01">
+                            <span class="textBeefy">
+                                debris field                            </span>:
+                        </td>
+                        <td>
+                            0 metal and 0 crystal.                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col01">
+                            <span class="textBeefy">
+                                Repaired                            </span>:
+                        </td>
+                        <td>
+                            ?                        </td>
+                    </tr>
+                    </table>
+                </td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="textCenter next">
+                        <a href="#" onclick="popupWindow('index.php?page=combatreport&session=1e23eaf6c057&nID=1682699','CombatReport','auto','no','0','0','no','620','600','yes');">
+                            Detailed combat report >>
+                        </a>
+                    </td>
+                </tr>
+              </table>
+        </div>        </div>
+
+        </div>
+    </div>
+
+</div>
+<script>
+$(document).ready(function(){
+	$("div.note p:first").after("<span class=\"seperator\">");
+
+	$('#messagebox .answerHeadline').hover(function() {
+        $(this).addClass("pushable");
+    }, function() {
+        $(this).removeClass("pushable");
+    });
+  });
+</script>
+</body>
+</html>

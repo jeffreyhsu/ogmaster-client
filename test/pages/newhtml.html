@@ -1,0 +1,622 @@
+<script>
+var aktPage = 1;
+var aktCat = 9;
+
+
+if (!$.isFunction(clickFunction)) {
+  var clickFunction = function() {
+     $(".reiter").removeClass("active");
+     $(this).addClass("active");
+     ajaxLoad($(this).attr("id"), 1);
+  }
+} else {
+  $(".reiter").unbind('click', clickFunction);
+}
+$(".reiter").click(clickFunction);
+
+$("#checkAll").click(function(){
+    if($(this).attr("checked")){
+        $(".checker").attr({checked: "checked" });
+    }else{
+        $(".checker").removeAttr("checked");
+    }
+});
+
+function hide(id)
+{
+    $("#" + id + "TR").hide();
+}
+
+function switchView(id)
+{
+	if ( $("#" + id + ":hidden").length > 0 ){
+		$("#" + id).show();
+	} else {
+		$("#" + id).hide();
+	}
+}
+
+function markAsRead(id)
+{
+    $("#" + id + "TR").removeClass("new");
+}
+
+$(".ajax_thickbox").click(function(){
+    var msg_id = $(this).attr("id");
+    markAsRead(msg_id);
+});
+
+$("select").change(function(){
+    $(".buttonOK").show();
+    mod = $("select option:selected").attr("id");
+});
+
+$(".del").click(function(){
+    mod = $(this).attr("id");
+})
+
+$(".underlined").click(function(){
+    $(".buttonOK").hide();
+});
+
+
+$(".deleteIt").click(function(){
+
+    if (mod == 7)
+    {
+        delIds = [];
+        $(":checkbox:checked").each(function() { delIds.push(this.id) });
+        executeAction(delIds, 7);
+    }
+    else if (mod == 10)
+    {
+        delIds = [];
+        $(":checkbox:not(:checked)").each(function() { delIds.push(this.id) });
+        executeAction(delIds, 10);
+
+    }
+    else if (mod == 9)
+    {
+        delIds = [];
+        $(":checkbox").each(function() { delIds.push(this.id) });
+        executeAction(delIds, 9);
+
+    }
+    else if (mod == 1)
+    {
+        delIds = [];
+        executeAction(delIds, 1);
+    }
+    else if (mod == 11)
+    {
+
+                            delIds = new Array(5630401,5629366,5628936,5627732,5626448,5626260,5624957,5624956,5624910,5624903,5624862,5624836,5624834,5624809,5624804,5624799,5624792,5624777,5624732,5624723,5624670,5624667,5624653,5624632,5624613,5624597,5624535,5624522,5624479,5624477,5624461,5624449,5624435,5624424,5624358,5624353,5624331,5624297,5624295,5624279,5624267,5624264,5624257,5624219,5624207,5624141,5624129,5624101,5624098,5624090,5624080,5624041,5624031,5624025,5623969,5623967,5623955,5623946,5623939,5623932,5623886,5623881,5623820,5623796,5623785,5623778,5623770,5623758,5623679,5623672,5623619);
+
+
+        executeAction(delIds, 11);
+    }
+    else if (mod == 2)
+    {
+        delIds = [];
+        delIds.push($(this).attr("rel"));
+        executeAction(delIds, 2);
+    }
+    else if (mod == 4)
+    {
+        restoreIds = [];
+        restoreIds.push($(this).attr("rel"));
+        executeAction(restoreIds, 4);
+    }
+    else if (mod == 8)
+    {
+        delIds = [];
+        $(":checkbox:checked").each(function() { delIds.push(this.id) });
+        executeAction(delIds, 8);
+    }
+    else if (mod == 12)
+    {
+        delIds = [];
+        $(":checkbox:checked").each(function() { delIds.push(this.id) });
+        executeAction(delIds, 12);
+    }
+    else if (mod == 5)
+    {
+        delIds = [];
+        $(":checkbox:checked").each(function() { delIds.push(this.id) });
+        executeAction(delIds, 5);
+    }
+    else if (mod == 3)
+    {
+        delIds = [];
+        executeAction(delIds, 3);
+    }
+});
+
+$(".espionageReport").click(function(){
+    shareEspionageReport(this);
+    return false;
+});
+
+reduceMsgCount(aktCat);
+
+tb_init('a.ajax_thickbox');
+initCluetipEventlist();
+
+</script>
+
+<form method="POST"
+      name="delMsg"
+      action="index.php?page=messages&session=04214ce2d0d1&displayCategory=9&displayPage=1">
+    <input type="hidden" value="24" id="new_msg_count">
+	<table cellspacing="0" cellpadding="0" class="list" id="mailz">
+	<tbody>
+	<tr class="first">
+	    <th class="check">
+	        <input type="checkbox" class="checker" id="checkAll" title="" />
+	    </th>
+
+    	    <th class="from">Sender</th>
+    	    <th class="subject">Subject</th>
+	    <th class="date">Date</th>
+	    <th class="action"></th>
+	</tr>
+
+	<tr class="entry trigger new" id="5630401TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="5630401" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+    			<a href="#" onClick="switchView('spioDetails_5630401'); return false;">
+                Espionage report of Slave1 [2:356:8]			</a>
+    	    </td>
+	    <td class="date">12.12.2009 10:49:00</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="5630401"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+    	<tr id="spioDetails_5630401">
+    	<td colspan="6">
+	    	<div id="showSpyReportsNow">
+
+    <table cellpadding="0" cellspacing="0" class="material spy">
+    <tr>
+        <th class="area" colspan="6">Resources at Slave1 <a onclick="self.parent.tb_remove();"  target="_parent" href="javascript:showGalaxy(2,356,8)" >[2:356:8]</a> (Player 'L42') on 12-12 10:48:59</th>
+    </tr>
+    <tr class="areadetail">
+        <td></td>
+        <td colspan="4">
+            <table class="fragment spy2">
+            <tbody>
+                <tr><td class="item">Metal:</td><td> 48.031</td> <td class="item">Crystal:</td> <td>15.396</td></tr>
+                <tr><td class="item">Deuterium:</td><td> 3.972</td> <td class="item">Energy:</td> <td>3.540</td></tr>
+            </tbody>
+            </table>
+        </td>
+        <td></td>
+    </tr>
+    </table><table cellpadding="0" cellspacing="0" class="aktiv spy"><tr><th class="area" colspan="6">Activity</th></tr><TR><TD colspan=4><span class="tooltip_sticky" style="display:none;"><div class="TTInner" id="TTTechinfo"><div class="techHeadline">Activity</div><div class="techDescription">Activity means that the scanned player has been active on that planet or another player had fleet contact with the planet you scanned.</div></div></span>Your espionage does not show abnormalities in the atmosphere of the planet. There appears to have been no activity on the planet within the last hour.</TD></TR></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">fleets</th></tr></tr><td class=key>Small Cargo</td><td class=value>30</td><td class=key>Battleship</td><td class=value>1</td></tr><td class=key>Colony Ship</td><td class=value>1</td><td class=key>Espionage Probe</td><td class=value>27</td></tr><td class=key>Solar Satellite</td><td class=value>25</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Defense</th></tr></tr><td class=key>Rocket Launcher</td><td class=value>74</td><td class=key>Light Laser</td><td class=value>119</td></tr><td class=key>Heavy Laser</td><td class=value>5</td><td class=key>Gauss Cannon</td><td class=value>50</td></tr><td class=key>Ion Cannon</td><td class=value>3</td><td class=key>Small Shield Dome</td><td class=value>1</td></tr><td class=key>Large Shield Dome</td><td class=value>1</td><td class=key>Anti-Ballistic Missiles</td><td class=value>30</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Building</th></tr></tr><td class=key>Metal Mine</td><td class=value>22</td><td class=key>Crystal Mine</td><td class=value>17</td></tr><td class=key>Deuterium Synthesizer</td><td class=value>12</td><td class=key>Solar Plant</td><td class=value>20</td></tr><td class=key>Robotics Factory</td><td class=value>5</td><td class=key>Shipyard</td><td class=value>8</td></tr><td class=key>Metal Storage</td><td class=value>7</td><td class=key>Crystal Storage</td><td class=value>6</td></tr><td class=key>Deuterium Tank</td><td class=value>5</td><td class=key>Research Lab</td><td class=value>7</td></tr><td class=key>Missile Silo</td><td class=value>3</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Research</th></tr></tr><td class=key>Espionage Technology</td><td class=value>8</td><td class=key>Computer Technology</td><td class=value>8</td></tr><td class=key>Weapons Technology</td><td class=value>8</td><td class=key>Shielding Technology</td><td class=value>7</td></tr><td class=key>Armour Technology</td><td class=value>7</td><td class=key>Energy Technology</td><td class=value>7</td></tr><td class=key>Hyperspace Technology</td><td class=value>5</td><td class=key>Combustion Drive</td><td class=value>6</td></tr><td class=key>Impulse Drive</td><td class=value>5</td><td class=key>Hyperspace Drive</td><td class=value>4</td></tr><td class=key>Laser Technology</td><td class=value>11</td><td class=key>Ion Technology</td><td class=value>5</td></tr><td class=key>Astrophysics</td><td class=value>7</td></table> <table cellpadding="0" cellspacing="0" class="defenseattack spy">
+            <tr>
+                <td class="defense textCenter textBeefy" colspan="2">Chance of counter-espionage: 8 %</td>
+            </tr>
+            <tr>
+                <td class="attack" align="center" colspan="2"><a class="buttonSave" target="_parent" href="index.php?page=fleet1&session=04214ce2d0d1&galaxy=2&system=356&position=8&type=1&mission=1"><span>Attack</span></a></td>
+            </tr>
+            </table>	    	</div>
+	    </td>
+    </tr>
+
+
+	<tr class="entry trigger " id="5629366TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="5629366" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+    			<a href="#" onClick="switchView('spioDetails_5629366'); return false;">
+                Espionage report of XXL [4:147:5]			</a>
+    	    </td>
+	    <td class="date">12.12.2009 10:35:04</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="5629366"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+    	<tr id="spioDetails_5629366">
+    	<td colspan="6">
+	    	<div id="showSpyReportsNow">
+
+    <table cellpadding="0" cellspacing="0" class="material spy">
+    <tr>
+        <th class="area" colspan="6">Resources at XXL <a onclick="self.parent.tb_remove();"  target="_parent" href="javascript:showGalaxy(4,147,5)" >[4:147:5]</a> (Player 'Cristoase') on 12-12 10:35:02</th>
+    </tr>
+    <tr class="areadetail">
+        <td></td>
+        <td colspan="4">
+            <table class="fragment spy2">
+            <tbody>
+                <tr><td class="item">Metal:</td><td> 75.964</td> <td class="item">Crystal:</td> <td>15.196</td></tr>
+                <tr><td class="item">Deuterium:</td><td> 1.596</td> <td class="item">Energy:</td> <td>1.890</td></tr>
+            </tbody>
+            </table>
+        </td>
+        <td></td>
+    </tr>
+    </table><table cellpadding="0" cellspacing="0" class="aktiv spy"><tr><th class="area" colspan="6">Activity</th></tr><TR><TD colspan=4><span class="tooltip_sticky" style="display:none;"><div class="TTInner" id="TTTechinfo"><div class="techHeadline">Activity</div><div class="techDescription">Activity means that the scanned player has been active on that planet or another player had fleet contact with the planet you scanned.</div></div></span>Your espionage does not show abnormalities in the atmosphere of the planet. There appears to have been no activity on the planet within the last hour.</TD></TR></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">fleets</th></tr></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Defense</th></tr></tr><td class=key>Light Laser</td><td class=value>64</td><td class=key>Small Shield Dome</td><td class=value>1</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Building</th></tr></tr><td class=key>Metal Mine</td><td class=value>24</td><td class=key>Crystal Mine</td><td class=value>20</td></tr><td class=key>Deuterium Synthesizer</td><td class=value>11</td><td class=key>Solar Plant</td><td class=value>17</td></tr><td class=key>Robotics Factory</td><td class=value>5</td><td class=key>Shipyard</td><td class=value>7</td></tr><td class=key>Metal Storage</td><td class=value>7</td><td class=key>Crystal Storage</td><td class=value>7</td></tr><td class=key>Deuterium Tank</td><td class=value>4</td></table> <table cellpadding="0" cellspacing="0" class="defenseattack spy">
+            <tr>
+                <td class="defense textCenter textBeefy" colspan="2">Chance of counter-espionage: 0 %</td>
+            </tr>
+            <tr>
+                <td class="attack" align="center" colspan="2"><a class="buttonSave" target="_parent" href="index.php?page=fleet1&session=04214ce2d0d1&galaxy=4&system=147&position=5&type=1&mission=1"><span>Attack</span></a></td>
+            </tr>
+            </table>	    	</div>
+	    </td>
+    </tr>
+
+
+	<tr class="entry trigger new" id="5628936TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="5628936" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+                <a class="ajax_thickbox"
+	           id="5628936"
+	           href="index.php?page=showmessage&session=04214ce2d0d1&ajax=1&msg_id=5628936&mids=%253D%2592%25CBu%2504%2521%250C%2504SB%251F%2524%2518G%25E3%25E3%25C6%25E0%25B7%25B9%251B5%25D3%25BA%25A9%2506%25D1%25AA%2501%257E%259F%2594%25E7%25EF%25F3%258C%259F%25CF3%25C3%2586%250F9%2595%2580t%255B%25C4%25A9%25F4%25D2%253Ax%252A%25BB%2594i%25F5%25DD%252F%2585%25FB%25AA%25EA%2525%258D%25CA%258BK%25BEg%259E%252A%259B%25EA%25FB%2522Iun%25D2%25A8t%2519%252F%25AE%25A8%2511%2522D%25CC%2517m%25AC%25E1b%25C4Q%2529%25E2%258DX%257D%258D%253C7V%25A3%2511%25C9t%25CA%25ACJ%2528u%257FMh%2595Z3%2594V%2591U%2529%25AD%2522j%25AF%25D2%252A%2526%259Ai%2515%2588RZ%2505t%2595Vsc%252F%25AD%25A6%25D5%2582%25D2j%2522Tiu%25A4%250Bwc%25F5%2519%25ADNt%2521%25AD%25DC%25AB%25CFh%25E5H6Z9%2584%258CV6k%2586%25CD%25C6%25EA3Z%2519B%258DV%250Ag%255B%258DH%25A6%2595B%25D2i%25A58%251C%2597%25C6%251A%25E9%25B4R%253C%250C%25A7%2595%25E2%25C4%259DV%253A%25B0J%252BA%258A%25D3Jp%2510N%252B%25C1%25BBuZ%258D%255D%2595%25EFF%2508%25D1j%252CT%25B4%251A%25D7%258FV%25E3%251E%2522%25AD%25C6%25BD%25AD%25D7%25CAv%2Bt6%255E%2503%25E2%255DH%25E2%25D5%255D%25C4%257BL%25BB%25B1F%25C6kekUsHcU%25A1D%25BC%25BFx%25AD%252C7%259Ai%2595%25AB%25E6%2506%25AD2kdD%2523%25F6%25D2%252A%2521%2514%25B4%250A%255CY%25EC%25C6%251A%2599%25B4%258As%2529%25DF%257F&cat=4&height=500&width=770&TB_iframe=1">
+                Return of a fleet            </a>
+    	    </td>
+	    <td class="date">12.12.2009 10:29:49</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="5628936"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+
+	<tr class="entry trigger new" id="5627732TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="5627732" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+                <a class="ajax_thickbox"
+	           id="5627732"
+	           href="index.php?page=showmessage&session=04214ce2d0d1&ajax=1&msg_id=5627732&mids=%253D%2592%25CBu%2504%2521%250C%2504SB%251F%2524%2518G%25E3%25E3%25C6%25E0%25B7%25B9%251B5%25D3%25BA%25A9%2506%25D1%25AA%2501%257E%259F%2594%25E7%25EF%25F3%258C%259F%25CF3%25C3%2586%250F9%2595%2580t%255B%25C4%25A9%25F4%25D2%253Ax%252A%25BB%2594i%25F5%25DD%252F%2585%25FB%25AA%25EA%2525%258D%25CA%258BK%25BEg%259E%252A%259B%25EA%25FB%2522Iun%25D2%25A8t%2519%252F%25AE%25A8%2511%2522D%25CC%2517m%25AC%25E1b%25C4Q%2529%25E2%258DX%257D%258D%253C7V%25A3%2511%25C9t%25CA%25ACJ%2528u%257FMh%2595Z3%2594V%2591U%2529%25AD%2522j%25AF%25D2%252A%2526%259Ai%2515%2588RZ%2505t%2595Vsc%252F%25AD%25A6%25D5%2582%25D2j%2522Tiu%25A4%250Bwc%25F5%2519%25ADNt%2521%25AD%25DC%25AB%25CFh%25E5H6Z9%2584%258CV6k%2586%25CD%25C6%25EA3Z%2519B%258DV%250Ag%255B%258DH%25A6%2595B%25D2i%25A58%251C%2597%25C6%251A%25E9%25B4R%253C%250C%25A7%2595%25E2%25C4%259DV%253A%25B0J%252BA%258A%25D3Jp%2510N%252B%25C1%25BBuZ%258D%255D%2595%25EFF%2508%25D1j%252CT%25B4%251A%25D7%258FV%25E3%251E%2522%25AD%25C6%25BD%25AD%25D7%25CAv%2Bt6%255E%2503%25E2%255DH%25E2%25D5%255D%25C4%257BL%25BB%25B1F%25C6kekUsHcU%25A1D%25BC%25BFx%25AD%252C7%259Ai%2595%25AB%25E6%2506%25AD2kdD%2523%25F6%25D2%252A%2521%2514%25B4%250A%255CY%25EC%25C6%251A%2599%25B4%258As%2529%25DF%257F&cat=4&height=500&width=770&TB_iframe=1">
+                Reaching a planet            </a>
+    	    </td>
+	    <td class="date">12.12.2009 10:26:28</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="5627732"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+
+	<tr class="entry trigger new" id="5626448TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="5626448" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+                <a class="ajax_thickbox"
+	           id="5626448"
+	           href="index.php?page=showmessage&session=04214ce2d0d1&ajax=1&msg_id=5626448&mids=%253D%2592%25CBu%2504%2521%250C%2504SB%251F%2524%2518G%25E3%25E3%25C6%25E0%25B7%25B9%251B5%25D3%25BA%25A9%2506%25D1%25AA%2501%257E%259F%2594%25E7%25EF%25F3%258C%259F%25CF3%25C3%2586%250F9%2595%2580t%255B%25C4%25A9%25F4%25D2%253Ax%252A%25BB%2594i%25F5%25DD%252F%2585%25FB%25AA%25EA%2525%258D%25CA%258BK%25BEg%259E%252A%259B%25EA%25FB%2522Iun%25D2%25A8t%2519%252F%25AE%25A8%2511%2522D%25CC%2517m%25AC%25E1b%25C4Q%2529%25E2%258DX%257D%258D%253C7V%25A3%2511%25C9t%25CA%25ACJ%2528u%257FMh%2595Z3%2594V%2591U%2529%25AD%2522j%25AF%25D2%252A%2526%259Ai%2515%2588RZ%2505t%2595Vsc%252F%25AD%25A6%25D5%2582%25D2j%2522Tiu%25A4%250Bwc%25F5%2519%25ADNt%2521%25AD%25DC%25AB%25CFh%25E5H6Z9%2584%258CV6k%2586%25CD%25C6%25EA3Z%2519B%258DV%250Ag%255B%258DH%25A6%2595B%25D2i%25A58%251C%2597%25C6%251A%25E9%25B4R%253C%250C%25A7%2595%25E2%25C4%259DV%253A%25B0J%252BA%258A%25D3Jp%2510N%252B%25C1%25BBuZ%258D%255D%2595%25EFF%2508%25D1j%252CT%25B4%251A%25D7%258FV%25E3%251E%2522%25AD%25C6%25BD%25AD%25D7%25CAv%2Bt6%255E%2503%25E2%255DH%25E2%25D5%255D%25C4%257BL%25BB%25B1F%25C6kekUsHcU%25A1D%25BC%25BFx%25AD%252C7%259Ai%2595%25AB%25E6%2506%25AD2kdD%2523%25F6%25D2%252A%2521%2514%25B4%250A%255CY%25EC%25C6%251A%2599%25B4%258As%2529%25DF%257F&cat=5&height=500&width=770&TB_iframe=1">
+                <span class="combatreport_ididattack_ilost">Combat Report [2:389:8] (D: 0, A: 1.000)</span>            </a>
+    	    </td>
+	    <td class="date">12.12.2009 10:07:30</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="5626448"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+
+	<tr class="entry trigger " id="5626260TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="5626260" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+    			<a href="#" onClick="switchView('spioDetails_5626260'); return false;">
+                Espionage report of Krnje [2:389:8]			</a>
+    	    </td>
+	    <td class="date">12.12.2009 10:04:03</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="5626260"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+    	<tr id="spioDetails_5626260">
+    	<td colspan="6">
+	    	<div id="showSpyReportsNow">
+
+    <table cellpadding="0" cellspacing="0" class="material spy">
+    <tr>
+        <th class="area" colspan="6">Resources at Krnje <a onclick="self.parent.tb_remove();"  target="_parent" href="javascript:showGalaxy(2,389,8)" >[2:389:8]</a> (Player 'LudiSplicho') on 12-12 10:04:02</th>
+    </tr>
+    <tr class="areadetail">
+        <td></td>
+        <td colspan="4">
+            <table class="fragment spy2">
+            <tbody>
+                <tr><td class="item">Metal:</td><td> 73.169</td> <td class="item">Crystal:</td> <td>48.753</td></tr>
+                <tr><td class="item">Deuterium:</td><td> 20.141</td> <td class="item">Energy:</td> <td>3.509</td></tr>
+            </tbody>
+            </table>
+        </td>
+        <td></td>
+    </tr>
+    </table><table cellpadding="0" cellspacing="0" class="aktiv spy"><tr><th class="area" colspan="6">Activity</th></tr><TR><TD colspan=4><span class="tooltip_sticky" style="display:none;"><div class="TTInner" id="TTTechinfo"><div class="techHeadline">Activity</div><div class="techDescription">Activity means that the scanned player has been active on that planet or another player had fleet contact with the planet you scanned.</div></div></span>Your espionage report shows abnormalities in the atmosphere of the planet which suggests activity within the last <font color=red>37</font> minutes.</TD></TR></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">fleets</th></tr></tr><td class=key>Small Cargo</td><td class=value>9</td><td class=key>Light Fighter</td><td class=value>17</td></tr><td class=key>Heavy Fighter</td><td class=value>23</td><td class=key>Battleship</td><td class=value>1</td></tr><td class=key>Solar Satellite</td><td class=value>10</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Defense</th></tr></tr><td class=key>Rocket Launcher</td><td class=value>45</td><td class=key>Light Laser</td><td class=value>6</td></tr><td class=key>Heavy Laser</td><td class=value>4</td><td class=key>Gauss Cannon</td><td class=value>4</td></tr><td class=key>Ion Cannon</td><td class=value>10</td><td class=key>Small Shield Dome</td><td class=value>1</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Building</th></tr></tr><td class=key>Metal Mine</td><td class=value>19</td><td class=key>Crystal Mine</td><td class=value>17</td></tr><td class=key>Deuterium Synthesizer</td><td class=value>16</td><td class=key>Solar Plant</td><td class=value>21</td></tr><td class=key>Fusion Reactor</td><td class=value>5</td><td class=key>Robotics Factory</td><td class=value>8</td></tr><td class=key>Shipyard</td><td class=value>8</td><td class=key>Metal Storage</td><td class=value>6</td></tr><td class=key>Crystal Storage</td><td class=value>5</td><td class=key>Deuterium Tank</td><td class=value>5</td></tr><td class=key>Research Lab</td><td class=value>8</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Research</th></tr></tr><td class=key>Espionage Technology</td><td class=value>8</td><td class=key>Computer Technology</td><td class=value>9</td></tr><td class=key>Weapons Technology</td><td class=value>9</td><td class=key>Shielding Technology</td><td class=value>9</td></tr><td class=key>Armour Technology</td><td class=value>8</td><td class=key>Energy Technology</td><td class=value>6</td></tr><td class=key>Hyperspace Technology</td><td class=value>5</td><td class=key>Combustion Drive</td><td class=value>8</td></tr><td class=key>Impulse Drive</td><td class=value>5</td><td class=key>Hyperspace Drive</td><td class=value>4</td></tr><td class=key>Laser Technology</td><td class=value>9</td><td class=key>Ion Technology</td><td class=value>5</td></tr><td class=key>Astrophysics</td><td class=value>7</td></table> <table cellpadding="0" cellspacing="0" class="defenseattack spy">
+            <tr>
+                <td class="defense textCenter textBeefy" colspan="2">Chance of counter-espionage: 0 %</td>
+            </tr>
+            <tr>
+                <td class="attack" align="center" colspan="2"><a class="buttonSave" target="_parent" href="index.php?page=fleet1&session=04214ce2d0d1&galaxy=2&system=389&position=8&type=1&mission=1"><span>Attack</span></a></td>
+            </tr>
+            </table>	    	</div>
+	    </td>
+    </tr>
+
+
+	<tr class="entry trigger new" id="5624957TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="5624957" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+                <a class="ajax_thickbox"
+	           id="5624957"
+	           href="index.php?page=showmessage&session=04214ce2d0d1&ajax=1&msg_id=5624957&mids=%253D%2592%25CBu%2504%2521%250C%2504SB%251F%2524%2518G%25E3%25E3%25C6%25E0%25B7%25B9%251B5%25D3%25BA%25A9%2506%25D1%25AA%2501%257E%259F%2594%25E7%25EF%25F3%258C%259F%25CF3%25C3%2586%250F9%2595%2580t%255B%25C4%25A9%25F4%25D2%253Ax%252A%25BB%2594i%25F5%25DD%252F%2585%25FB%25AA%25EA%2525%258D%25CA%258BK%25BEg%259E%252A%259B%25EA%25FB%2522Iun%25D2%25A8t%2519%252F%25AE%25A8%2511%2522D%25CC%2517m%25AC%25E1b%25C4Q%2529%25E2%258DX%257D%258D%253C7V%25A3%2511%25C9t%25CA%25ACJ%2528u%257FMh%2595Z3%2594V%2591U%2529%25AD%2522j%25AF%25D2%252A%2526%259Ai%2515%2588RZ%2505t%2595Vsc%252F%25AD%25A6%25D5%2582%25D2j%2522Tiu%25A4%250Bwc%25F5%2519%25ADNt%2521%25AD%25DC%25AB%25CFh%25E5H6Z9%2584%258CV6k%2586%25CD%25C6%25EA3Z%2519B%258DV%250Ag%255B%258DH%25A6%2595B%25D2i%25A58%251C%2597%25C6%251A%25E9%25B4R%253C%250C%25A7%2595%25E2%25C4%259DV%253A%25B0J%252BA%258A%25D3Jp%2510N%252B%25C1%25BBuZ%258D%255D%2595%25EFF%2508%25D1j%252CT%25B4%251A%25D7%258FV%25E3%251E%2522%25AD%25C6%25BD%25AD%25D7%25CAv%2Bt6%255E%2503%25E2%255DH%25E2%25D5%255D%25C4%257BL%25BB%25B1F%25C6kekUsHcU%25A1D%25BC%25BFx%25AD%252C7%259Ai%2595%25AB%25E6%2506%25AD2kdD%2523%25F6%25D2%252A%2521%2514%25B4%250A%255CY%25EC%25C6%251A%2599%25B4%258As%2529%25DF%257F&cat=5&height=500&width=770&TB_iframe=1">
+                <span class="combatreport_ididattack_ilost">Combat Report [2:393:11] (D: 0, A: 4.000)</span>            </a>
+    	    </td>
+	    <td class="date">12.12.2009 09:42:47</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="5624957"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+
+	<tr class="entry trigger " id="5624956TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="5624956" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+    			<a href="#" onClick="switchView('spioDetails_5624956'); return false;">
+                Espionage report of Ah Rang [2:393:11]			</a>
+    	    </td>
+	    <td class="date">12.12.2009 09:42:47</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="5624956"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+    	<tr id="spioDetails_5624956">
+    	<td colspan="6">
+	    	<div id="showSpyReportsNow">
+
+    <table cellpadding="0" cellspacing="0" class="material spy">
+    <tr>
+        <th class="area" colspan="6">Resources at Ah Rang <a onclick="self.parent.tb_remove();"  target="_parent" href="javascript:showGalaxy(2,393,11)" >[2:393:11]</a> (Player 'amazonwin') on 12-12 09:42:46</th>
+    </tr>
+    <tr class="areadetail">
+        <td></td>
+        <td colspan="4">
+            <table class="fragment spy2">
+            <tbody>
+                <tr><td class="item">Metal:</td><td> 57.482</td> <td class="item">Crystal:</td> <td>25.924</td></tr>
+                <tr><td class="item">Deuterium:</td><td> 6.921</td> <td class="item">Energy:</td> <td>4.044</td></tr>
+            </tbody>
+            </table>
+        </td>
+        <td></td>
+    </tr>
+    </table><table cellpadding="0" cellspacing="0" class="aktiv spy"><tr><th class="area" colspan="6">Activity</th></tr><TR><TD colspan=4><span class="tooltip_sticky" style="display:none;"><div class="TTInner" id="TTTechinfo"><div class="techHeadline">Activity</div><div class="techDescription">Activity means that the scanned player has been active on that planet or another player had fleet contact with the planet you scanned.</div></div></span>Your espionage report shows abnormalities in the atmosphere of the planet which suggests activity within the last <font color=red>22</font> minutes.</TD></TR></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">fleets</th></tr></tr><td class=key>Small Cargo</td><td class=value>4</td><td class=key>Large Cargo</td><td class=value>2</td></tr><td class=key>Light Fighter</td><td class=value>9</td><td class=key>Heavy Fighter</td><td class=value>6</td></tr><td class=key>Recycler</td><td class=value>2</td><td class=key>Espionage Probe</td><td class=value>43</td></tr><td class=key>Solar Satellite</td><td class=value>39</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Defense</th></tr></tr><td class=key>Rocket Launcher</td><td class=value>170</td><td class=key>Light Laser</td><td class=value>120</td></tr><td class=key>Heavy Laser</td><td class=value>10</td><td class=key>Gauss Cannon</td><td class=value>6</td></tr><td class=key>Small Shield Dome</td><td class=value>1</td><td class=key>Large Shield Dome</td><td class=value>1</td></tr><td class=key>Anti-Ballistic Missiles</td><td class=value>20</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Building</th></tr></tr><td class=key>Metal Mine</td><td class=value>22</td><td class=key>Crystal Mine</td><td class=value>20</td></tr><td class=key>Deuterium Synthesizer</td><td class=value>13</td><td class=key>Solar Plant</td><td class=value>21</td></tr><td class=key>Fusion Reactor</td><td class=value>5</td><td class=key>Robotics Factory</td><td class=value>7</td></tr><td class=key>Shipyard</td><td class=value>6</td><td class=key>Metal Storage</td><td class=value>6</td></tr><td class=key>Crystal Storage</td><td class=value>5</td><td class=key>Deuterium Tank</td><td class=value>4</td></tr><td class=key>Research Lab</td><td class=value>7</td><td class=key>Missile Silo</td><td class=value>2</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Research</th></tr></tr><td class=key>Espionage Technology</td><td class=value>7</td><td class=key>Computer Technology</td><td class=value>7</td></tr><td class=key>Weapons Technology</td><td class=value>8</td><td class=key>Shielding Technology</td><td class=value>7</td></tr><td class=key>Armour Technology</td><td class=value>7</td><td class=key>Energy Technology</td><td class=value>7</td></tr><td class=key>Combustion Drive</td><td class=value>7</td><td class=key>Impulse Drive</td><td class=value>3</td></tr><td class=key>Laser Technology</td><td class=value>7</td><td class=key>Ion Technology</td><td class=value>3</td></tr><td class=key>Astrophysics</td><td class=value>6</td></table> <table cellpadding="0" cellspacing="0" class="defenseattack spy">
+            <tr>
+                <td class="defense textCenter textBeefy" colspan="2">Chance of counter-espionage: 1 %</td>
+            </tr>
+            <tr>
+                <td class="attack" align="center" colspan="2"><a class="buttonSave" target="_parent" href="index.php?page=fleet1&session=04214ce2d0d1&galaxy=2&system=393&position=11&type=1&mission=1"><span>Attack</span></a></td>
+            </tr>
+            </table>	    	</div>
+	    </td>
+    </tr>
+
+
+	<tr class="entry trigger " id="5624910TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="5624910" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+    			<a href="#" onClick="switchView('spioDetails_5624910'); return false;">
+                Espionage report of Brown eye [2:393:9]			</a>
+    	    </td>
+	    <td class="date">12.12.2009 09:41:53</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="5624910"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+    	<tr id="spioDetails_5624910">
+    	<td colspan="6">
+	    	<div id="showSpyReportsNow">
+
+    <table cellpadding="0" cellspacing="0" class="material spy">
+    <tr>
+        <th class="area" colspan="6">Resources at Brown eye <a onclick="self.parent.tb_remove();"  target="_parent" href="javascript:showGalaxy(2,393,9)" >[2:393:9]</a> (Player 'odd eyes') on 12-12 09:41:52</th>
+    </tr>
+    <tr class="areadetail">
+        <td></td>
+        <td colspan="4">
+            <table class="fragment spy2">
+            <tbody>
+                <tr><td class="item">Metal:</td><td> 42.165</td> <td class="item">Crystal:</td> <td>55.631</td></tr>
+                <tr><td class="item">Deuterium:</td><td> 26.475</td> <td class="item">Energy:</td> <td>2.690</td></tr>
+            </tbody>
+            </table>
+        </td>
+        <td></td>
+    </tr>
+    </table><table cellpadding="0" cellspacing="0" class="aktiv spy"><tr><th class="area" colspan="6">Activity</th></tr><TR><TD colspan=4><span class="tooltip_sticky" style="display:none;"><div class="TTInner" id="TTTechinfo"><div class="techHeadline">Activity</div><div class="techDescription">Activity means that the scanned player has been active on that planet or another player had fleet contact with the planet you scanned.</div></div></span>Your espionage report shows abnormalities in the atmosphere of the planet which suggests activity within the last <font color=red>19</font> minutes.</TD></TR></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">fleets</th></tr></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Defense</th></tr></tr><td class=key>Rocket Launcher</td><td class=value>16</td><td class=key>Light Laser</td><td class=value>44</td></tr><td class=key>Heavy Laser</td><td class=value>1</td><td class=key>Gauss Cannon</td><td class=value>11</td></tr><td class=key>Small Shield Dome</td><td class=value>1</td><td class=key>Large Shield Dome</td><td class=value>1</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Building</th></tr></tr><td class=key>Metal Mine</td><td class=value>20</td><td class=key>Crystal Mine</td><td class=value>17</td></tr><td class=key>Deuterium Synthesizer</td><td class=value>7</td><td class=key>Solar Plant</td><td class=value>20</td></tr><td class=key>Fusion Reactor</td><td class=value>1</td><td class=key>Robotics Factory</td><td class=value>5</td></tr><td class=key>Shipyard</td><td class=value>6</td><td class=key>Metal Storage</td><td class=value>5</td></tr><td class=key>Crystal Storage</td><td class=value>4</td><td class=key>Deuterium Tank</td><td class=value>2</td></tr><td class=key>Research Lab</td><td class=value>5</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Research</th></tr></tr><td class=key>Espionage Technology</td><td class=value>6</td><td class=key>Computer Technology</td><td class=value>7</td></tr><td class=key>Weapons Technology</td><td class=value>4</td><td class=key>Shielding Technology</td><td class=value>6</td></tr><td class=key>Armour Technology</td><td class=value>8</td><td class=key>Energy Technology</td><td class=value>8</td></tr><td class=key>Hyperspace Technology</td><td class=value>3</td><td class=key>Combustion Drive</td><td class=value>7</td></tr><td class=key>Impulse Drive</td><td class=value>5</td><td class=key>Laser Technology</td><td class=value>10</td></tr><td class=key>Ion Technology</td><td class=value>5</td><td class=key>Plasma Technology</td><td class=value>7</td></tr><td class=key>Astrophysics</td><td class=value>5</td></table> <table cellpadding="0" cellspacing="0" class="defenseattack spy">
+            <tr>
+                <td class="defense textCenter textBeefy" colspan="2">Chance of counter-espionage: 0 %</td>
+            </tr>
+            <tr>
+                <td class="attack" align="center" colspan="2"><a class="buttonSave" target="_parent" href="index.php?page=fleet1&session=04214ce2d0d1&galaxy=2&system=393&position=9&type=1&mission=1"><span>Attack</span></a></td>
+            </tr>
+            </table>	    	</div>
+	    </td>
+    </tr>
+
+
+	<tr class="entry trigger " id="5624903TR">
+	    <td class="check">
+    	    	<input type="checkbox" class="checker" id="5624903" />
+    	    </td>
+	    <td class="from">Fleet Command</td>
+	    <td class="subject">
+    			<a href="#" onClick="switchView('spioDetails_5624903'); return false;">
+                Espionage report of Drasnia [2:393:7]			</a>
+    	    </td>
+	    <td class="date">12.12.2009 09:41:46</td>
+	    <td class="actions" id="test">
+                <a href="#"
+               rel="5624903"
+               class="del tips deleteIt"
+               title="|Delete this message"
+               id="2">
+                <img src="img/icons/trash.gif" width="16" height="16" />
+            </a>
+
+
+	    </td>
+	</tr>
+    	<tr id="spioDetails_5624903">
+    	<td colspan="6">
+	    	<div id="showSpyReportsNow">
+
+    <table cellpadding="0" cellspacing="0" class="material spy">
+    <tr>
+        <th class="area" colspan="6">Resources at Drasnia <a onclick="self.parent.tb_remove();"  target="_parent" href="javascript:showGalaxy(2,393,7)" >[2:393:7]</a> (Player 'Caj Darkmoon') on 12-12 09:41:44</th>
+    </tr>
+    <tr class="areadetail">
+        <td></td>
+        <td colspan="4">
+            <table class="fragment spy2">
+            <tbody>
+                <tr><td class="item">Metal:</td><td> 53.183</td> <td class="item">Crystal:</td> <td>17.348</td></tr>
+                <tr><td class="item">Deuterium:</td><td> 1.055</td> <td class="item">Energy:</td> <td>1.718</td></tr>
+            </tbody>
+            </table>
+        </td>
+        <td></td>
+    </tr>
+    </table><table cellpadding="0" cellspacing="0" class="aktiv spy"><tr><th class="area" colspan="6">Activity</th></tr><TR><TD colspan=4><span class="tooltip_sticky" style="display:none;"><div class="TTInner" id="TTTechinfo"><div class="techHeadline">Activity</div><div class="techDescription">Activity means that the scanned player has been active on that planet or another player had fleet contact with the planet you scanned.</div></div></span>Your espionage does not show abnormalities in the atmosphere of the planet. There appears to have been no activity on the planet within the last hour.</TD></TR></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">fleets</th></tr></tr><td class=key>Large Cargo</td><td class=value>2</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Defense</th></tr></tr><td class=key>Rocket Launcher</td><td class=value>39</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Building</th></tr></tr><td class=key>Metal Mine</td><td class=value>18</td><td class=key>Crystal Mine</td><td class=value>15</td></tr><td class=key>Deuterium Synthesizer</td><td class=value>3</td><td class=key>Solar Plant</td><td class=value>17</td></tr><td class=key>Robotics Factory</td><td class=value>3</td><td class=key>Shipyard</td><td class=value>4</td></tr><td class=key>Metal Storage</td><td class=value>3</td><td class=key>Crystal Storage</td><td class=value>3</td></table><table cellpadding="0" cellspacing="0" class="fleetdefbuildings spy"><tr><th class="area" colspan="6">Research</th></tr></tr><td class=key>Espionage Technology</td><td class=value>6</td><td class=key>Computer Technology</td><td class=value>7</td></tr><td class=key>Weapons Technology</td><td class=value>5</td><td class=key>Shielding Technology</td><td class=value>6</td></tr><td class=key>Armour Technology</td><td class=value>8</td><td class=key>Energy Technology</td><td class=value>6</td></tr><td class=key>Hyperspace Technology</td><td class=value>3</td><td class=key>Combustion Drive</td><td class=value>6</td></tr><td class=key>Impulse Drive</td><td class=value>4</td><td class=key>Hyperspace Drive</td><td class=value>4</td></tr><td class=key>Laser Technology</td><td class=value>5</td><td class=key>Ion Technology</td><td class=value>3</td></tr><td class=key>Astrophysics</td><td class=value>5</td></table> <table cellpadding="0" cellspacing="0" class="defenseattack spy">
+            <tr>
+                <td class="defense textCenter textBeefy" colspan="2">Chance of counter-espionage: 0 %</td>
+            </tr>
+            <tr>
+                <td class="attack" align="center" colspan="2"><a class="buttonSave" target="_parent" href="index.php?page=fleet1&session=04214ce2d0d1&galaxy=2&system=393&position=7&type=1&mission=1"><span>Attack</span></a></td>
+            </tr>
+            </table>	    	</div>
+	    </td>
+    </tr>
+
+    	<tr class="last">
+	    <td align="left" colspan="3">
+			<select class="choose" name="deletemessages">
+			    <option class="underlined">Select action</option>
+                    <option class="method" id="12">Mark message as read</option>
+			    <option class="method" id="7">Delete marked messages</option>
+			    <option class="method" id="10">Delete all unmarked messages</option>
+			    <option class="method" id="9">Delete shown messages</option>
+        	            <option class="method" id="1">Delete all messages</option>
+
+    			</select>
+                <input type="button" name="submit_" value="Ok" class="buttonOK deleteIt" id="" style="display:none;" />
+	    </td>
+	    <td colspan="2">
+	        <div class="selectContainer">
+    	                <div>
+	                    <a><img src="img/icons/skip-back.gif" /></a>
+	                    <a><img src="img/icons/rewind.gif" /></a>
+	                </div>
+    	                <div class="msgpersite">1 - 10</div>
+    	                <div>
+	                    <a href="#" onClick="ajaxLoad(9,2);" style="margin-right:2px;" class="changePage"><img src="img/icons/fastforward.gif" /></a>
+	                    <a href="#" class="changePage" onClick="ajaxLoad(9,43)"><img src="img/icons/skip.gif" /></a>
+	                </div>
+    	        </div>
+	   </td>
+	</tr>
+	</tbody>
+	</table>
+</form>
+<script type="text/javascript">
+$(document).ready(function(){
+	//JQuery ready is quicker than onload
+	$(".list tr.entry:even").addClass("alt");
+});
+</script>
